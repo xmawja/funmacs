@@ -7,6 +7,7 @@
 ;; Enable lsp.el
 (use-package lsp-mode
   :straight t
+  :commands (lsp lsp-deferred) 
   :init
   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
   (setq lsp-keymap-prefix "C-c l")
