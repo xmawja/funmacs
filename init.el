@@ -20,4 +20,5 @@
 ;; lsp elisp
 (load-library "lsp")
 (load-library "company")
+(load-library "yasnippet")
 
