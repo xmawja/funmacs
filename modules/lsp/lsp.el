@@ -4,6 +4,11 @@
 (add-to-list 'load-path (expand-file-name "lib/lsp-mode" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lib/lsp-mode/clients" user-emacs-directory))
 
+;; Header breadcumb Function
+(defun efs/lsp-mode-setup ()
+  (setq lsp-headerline-breadcrumb-segments '(path-up-to-project file symbols))
+  (lsp-headerline-breadcrumb-mode))
+
 ;; Enable lsp.el
 (use-package lsp-mode
   :straight t
@@ -21,9 +26,8 @@
   :config
   ;; if you want which-key integration
   (lsp-enable-which-key-integration t)
-  :custom
-  (lsp-headerline-breadcrumb-enable t)
   :hook
+  (lsp-mode . efs/lsp-mode-setup)     ; Enable Header Breadcrumb 
   ;; LSP LANGUAGES SUPPORT
   (c-mode . lsp-deferred)             ; ENABLE C PROGRAMING
   (c++-mode . lsp-deferred)           ; ENABLE C++ PROGRAMING
