@@ -15,4 +15,7 @@
 ;; CHANGE TAB SIZE
 (setq-default tab-width 4)		; enable indent global
 
+:;; MAKE ESC QUITE PROMPTE
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+
 
