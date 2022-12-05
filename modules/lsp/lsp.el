@@ -14,4 +14,9 @@
   ;; if you want which-key integration
   (lsp-enable-which-key-integration t))
 
+;; Optionaly
+;;  Enhance UI
+(use-package lsp-ui
+  :hook (lsp-mode . lsp-ui-mode))
+
 
