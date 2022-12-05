@@ -21,4 +21,5 @@
 (load-library "lsp")
 (load-library "company")
 (load-library "yasnippet")
+(load-library "flycheck")
 
