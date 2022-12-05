@@ -15,7 +15,13 @@
   ;; if you want which-key integration
   (lsp-enable-which-key-integration t)
   :custom
-  (lsp-headerline-breadcrumb-enable t))
+  (lsp-headerline-breadcrumb-enable t)
+  :hook
+  ;; LSP LANGUAGES SUPPORT
+  (c-mode . lsp-deferred)             ; ENABLE C PROGRAMING
+  (c++-mode . lsp-deferred)           ; ENABLE C++ PROGRAMING
+  (c-or-c++-mode . lsp-deferred)      ; ENABLE C/C++ PROGRAMING
+  )
 
 ;; Optionaly
 ;; lsp-ui Enhance UI
