@@ -1,6 +1,6 @@
 ;;=============== IMPORTS ===============;;
 ;; import directorys
-(add-to-list 'load-path "~/.emacs.d/core/")
+(add-to-list 'load-path "~/.emacs.d/core")
 (add-to-list 'load-path "~/.emacs.d/modules")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp")
 
