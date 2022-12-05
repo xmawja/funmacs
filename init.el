@@ -17,6 +17,7 @@
 (load-library "icons")
 (load-library "dashboard")
 (load-library "vterm")
+(load-library "modeline")
 
 ;; lsp elisp
 (load-library "lsp")
