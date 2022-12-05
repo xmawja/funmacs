@@ -10,4 +10,5 @@
 (load-library "magit")
 (load-library "ui")
 (load-library "treemacs")
+(load-library "icons")
 

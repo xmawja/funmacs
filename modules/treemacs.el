@@ -114,3 +114,7 @@
   :straight t
   :config (treemacs-set-scope-type 'Tabs))
 
+(use-package treemacs-all-the-icons  ;; icons
+  :straight t
+  :after treemacs)
+
