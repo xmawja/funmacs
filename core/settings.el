@@ -13,7 +13,8 @@
 (set-fringe-mode 10)                    ; give some breathing room
 
 ;; CHANGE TAB SIZE
-(setq-default tab-width 4)		; enable indent global
+(setq-default tab-width 4)		        ; enable indent global
+(setq-default c-basic-offset 4)         ; enable indent for C/C++
 
 :;; MAKE ESC QUITE PROMPTE
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
