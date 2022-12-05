@@ -12,7 +12,9 @@
   (setq lsp-keymap-prefix "C-c l")
   :config
   ;; if you want which-key integration
-  (lsp-enable-which-key-integration t))
+  (lsp-enable-which-key-integration t)
+  :custom
+  (lsp-headerline-breadcrumb-enable t))
 
 ;; Optionaly
 ;; lsp-ui Enhance UI
@@ -21,5 +23,4 @@
 ;; lsp-treemacs integration
 (use-package lsp-treemacs
   :after lsp)
-
 
