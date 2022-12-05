@@ -29,7 +29,7 @@ straight
 recentf
 transient
 eshell
-
+history
 
 # Undo-tree save-files
 *.~undo-tree
