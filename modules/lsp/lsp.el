@@ -28,6 +28,7 @@
   (c-mode . lsp-deferred)             ; ENABLE C PROGRAMING
   (c++-mode . lsp-deferred)           ; ENABLE C++ PROGRAMING
   (c-or-c++-mode . lsp-deferred)      ; ENABLE C/C++ PROGRAMING
+  (sh-mode . lsp-deferred)            ; ENABLE SHELL SCRIPT
   )
 
 ;; Optionaly
@@ -37,4 +38,3 @@
 ;; lsp-treemacs integration
 (use-package lsp-treemacs
   :after lsp)
-
