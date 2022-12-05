@@ -15,8 +15,11 @@
   (lsp-enable-which-key-integration t))
 
 ;; Optionaly
-;;  Enhance UI
+;; lsp-ui Enhance UI
 (use-package lsp-ui
   :hook (lsp-mode . lsp-ui-mode))
+;; lsp-treemacs integration
+(use-package lsp-treemacs
+  :after lsp)
 
 
