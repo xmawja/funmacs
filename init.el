@@ -7,5 +7,6 @@
 (load-library "keymaps")
 
 (load-library "vertico")
+(load-library "magit")
 
 
