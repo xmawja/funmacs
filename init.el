@@ -16,6 +16,7 @@
 (load-library "treemacs")
 (load-library "icons")
 (load-library "dashboard")
+(load-library "vterm")
 
 ;; lsp elisp
 (load-library "lsp")
