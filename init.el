@@ -11,4 +11,5 @@
 (load-library "ui")
 (load-library "treemacs")
 (load-library "icons")
+(load-library "dashboard")
 
