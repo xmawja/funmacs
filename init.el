@@ -3,4 +3,6 @@
 
 (load-library "settings")
 (load-library "straight")
+(load-library "keymaps")
+
 
