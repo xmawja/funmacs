@@ -11,6 +11,13 @@
   :init
   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
   (setq lsp-keymap-prefix "C-c l")
+  ;; set c/c++ compilation and snippetg
+  (setq gc-cons-threshold (* 100 1024 1024)
+      read-process-output-max (* 1024 1024)
+      treemacs-space-between-root-nodes nil
+      company-idle-delay 0.0
+      company-minimum-prefix-length 1
+      lsp-idle-delay 0.1)  ;; clangd is fast
   :config
   ;; if you want which-key integration
   (lsp-enable-which-key-integration t)
