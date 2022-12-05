@@ -10,5 +10,7 @@
 (menu-bar-mode -1)                      ; disable menu bar
 (toggle-scroll-bar -1)                  ; disable scroll bar
 (tool-bar-mode -1)                      ; diasble tool bar
+(set-fringe-mode 10)                    ; give some breathing room
+
 
 
