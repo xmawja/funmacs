@@ -9,4 +9,5 @@
 (load-library "vertico")
 (load-library "magit")
 (load-library "ui")
+(load-library "treemacs")
 

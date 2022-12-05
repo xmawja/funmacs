@@ -30,6 +30,7 @@ recentf
 transient
 eshell
 history
+projects
 
 # Undo-tree save-files
 *.~undo-tree
