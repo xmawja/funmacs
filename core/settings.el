@@ -12,5 +12,7 @@
 (tool-bar-mode -1)                      ; diasble tool bar
 (set-fringe-mode 10)                    ; give some breathing room
 
+;; CHANGE TAB SIZE
+(setq-default tab-width 4)		; enable indent global
 
 
