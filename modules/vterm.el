@@ -9,7 +9,7 @@
 ;; Enable vterm-toggle.el
 (use-package vterm-toggle
   :bind
-  (("C-x v t"        . vterm-toggle)
+  (("C-c t"        . vterm-toggle)
    :map vterm-mode-map
    ("<C-return>" . vterm-toggle-insert-cd)
    ("s-n" . vterm-toggle-forward)
