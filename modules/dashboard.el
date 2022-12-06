@@ -12,6 +12,8 @@
   (setq dashboard-set-file-icons t)
   ;; Set the title
   (setq dashboard-banner-logo-title "Welcome to Funmacs")
+  ;; Content is not centered by default. To center, set
+  (setq dashboard-center-content t)
   )
 
 
