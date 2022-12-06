@@ -25,3 +25,6 @@
 
 ;; Set up the visible bell
 (setq visible-bell t)
+
+;; Set default connection mode to SSH
+(setq tramp-default-method "ssh")
