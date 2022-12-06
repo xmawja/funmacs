@@ -2,6 +2,7 @@
 ;; import directorys
 (add-to-list 'load-path "~/.emacs.d/core")
 (add-to-list 'load-path "~/.emacs.d/modules")
+(add-to-list 'load-path "~/.emacs.d/modules/ui")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp")
 
 ;; core elisp 
@@ -12,7 +13,7 @@
 ;; modules elisp
 (load-library "vertico")
 (load-library "magit")
-(load-library "ui")
+(load-library "themes")
 (load-library "treemacs")
 (load-library "icons")
 (load-library "dashboard")
