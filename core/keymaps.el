@@ -6,3 +6,7 @@
    (which-key-mode)
    (setq which-key-idle-delay 0.3)
    (which-key-setup-minibuffer))
+
+;; global keybinding
+;; recompile
+(global-set-key (kbd "<f5>") #'recompile) 
