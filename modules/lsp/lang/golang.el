@@ -3,7 +3,10 @@
 (use-package go-mode
   :straight t
   :hook
+  ;; set lsp-mode 
   (go-mode . lsp-deferred)
+  ;; set company as default code compilaton
+  (go-mode . company-mode)
   :config
   ;; GOPATH to gopls
   (add-to-list 'exec-path "~/go/bin")
