@@ -33,6 +33,7 @@
   (c++-mode . lsp-deferred)           ; ENABLE C++ PROGRAMING
   (c-or-c++-mode . lsp-deferred)      ; ENABLE C/C++ PROGRAMING
   (sh-mode . lsp-deferred)            ; ENABLE SHELL SCRIPT
+  (emacs-lisp-mode . lsp-deffered)
   )
 
 ;; Optionaly

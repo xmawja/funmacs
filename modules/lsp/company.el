@@ -2,7 +2,13 @@
 ;; Enable company.el
 (use-package company
   :after lsp-mode
-  :hook (prog-mode . company-mode)
+  :hook
+  (prog-mode . company-mode)
+  ;; enabel emacs lisp mode
+  (emacs-lisp-mode . company-mode)
+  ;; set company backends as default
+  (emacs-lisp-mode . (lambda ()
+					   (setq-local company-backends '(company-elisp))))
   :bind (:map company-active-map
          ("<tab>" . company-complete-selection))
         (:map lsp-mode-map
