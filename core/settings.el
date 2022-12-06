@@ -16,7 +16,9 @@
 (setq-default tab-width 4)		        ; enable indent global
 (setq-default c-basic-offset 4)         ; enable indent for C/C++
 
-:;; MAKE ESC QUITE PROMPTE
+;; MAKE ESC QUITE PROMPTE
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
-
+;; ENABLE BULTIN COPLATION
+(setq tab-always-indent 'complete)
+(add-to-list 'completion-styles 'initials t)
