@@ -28,3 +28,7 @@
 
 ;; Set default connection mode to SSH
 (setq tramp-default-method "ssh")
+
+;; autocomplete paired brackets
+(electric-pair-mode 1)
+
