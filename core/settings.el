@@ -22,3 +22,6 @@
 ;; ENABLE BULTIN COPLATION
 (setq tab-always-indent 'complete)
 (add-to-list 'completion-styles 'initials t)
+
+;; Set up the visible bell
+(setq visible-bell t)
