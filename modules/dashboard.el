@@ -10,6 +10,8 @@
   ;; add icons to the widget headings and their items
   (setq dashboard-set-heading-icons t)
   (setq dashboard-set-file-icons t)
+  ;; Set the title
+  (setq dashboard-banner-logo-title "Welcome to Funmacs")
   )
 
 
