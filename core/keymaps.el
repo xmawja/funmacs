@@ -9,4 +9,4 @@
 
 ;; global keybinding
 ;; recompile
-(global-set-key (kbd "<f5>") #'recompile) 
+(global-set-key (kbd "<f12>") #'recompile) 
