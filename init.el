@@ -27,7 +27,9 @@
 (load-library "company")
 (load-library "yasnippet")
 (load-library "flycheck")
+(load-library "dap")
 
 ;; lsp-lang elisp
 (load-library "rust")
 (load-library "golang")
+
