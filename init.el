@@ -32,4 +32,5 @@
 ;; lsp-lang elisp
 (load-library "rust")
 (load-library "golang")
+(load-library "markdown")
 
