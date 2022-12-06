@@ -7,5 +7,5 @@
   )
 
 ;; FONTS 
-(set-face-attribute 'default nil :font "Fira Code Retina" :height 110)
+(set-face-attribute 'default nil :font "Fira Code Retina" :height 120)
 
