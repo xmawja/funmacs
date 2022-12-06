@@ -4,6 +4,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules")
 (add-to-list 'load-path "~/.emacs.d/modules/ui")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang")
 
 ;; core elisp 
 (load-library "settings")
@@ -21,9 +22,11 @@
 (load-library "modeline")
 (load-library "projectile")
 
-;; lsp elisp
+;; modules-lsp elisp
 (load-library "lsp")
 (load-library "company")
 (load-library "yasnippet")
 (load-library "flycheck")
 
+;; lsp-lang elisp
+(load-library "rust")
