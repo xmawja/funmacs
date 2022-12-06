@@ -7,4 +7,7 @@
 		("C-x g" . magit-status))
 )
 
-
+;; Options
+;; magit todos
+(use-package magit-todos
+  :defer t)
