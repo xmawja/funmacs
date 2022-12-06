@@ -30,3 +30,4 @@
 
 ;; lsp-lang elisp
 (load-library "rust")
+(load-library "golang")
