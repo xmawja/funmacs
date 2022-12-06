@@ -13,6 +13,13 @@
       company-idle-delay 0.0
       company-minimum-prefix-length 1
       lsp-idle-delay 0.1)  ;; clangd is fast
+  :hook
+  (lsp-mode . efs/lsp-mode-setup)     ; Enable Header Breadcrumb
+  ;; LSP LANGUAGES SUPPORT
+  (c-mode . lsp-deferred)             ; ENABLE C PROGRAMING
+  (c++-mode . lsp-deferred)           ; ENABLE C++ PROGRAMING
+  (c-or-c++-mode . lsp-deferred)      ; ENABLE C/C++ PROGRAMING
+  (sh-mode . lsp-deferred)            ; ENABLE BASH SHELL SCRIPT
   :config
   ;; if you want which-key integration
   (lsp-enable-which-key-integration t)
@@ -24,14 +31,6 @@
   (defun efs/lsp-mode-setup ()
 	(setq lsp-headerline-breadcrumb-segments '(path-up-to-project file symbols))
 	(lsp-headerline-breadcrumb-mode))
-  :hook
-  (lsp-mode . efs/lsp-mode-setup)     ; Enable Header Breadcrumb 
-  ;; LSP LANGUAGES SUPPORT
-  (c-mode . lsp-deferred)             ; ENABLE C PROGRAMING
-  (c++-mode . lsp-deferred)           ; ENABLE C++ PROGRAMING
-  (c-or-c++-mode . lsp-deferred)      ; ENABLE C/C++ PROGRAMING
-  (sh-mode . lsp-deferred)            ; ENABLE SHELL SCRIPT
-  (emacs-lisp-mode . lsp-deffered)
   )
 
 ;; Optionaly
