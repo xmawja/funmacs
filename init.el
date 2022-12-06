@@ -18,6 +18,7 @@
 (load-library "dashboard")
 (load-library "vterm")
 (load-library "modeline")
+(load-library "projectile")
 
 ;; lsp elisp
 (load-library "lsp")
