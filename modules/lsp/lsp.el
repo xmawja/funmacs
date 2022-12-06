@@ -1,14 +1,4 @@
 ;;=============== LSP MODE ==================;;
-;; The path to lsp-mode needs to be added to load-path as well as the
-;; path to the `clients' subdirectory.
-(add-to-list 'load-path (expand-file-name "lib/lsp-mode" user-emacs-directory))
-(add-to-list 'load-path (expand-file-name "lib/lsp-mode/clients" user-emacs-directory))
-
-;; Header breadcumb Function
-(defun efs/lsp-mode-setup ()
-  (setq lsp-headerline-breadcrumb-segments '(path-up-to-project file symbols))
-  (lsp-headerline-breadcrumb-mode))
-
 ;; Enable lsp.el
 (use-package lsp-mode
   :straight t
@@ -26,6 +16,14 @@
   :config
   ;; if you want which-key integration
   (lsp-enable-which-key-integration t)
+  ;; The path to lsp-mode needs to be added to load-path as well as the
+  ;; path to the `clients' subdirectory.
+  (add-to-list 'load-path (expand-file-name "lib/lsp-mode" user-emacs-directory))
+  (add-to-list 'load-path (expand-file-name "lib/lsp-mode/clients" user-emacs-directory))
+  ;; Header breadcumb Function
+  (defun efs/lsp-mode-setup ()
+	(setq lsp-headerline-breadcrumb-segments '(path-up-to-project file symbols))
+	(lsp-headerline-breadcrumb-mode))
   :hook
   (lsp-mode . efs/lsp-mode-setup)     ; Enable Header Breadcrumb 
   ;; LSP LANGUAGES SUPPORT
