@@ -4,7 +4,7 @@
   :after lsp-mode
   :hook
   (prog-mode . company-mode)
-  ;; enabel emacs lisp mode
+  ;; enable emacs lisp mode
   (emacs-lisp-mode . company-mode)
   ;; set company backends as default
   (emacs-lisp-mode . (lambda ()
