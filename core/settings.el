@@ -1,4 +1,8 @@
 ;;================ GENERAL SETTINGS ================;;
+;; USER info
+(setq user-full-name "Muja Siyam"
+      user-mail-address "contact@muja.dev")
+
 ;; UTF-8
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
