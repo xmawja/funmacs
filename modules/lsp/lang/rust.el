@@ -1,5 +1,5 @@
 ;;==================== RUST LANG =================;;
-;; rust
+;; Enable rust.el
 (use-package rustic
   :straight t
   :bind (:map rustic-mode-map
@@ -14,3 +14,8 @@
   :config
   ;; set rustfmt on save
   (setq rustic-format-on-save t))
+
+;; Enable cargo.el
+(use-package cargo
+  :hook
+  (rust-mode . cargo-minor-mode))
