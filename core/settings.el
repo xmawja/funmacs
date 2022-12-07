@@ -7,6 +7,10 @@
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
 
+;; PERFORMANCE
+(setq gc-cons-threshold (* 100 1024 1024)) ; Increase garbage collector threshold 1MB
+(setq gc-cons-threshold 100000000)         ; Increase garbage collector threshold 100MB
+
 ;; ENABLE LINE NUMBERS
 (global-display-line-numbers-mode)
 
