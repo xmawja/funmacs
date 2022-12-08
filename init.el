@@ -21,6 +21,7 @@
 (load-library "vterm")
 (load-library "modeline")
 (load-library "projectile")
+(load-library "undo-tree")
 
 ;; modules-lsp elisp
 (load-library "lsp")
