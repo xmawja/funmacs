@@ -13,3 +13,10 @@
   :mode "\\.js\\'"
   :hook
   ((js2-mode . my/setup-js-mode)))
+
+;; Enable typescript-mode.el
+(use-package typescript-mode
+  :after (lsp-mode dap-mode)
+  :mode ("\\.ts\\'" "\\.tsx\\'")
+  :hook
+  ((typescript-mode . my/setup-js-mode)))
