@@ -34,4 +34,5 @@
 (load-library "rust")
 (load-library "golang")
 (load-library "markdown")
+(load-library "web")
 
