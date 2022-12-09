@@ -5,13 +5,14 @@
 (add-to-list 'load-path "~/.emacs.d/modules/ui")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang")
-
+(add-to-list 'load-path "~/.emacs.d/modules/org")
 ;; core elisp 
 (load-library "settings")
 (load-library "straight")
 (load-library "keymaps")
 
 ;; modules elisp
+(load-library "org")
 (load-library "vertico")
 (load-library "magit")
 (load-library "themes")
