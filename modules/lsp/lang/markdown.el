@@ -1,9 +1,12 @@
 ;;================= MARKDOWN ========================;;
-;; Enable markdown-mode.el non lsp
+;; Enable markdown-mode.el
 (use-package markdown-mode
   :straight t
-  :mode (("README\\.md\\'" . gfm-mode)
-         ("\\.md\\'" . markdown-mode)
-         ("\\.markdown\\'" . markdown-mode))
-  :init (setq markdown-command "multimarkdown"))
-
+  :hook
+  (markdown-mode . lsp-deferred)
+  :mode
+  (("README\\.md\\'" . gfm-mode)
+   ("\\.md\\'" . markdown-mode)
+   ("\\.markdown\\'" . markdown-mode))
+  :config
+  (require 'lsp-marksman))
