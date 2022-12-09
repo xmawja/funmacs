@@ -8,6 +8,7 @@
     (lsp)))
 
 ;; Enable js2-mode.el
+;; Bind js2-mode to any file with the *.js extension by default:
 (use-package js2-mode
   :after (lsp-mode dap-mode)
   :mode "\\.js\\'"
@@ -15,8 +16,16 @@
   ((js2-mode . my/setup-js-mode)))
 
 ;; Enable typescript-mode.el
+;; Bind typescript-mode to any file with the *.ts extension by default:
 (use-package typescript-mode
   :after (lsp-mode dap-mode)
   :mode ("\\.ts\\'" "\\.tsx\\'")
   :hook
   ((typescript-mode . my/setup-js-mode)))
+
+;; Enable risx-mode.el
+;; But if a *.js file  is inside a components directory, use rjsx-mode instead:
+(use-package rjsx-mode
+  :mode "\\.jsx\\'"
+  :mode "components\\/.*\\.js\\'"
+  :hook ((rjsx-mode . lsp-deferred)))
