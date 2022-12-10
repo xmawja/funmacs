@@ -2,8 +2,8 @@
 ;; Enable web-mode.el
 (use-package web-mode
   :mode
-  "\\.html?\\'"
-  "\\.css?\\'"
+  "\\.html?\\'" ;; html support
+  "\\.css?\\'"  ;; css support
   :hook ((web-mode . (lambda ()
                        (when
 						 ;; auto emerge emmet-ls
