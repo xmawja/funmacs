@@ -6,6 +6,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/lsp")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang")
 (add-to-list 'load-path "~/.emacs.d/modules/org")
+(add-to-list 'load-path "~/.emacs.d/modules/eglot")
 ;; core elisp 
 (load-library "settings")
 (load-library "straight")
@@ -37,4 +38,6 @@
 (load-library "markdown")
 (load-library "web")
 (load-library "javascript")
+;; modules-eglot elisp
+(load-library "eglot")
 
