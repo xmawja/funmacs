@@ -9,6 +9,9 @@
   ;; set company backends as default
   (emacs-lisp-mode . (lambda ()
 					   (setq-local company-backends '(company-elisp))))
+  (eglot-managed-mode-hook . (lambda ()
+                                     (add-to-list 'company-backends
+                            :                      '(company-capf :with company-yasnippet))))
   :bind (:map company-active-map
          ("<tab>" . company-complete-selection))
         (:map lsp-mode-map
