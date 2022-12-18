@@ -7,6 +7,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang")
 (add-to-list 'load-path "~/.emacs.d/modules/org")
 (add-to-list 'load-path "~/.emacs.d/modules/eglot")
+(add-to-list 'load-path "~/.emacs.d/modules/completion")
 
 ;; core elisp 
 (load-library "settings")
@@ -32,6 +33,8 @@
 ;; modules-eglot elisp
 (load-library "eglot")
 (load-library "all-the-icons")
+;; modules-completion elisp
+(load-library "corfu")
 
 ;; modules-lsp elisp
 (load-library "lsp")
