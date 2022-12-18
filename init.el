@@ -35,6 +35,7 @@
 (load-library "all-the-icons")
 ;; modules-completion elisp
 (load-library "corfu")
+(load-library "cape")
 
 ;; modules-lsp elisp
 (load-library "lsp")
