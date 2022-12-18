@@ -20,8 +20,8 @@
 ;; Enable rust.el
 (use-package rustic
   :straight t
-;;  :init
-;;  (setq rustic-lsp-client 'eglot)
+  :init
+  (setq rustic-lsp-client 'eglot)
   
   :bind (:map rustic-mode-map
               ("M-j" . lsp-ui-imenu)
