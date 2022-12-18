@@ -31,6 +31,7 @@
 
 ;; modules-eglot elisp
 (load-library "eglot")
+(load-library "all-the-icons")
 
 ;; modules-lsp elisp
 (load-library "lsp")
