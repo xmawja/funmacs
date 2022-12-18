@@ -1,7 +1,7 @@
 ;;===================== PROJECTILE ======================;;
 ;; Enable projectile.el
 (use-package projectile
-  :straght t
+  :straight t
   :init
   (projectile-mode +1)
   :bind (:map projectile-mode-map
