@@ -19,7 +19,8 @@
 
 ;; Enable org-mode.el
 (use-package org
-  :straight t
+  :ensure nil
+  :straight nil
   :after org
   :bind
   (:map global-map
@@ -38,9 +39,9 @@
   ;; closing timestamp or next line
   (setq org-log-done 'time)
   ;; take a note before closing the task.
-  (setq org-log-done 'note)
-  ;; Pamodoro timer tone
-  (setq org-clock-sound "~/.emacs.d/assets/sound/ding.wav")
-  :config
-  (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-  )
+ (setq org-log-done 'note)
+ ;; Pamodoro timer tone
+ (setq org-clock-sound "~/.emacs.d/assets/sound/ding.wav")
+ :config
+ (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+ )
