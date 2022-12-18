@@ -40,4 +40,3 @@
 ;; lsp-treemacs integration
 (use-package lsp-treemacs
   :after lsp)
-
