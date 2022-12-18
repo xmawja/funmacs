@@ -25,6 +25,7 @@
 (load-library "company")
 (load-library "yasnippet")
 (load-library "flycheck")
+;;(load-library "flycheck")
 (load-library "benchmark-init")
 
 ;;modules-ui elisp
