@@ -38,8 +38,8 @@
 
 ;; modules-lsp elisp
 (load-library "eglot")
-(load-library "lsp")
-(load-library "dap")
+;;(load-library "lsp")
+;;(load-library "dap")
 
 ;; lsp-lang elisp
 (load-library "rust")
