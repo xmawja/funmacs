@@ -19,6 +19,7 @@
 
 ;; Enable corfu.el
 (use-package corfu
+  ;;:straight (:files (:defaults "extensions/*.el"))
   ;; Optional customizations
   :custom
   (corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
@@ -41,18 +42,22 @@
   ;; See also `corfu-excluded-modes'.
   :init
   (global-corfu-mode)
+  ;; Aggressive completion, cheap prefix filtering.
+  (setq corfu-auto t
+              corfu-auto-delay 0
+              corfu-auto-prefix 0
+              completion-styles '(basic))
   :hook
   ;; yasnippet suggestion
   (eglot-managed-mode . ms/eglot-capf)
   :config
   ;; add suggestion for yasnippets when using eglot
   (defun ms/eglot-capf ()
-  (setq-local completion-at-point-functions
-              (list (cape-super-capf
-                     #'eglot-completion-at-point
-                     (cape-company-to-capf #'company-yasnippet)))))
+    (setq-local completion-at-point-functions
+		(list (cape-super-capf
+		       #'eglot-completion-at-point
+                       (cape-company-to-capf #'company-yasnippet)))))
   )
-
 
 ;; Use Dabbrev with Corfu!
 (use-package dabbrev
