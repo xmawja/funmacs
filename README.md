@@ -27,7 +27,7 @@
 
   <p align="center">
     <a href="https://github.com/xmawja/funmacs">
-      <img src="https://raw.githubusercontent.com/xmawja/funmacs/main/assets/img/screenshot.png" alt="Funmcs Logo" width="1366px" height="768px">
+      <img src="https://raw.githubusercontent.com/xmawja/funmacs/main/assets/img/screenshot.png" alt="Funmcs Logo" >
     </a>
   </p>
 </p>
