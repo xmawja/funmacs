@@ -54,12 +54,8 @@
 ;; modules-completion elisp
 ;; complation-corfu
 (load-library "corfu")
-(load-library "cape")
-(load-library "dabbrev")
-(load-library "kind-icon")
-(load-library "tempel")
 ;;complation-company
-;;(load-library "company")
+;; (load-library "company")
 
 ;; modules-lsp elisp
 (load-library "eglot")

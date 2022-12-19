@@ -65,7 +65,12 @@
   ;; :hook
   ;; ;; yasnippet suggestion for lsp-mode
   ;; (eglot-managed-mode . ms/eglot-capf)
-  ;; :config
+  :config
+  ;; load useful extension to be used in the same directory.
+  (load-library "cape")
+  (load-library "dabbrev")
+  (load-library "kind-icon")
+  (load-library "tempel")
   ;; ;; add suggestion for yasnippets when using eglot
   ;; (defun ms/eglot-capf ()
   ;;   (setq-local completion-at-point-functions
