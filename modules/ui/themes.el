@@ -36,6 +36,4 @@
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config))
 
-;; FONTS 
-(set-face-attribute 'default nil :font "Fira Code Retina" :height 120)
 

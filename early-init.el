@@ -35,6 +35,9 @@
 ;; disable package.el load at startup if you use somthing like straight.el. 
 (setq package-enable-at-startup nil)
 
+;; Set fonts to be used as default to speed init.
+(set-face-attribute 'default nil :font "Fira Code Retina" :height 120)
+
 ;; Prevent the glimpse of un-styled Emacs by disabling these UI elements early.
 (push '(menu-bar-lines . 0) default-frame-alist)
 (push '(tool-bar-lines . 0) default-frame-alist)
