@@ -54,6 +54,15 @@
   )
 
 
+;; Use Dabbrev with Corfu!
+(use-package dabbrev
+  ;; Swap M-/ and C-M-/
+  :bind (("M-/" . dabbrev-completion)
+         ("C-M-/" . dabbrev-expand))
+  ;; Other useful Dabbrev configurations.
+  :custom
+  (dabbrev-ignored-buffer-regexps '("\\.\\(?:pdf\\|jpe?g\\|png\\)\\'")))
+
 ;; show icons at complation point.
 ;; Completion kind text/icon prefix labelling for emacs in-region completion
 (use-package kind-icon
