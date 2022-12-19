@@ -32,7 +32,7 @@
       company-minimum-prefix-length 1
       lsp-idle-delay 0.1)  ;; clangd is fast
   :hook
-  (lsp-mode . efs/lsp-mode-setup)     ; Enable Header Breadcrumb
+  (lsp-mode . ms/lsp-mode-setup)      ; Enable Header Breadcrumb
   ;; LSP LANGUAGES SUPPORT
   (c-mode . lsp-deferred)             ; ENABLE C PROGRAMING
   (c++-mode . lsp-deferred)           ; ENABLE C++ PROGRAMING
@@ -46,7 +46,7 @@
   (add-to-list 'load-path (expand-file-name "lib/lsp-mode" user-emacs-directory))
   (add-to-list 'load-path (expand-file-name "lib/lsp-mode/clients" user-emacs-directory))
   ;; Header breadcumb Function
-  (defun efs/lsp-mode-setup ()
+  (defun ms/lsp-mode-setup ()
 	(setq lsp-headerline-breadcrumb-segments '(path-up-to-project file symbols))
 	(lsp-headerline-breadcrumb-mode))
   )
