@@ -52,6 +52,8 @@
   (global-corfu-mode)
   ;; Enable popupinfo
   (corfu-popupinfo-mode t)
+  ;; Enable history
+  (corfu-history-mode t)
   ;; Aggressive completion, cheap prefix filtering.
   (setq corfu-auto t
               corfu-auto-delay 0
