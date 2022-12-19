@@ -57,6 +57,7 @@
 (load-library "cape")
 (load-library "dabbrev")
 (load-library "kind-icon")
+(load-library "tempel")
 ;;complation-company
 ;;(load-library "company")
 
