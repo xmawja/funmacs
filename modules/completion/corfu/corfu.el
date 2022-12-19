@@ -57,6 +57,9 @@
               corfu-auto-delay 0
               corfu-auto-prefix 0
               completion-styles '(basic))
+  :bind (:map corfu-map
+              ("C-n" . corfu-next)
+              ("C-p" . corfu-previous))
   :hook
   ;; yasnippet suggestion
   (eglot-managed-mode . ms/eglot-capf)
