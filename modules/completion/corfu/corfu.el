@@ -40,4 +40,15 @@
   ;; This is recommended since Dabbrev can be used globally (M-/).
   ;; See also `corfu-excluded-modes'.
   :init
-  (global-corfu-mode))
+  (global-corfu-mode)
+    :hook
+  ;; yasnippet suggestion
+  (eglot-managed-mode . ms/eglot-capf)
+  :config
+  ;; add suggestion for yasnippets when using eglot
+  (defun ms/eglot-capf ()
+  (setq-local completion-at-point-functions
+              (list (cape-super-capf
+                     #'eglot-completion-at-point
+                     (cape-company-to-capf #'company-yasnippet)))))
+  )
