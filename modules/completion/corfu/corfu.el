@@ -19,7 +19,15 @@
 
 ;; Enable corfu.el
 (use-package corfu
-  ;;:straight (:files (:defaults "extensions/*.el"))
+   :straight (corfu :files (:defaults "extensions/*")
+                    :includes
+		    (corfu-echo       ;; corfu-echo-mode displays a brief candidate documentation in the echo area.
+		     corfu-history    ;; corfu-history-mode remembers selected candidates and sorts the candidates by their history position.
+		     corfu-indexed    ;; corfu-indexed-mode allows you to select indexed candidates with prefix arguments.
+		     corfu-info       ;; Actions to access the candidate location and documentation.
+		     corfu-popupinfo  ;; Display candidate documentation or source in a popup next to the candidate menu.
+		     corfu-quick      ;; Commands to select using Avy-style quick keys.
+		     ))
   ;; Optional customizations
   :custom
   (corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
@@ -42,6 +50,8 @@
   ;; See also `corfu-excluded-modes'.
   :init
   (global-corfu-mode)
+  ;; Enable popupinfo
+  (corfu-popupinfo-mode t)
   ;; Aggressive completion, cheap prefix filtering.
   (setq corfu-auto t
               corfu-auto-delay 0
