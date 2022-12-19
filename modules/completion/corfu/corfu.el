@@ -62,14 +62,14 @@
   :bind (:map corfu-map
               ("C-n" . corfu-next)
               ("C-p" . corfu-previous))
-  :hook
-  ;; yasnippet suggestion
-  (eglot-managed-mode . ms/eglot-capf)
-  :config
-  ;; add suggestion for yasnippets when using eglot
-  (defun ms/eglot-capf ()
-    (setq-local completion-at-point-functions
-		(list (cape-super-capf
-		       #'eglot-completion-at-point
-                       (cape-company-to-capf #'company-yasnippet)))))
+  ;; :hook
+  ;; ;; yasnippet suggestion for lsp-mode
+  ;; (eglot-managed-mode . ms/eglot-capf)
+  ;; :config
+  ;; ;; add suggestion for yasnippets when using eglot
+  ;; (defun ms/eglot-capf ()
+  ;;   (setq-local completion-at-point-functions
+  ;; 		(list (cape-super-capf
+  ;; 		       #'eglot-completion-at-point
+  ;;                      (cape-company-to-capf #'company-yasnippet)))))
   )
