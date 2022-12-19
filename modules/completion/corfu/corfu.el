@@ -29,7 +29,7 @@
   ;; (corfu-preview-current nil)    ;; Disable current candidate preview
   ;; (corfu-preselect-first nil)    ;; Disable candidate preselection
   ;; (corfu-on-exact-match nil)     ;; Configure handling of exact matches
-  ;; (corfu-scroll-margin 5)        ;; Use scroll margin
+  (corfu-scroll-margin 5)        ;; Use scroll margin
 
   ;; Enable Corfu only for certain modes.
   ;; :hook ((prog-mode . corfu-mode)
