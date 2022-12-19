@@ -61,7 +61,12 @@
               completion-styles '(basic))
   :bind (:map corfu-map
               ("C-n" . corfu-next)
-              ("C-p" . corfu-previous))
+              ("C-p" . corfu-previous)
+	      ("<escape>" . corfu-quit)
+              ("<return>" . corfu-insert)
+              ("M-d" . corfu-show-documentation)
+              ("M-l" . corfu-show-location)
+	      )
   ;; :hook
   ;; ;; yasnippet suggestion for lsp-mode
   ;; (eglot-managed-mode . ms/eglot-capf)
