@@ -20,7 +20,7 @@
 ;; import directorys
 (add-to-list 'load-path "~/.emacs.d/core/")
 (add-to-list 'load-path "~/.emacs.d/modules/")
-(add-to-list 'load-path "~/.emacs.d/modules/org/")
+;;(add-to-list 'load-path "~/.emacs.d/modules/org/")
 (add-to-list 'load-path "~/.emacs.d/modules/ui/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/")
@@ -34,7 +34,7 @@
 (load-library "keymaps")
 
 ;; modules elisp
-(load-library "org")
+;; (load-library "org")
 (load-library "vertico")
 (load-library "magit")
 (load-library "treemacs")
