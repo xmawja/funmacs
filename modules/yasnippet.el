@@ -21,10 +21,15 @@
 (use-package yasnippet
   :straight t
   :config
-  (yas-global-mode 1) ; activate yaggsnippet as global mode
+  ;; use yasnippet as a global mode.
+  ;;(yas-global-mode 1)
+  ;; load yasnippet by buffer to increse performance.
+  (yas-reload-all)
   :hook
   (prog-mode . yas-minor-mode)
   )
-;; YASNIPPET-SNIPPETS
+
+;; some useful packages that provide extra functionalty.
+;; yasnippet-snippet.el
 (use-package yasnippet-snippets
   :straight t)
