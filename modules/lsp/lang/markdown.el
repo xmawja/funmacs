@@ -21,8 +21,9 @@
 (use-package markdown-mode
   :straight t
   :hook
+  ;; uncomment and choose your prefared lsp packend server.
   ;; lsp-mode.
-  (markdown-mode . lsp-deferred)
+  ;;(markdown-mode . lsp-deferred)
   ;; eglot mode.
   (markdown-mode . eglot-ensure)
   :mode
