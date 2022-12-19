@@ -24,6 +24,7 @@
   (yas-global-mode 1) ; activate yaggsnippet as global mode
   :hook
   (lsp-mode . yas-minor-mode)
+  (eglot-mode . yas-minor-mode)
   )
 ;; YASNIPPET-SNIPPETS
 (use-package yasnippet-snippets
