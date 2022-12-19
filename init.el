@@ -18,13 +18,15 @@
 ;; see <https://www.gnu.org/licenses/>.
 
 ;; import directorys
-(add-to-list 'load-path "~/.emacs.d/core")
-(add-to-list 'load-path "~/.emacs.d/modules")
-(add-to-list 'load-path "~/.emacs.d/modules/org")
-(add-to-list 'load-path "~/.emacs.d/modules/ui")
-(add-to-list 'load-path "~/.emacs.d/modules/lsp")
-(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang")
-(add-to-list 'load-path "~/.emacs.d/modules/completion")
+(add-to-list 'load-path "~/.emacs.d/core/")
+(add-to-list 'load-path "~/.emacs.d/modules/")
+(add-to-list 'load-path "~/.emacs.d/modules/org/")
+(add-to-list 'load-path "~/.emacs.d/modules/ui/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/")
+(add-to-list 'load-path "~/.emacs.d/modules/completion/")
+(add-to-list 'load-path "~/.emacs.d/modules/completion/corfu/")
+(add-to-list 'load-path "~/.emacs.d/modules/completion/company/")
 
 ;; core elisp 
 (load-library "settings")
@@ -39,7 +41,6 @@
 (load-library "vterm")
 ;;(load-library "projectile")
 (load-library "undo-tree")
-;;(load-library "company")
 (load-library "yasnippet")
 ;;(load-library "flycheck")
 (load-library "benchmark-init")
@@ -51,8 +52,11 @@
 (load-library "modeline")
 
 ;; modules-completion elisp
+;; complation-corfu
 (load-library "corfu")
 (load-library "cape")
+;;complation-company
+;;(load-library "company")
 
 ;; modules-lsp elisp
 (load-library "eglot")
