@@ -21,10 +21,24 @@
 (use-package markdown-mode
   :straight t
   :hook
+  ;; lsp-mode.
   (markdown-mode . lsp-deferred)
+  ;; eglot mode.
+  (markdown-mode . eglot-ensure)
   :mode
   (("README\\.md\\'" . gfm-mode)
    ("\\.md\\'" . markdown-mode)
    ("\\.markdown\\'" . markdown-mode))
+  ;;:commands (markdown-mode gfm-mode)
+  :init
+  ;; tools command to preview.
+  (setq markdown-command "pandoc -t html5")
   :config
-  (require 'lsp-marksman))
+  ;; load marksman directory to be placed of.
+  (add-to-list 'exec-path "~/.local/bin")
+  ;; uncomment if you are using lsp-mode.
+  ;;(require 'lsp-marksman)
+  ;; configuration for eglot using marksman
+  (add-to-list 'eglot-server-programs '(markdown-mode . ("marksman")))
+  )
+
