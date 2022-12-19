@@ -17,8 +17,9 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; DISABLE package.el INFAVOUR OF straight.el
-(setq package-enable-at-startup nil)
+;; disable package.el to load package as startup time.
+;; comment if you set it in early-init.el
+;;(setq package-enable-at-startup nil)
 
 ;; BOOTSTRAPING straight.el 
 (defvar bootstrap-version)
