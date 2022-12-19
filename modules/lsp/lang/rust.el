@@ -20,7 +20,12 @@
 ;; Enable rust.el
 (use-package rustic
   :straight t
+  :hook
+  ;; auto-save mode.
+  (rustic-mode . rustic-mode-auto-save-hook)
   :init
+  ;; the default lsp is lsp-mode but we can changet to eglot by.
+  ;; uncoment if you are using eglot mode.
   (setq rustic-lsp-client 'eglot)
   
   :bind (:map rustic-mode-map
@@ -31,11 +36,22 @@
               ("C-c C-c r" . lsp-rename)
               ("C-c C-c q" . lsp-workspace-restart)
               ("C-c C-c Q" . lsp-workspace-shutdown)
-              ("C-c C-c s" . lsp-rust-analyzer-status))
+	      ("C-c C-c s" . lsp-rust-analyzer-status))
   :config
+  ;; rust cargo bin PATH.
+  (add-to-list 'exec-path "~/.cargo/bin")
+  ;; the default lsp is lsp-mode but we can changet to eglot by.
+  ;;(setq rustic-analyzer-command '("~/.cargo/bin/rust-analyzer"))
+  ;; eglot mode.
+  ;; (setq rustic-lsp-client 'eglot)
   ;; set rustfmt on save
-  (setq rustic-format-on-save t))
-
+  (setq rustic-format-on-save t)
+  ;; auto-save.
+  (defun rustic-mode-auto-save-hook ()
+    "Enable auto-saving in rustic-mode buffers."
+    (when buffer-file-name
+      (setq-local compilation-ask-about-save nil)))
+  )
 ;; Enable cargo.el
 (use-package cargo
   :hook
