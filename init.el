@@ -55,6 +55,8 @@
 ;; complation-corfu
 (load-library "corfu")
 (load-library "cape")
+(load-library "dabbrev")
+(load-library "kind-icon")
 ;;complation-company
 ;;(load-library "company")
 

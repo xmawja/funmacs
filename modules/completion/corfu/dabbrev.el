@@ -1,4 +1,4 @@
-;;; yasnippet.el -*- lexical-binding: t; -*-
+;;; dabbrev.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,14 +17,11 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; Enable yasnippet.el
-(use-package yasnippet
-  :straight t
-  :config
-  (yas-global-mode 1) ; activate yaggsnippet as global mode
-  :hook
-  (prog-mode . yas-minor-mode)
-  )
-;; YASNIPPET-SNIPPETS
-(use-package yasnippet-snippets
-  :straight t)
+;; Enable dabbrev.el with Corfu!
+(use-package dabbrev
+  ;; Swap M-/ and C-M-/
+  :bind (("M-/" . dabbrev-completion)
+         ("C-M-/" . dabbrev-expand))
+  ;; Other useful Dabbrev configurations.
+  :custom
+  (dabbrev-ignored-buffer-regexps '("\\.\\(?:pdf\\|jpe?g\\|png\\)\\'")))

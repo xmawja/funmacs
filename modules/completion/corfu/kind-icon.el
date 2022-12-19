@@ -1,4 +1,4 @@
-;;; yasnippet.el -*- lexical-binding: t; -*-
+;;; kind-icon.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,14 +17,11 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; Enable yasnippet.el
-(use-package yasnippet
-  :straight t
+;; Enable kind-icon.el with corfu!.
+(use-package kind-icon
+  :ensure t
+  :after corfu
+  :custom
+  (kind-icon-default-face 'corfu-default) ; to compute blended backgrounds correctly
   :config
-  (yas-global-mode 1) ; activate yaggsnippet as global mode
-  :hook
-  (prog-mode . yas-minor-mode)
-  )
-;; YASNIPPET-SNIPPETS
-(use-package yasnippet-snippets
-  :straight t)
+  (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
