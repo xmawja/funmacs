@@ -28,6 +28,13 @@
   (c-mode . eglot-ensure)
   ;; set c++ language hook
   (c++-mode . eglot-ensure)
+  ;; set shell mode 'bash'
+  ;; (sh-mode . eglot-ensure)
   :config
   (add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
+  ;; enable zsh script to use 'sh-mode'.
+  (add-hook 'sh-mode-hook
+            (lambda ()
+              (if (string-match "\\.zsh$" buffer-file-name)
+                  (sh-set-shell "zsh"))))
   )
