@@ -19,8 +19,10 @@
 
 ;; Enable org-mode.el
 (use-package org
+  ;; ignore org.el from pull using package.el
   :ensure nil
-  :straight nil
+  ;; ignore org.el from pull using straight.el.
+  :straight (:type built-in)
   :after org
   :bind
   (:map global-map
