@@ -22,12 +22,19 @@
       user-mail-address "contact@muja.dev")
 
 ;; UTF-8
-(set-default-coding-systems 'utf-8)     ; Default to utf-8 encoding
-(prefer-coding-system       'utf-8)     ; Add utf-8 at the front for automatic detection.
-(set-default-coding-systems 'utf-8)     ; Set default value of various coding systems
-(set-terminal-coding-system 'utf-8)     ; Set coding system of terminal output
-(set-keyboard-coding-system 'utf-8)     ; Set coding system for keyboard input on TERMINAL
-(set-language-environment "UTF-8")       ; Set up multilingual environment
+;; set default charcters encoding to UTF-8.
+;; PR from `hkjels`
+(setq-default default-enable-multibyte-characters t)
+(prefer-coding-system 'utf-8)
+(set-language-environment "UTF-8")
+;; ;; set default UTF-8 multiline and leve it for redability
+;; (set-default-coding-systems 'utf-8)     ; Default to utf-8 encoding
+;; (prefer-coding-system       'utf-8)     ; Add utf-8 at the front for automatic detection.
+;; (set-default-coding-systems 'utf-8)     ; Set default value of various coding systems
+;; (set-terminal-coding-system 'utf-8)     ; Set coding system of terminal output
+;; (set-keyboard-coding-system 'utf-8)     ; Set coding system for keyboard input on TERMINAL
+;; (set-language-environment "UTF-8")      ; Set up multilingual environment
+
 
 ;; PERFORMANCE
 ;;(setq gc-cons-threshold (* 100 1024 1024)) ; Increase garbage collector threshold 1MB
