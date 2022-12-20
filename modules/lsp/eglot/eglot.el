@@ -19,8 +19,10 @@
 
 ;; Enable eglot.el
 (use-package eglot
+  ;; ignore eglot from pull using package.el
   :ensure nil
-  :straight nil
+  ;; ignore eglot from pull using straight.el
+  :straight (:type built-in)
   :hook
   ;; set c language hook
   (c-mode . eglot-ensure)
