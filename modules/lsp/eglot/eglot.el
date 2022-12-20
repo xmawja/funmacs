@@ -22,7 +22,9 @@
   :ensure nil
   :straight nil
   :hook
+  ;; set c language hook
   (c-mode . eglot-ensure)
+  ;; set c++ language hook
   (c++-mode . eglot-ensure)
   :config
   (add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
