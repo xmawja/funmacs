@@ -50,10 +50,16 @@
   ;; See also `corfu-excluded-modes'.
   :init
   (global-corfu-mode)
-  ;; Enable popupinfo
-  (corfu-popupinfo-mode t)
   ;; Enable history
   (corfu-history-mode t)
+  ;; Enable indexed
+  (corfu-indexed-mode t)
+  ;; ;; Enable info
+  ;; (corfu-info-mode t)
+  ;; Enable popupinfo
+  (corfu-popupinfo-mode t)
+  ;; ;; Enable quick
+  ;; (corfu-quick-mode t)
   ;; Aggressive completion, cheap prefix filtering.
   (setq corfu-auto t
               corfu-auto-delay 0
