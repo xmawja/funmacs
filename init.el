@@ -54,7 +54,7 @@
 ;; modules-completion elisp
 ;; complation-corfu
 (load-library "corfu")
-;;complation-company
+;; ;; complation-company
 ;; (load-library "company")
 
 ;; modules-lsp elisp
