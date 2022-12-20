@@ -19,6 +19,8 @@
 
 ;; Enable eglot.el
 (use-package eglot
+  :ensure nil
+  :straight nil
   :hook
   (c-mode . eglot-ensure)
   (c++-mode . eglot-ensure)
