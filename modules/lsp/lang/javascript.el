@@ -17,33 +17,50 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; Function to setup javascript and typescript mode
-(defun my/setup-js-mode ()
-  (require 'dap-firefox)
-  (require 'dap-chrome)
-  (setq tab-width 2)
-  (when (require 'lsp-javascript nil t)
-    (lsp)))
+;; ;; Function to setup javascript and typescript on lsp-mode.el
+;; (defun my/setup-js-mode ()
+;;   (require 'dap-firefox)
+;;   (require 'dap-chrome)
+;;   (setq tab-width 2)
+;;   (when (require 'lsp-javascript nil t)
+;;     (lsp)))
 
 ;; Enable js2-mode.el
 ;; Bind js2-mode to any file with the *.js extension by default:
 (use-package js2-mode
-  :after (lsp-mode dap-mode)
+  ;; ;; uncomment if youre unig lsp-mode.el
+  ;; :after (lsp-mode dap-mode)
   :mode "\\.js\\'"
   :hook
-  ((js2-mode . my/setup-js-mode)))
+  ;; To install it as your major mode for JavaScript editing:
+  ;;   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+  ;; Alternatively, to install it as a minor mode just for JavaScript linting,
+  ;; you must add it to the appropriate major-mode hook.  Normally this would be:
+  ;; (add-hook 'js-mode-hook 'js2-minor-mode)
+  ;; uncomment if you are using ls-mode.el
+  ;;((js2-mode . my/setup-js-mode))
+  ;; uncomment if your are using eglot.el.
+  (js2-mode . eglot-ensure))
 
 ;; Enable typescript-mode.el
 ;; Bind typescript-mode to any file with the *.ts extension by default:
 (use-package typescript-mode
-  :after (lsp-mode dap-mode)
+  ;; ;; uncomment if youre using lsp-mode.el
+  ;; :after (lsp-mode dap-mode)
   :mode ("\\.ts\\'" "\\.tsx\\'")
   :hook
-  ((typescript-mode . my/setup-js-mode)))
+  ;; uncomment if you are using lsp-mode.el
+  ;; ((typescript-mode . my/setup-js-mode))
+  ;; uncomment if you are using eglot.el
+  (typescript-mode . eglot-ensure))
 
 ;; Enable risx-mode.el
 ;; But if a *.js file  is inside a components directory, use rjsx-mode instead:
 (use-package rjsx-mode
   :mode "\\.jsx\\'"
   :mode "components\\/.*\\.js\\'"
-  :hook ((rjsx-mode . lsp-deferred)))
+  :hook
+  ;; uncomment if youre using lsp-mode.el
+  ;; ((rjsx-mode . lsp-deferred))
+  ;; uncomment if youre using eglot.el.
+  (rjsx-mode . eglot-ensure))
