@@ -41,6 +41,8 @@
   ;; - a cons of '("path/to/your/image.png" . "path/to/your/text.txt")
   ;; Content is not centered by default. To center, set
   (setq dashboard-center-content t)
+  ;; choose the default project managment backend
+  (setq dashboard-projects-backend 'project-el)
   ;; To customize which widgets are displayed
   (setq dashboard-items '((recents  . 5)
                         (bookmarks . 5)
