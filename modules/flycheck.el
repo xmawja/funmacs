@@ -17,7 +17,8 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; Enable flycheck.el
-(use-package flycheck
-  :straight t
-  :init (global-flycheck-mode))
+;; ;; Enable flycheck.el
+;; uncomment if you want to use it in favor of builtin flymake.
+;; (use-package flycheck
+;;   :straight t
+;;   :init (global-flycheck-mode))
