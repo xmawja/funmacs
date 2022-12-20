@@ -1,4 +1,4 @@
-;;; org.el -*- lexical-binding: t; -*-
+;;; org-mode.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
