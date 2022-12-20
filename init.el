@@ -39,7 +39,7 @@
 (load-library "magit")
 (load-library "treemacs")
 (load-library "vterm")
-;;(load-library "projectile")
+;; (load-library "projectile")
 (load-library "undo-tree")
 (load-library "yasnippet")
 ;;(load-library "flycheck")
