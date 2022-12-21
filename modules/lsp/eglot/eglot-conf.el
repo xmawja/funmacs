@@ -18,4 +18,4 @@
 ;; see <https://www.gnu.org/licenses/>.
 
 ;; load eglot.el config
-(load-library "eglot-mode")
+(load-library "eglot")

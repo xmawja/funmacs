@@ -20,6 +20,6 @@
 ;; load useful corfu extensions.
 (load-library "corfu")
 (load-library "cape")
-(load-library "dabbrev-mode")
+(load-library "dabbrev")
 (load-library "kind-icon")
 (load-library "tempel")
