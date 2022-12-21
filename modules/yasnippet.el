@@ -20,13 +20,16 @@
 ;; Enable yasnippet.el
 (use-package yasnippet
   :straight t
+  :hook
+  ;; set yasnippet for prog-mode as minor mode.
+  (prog-mode . yas-minor-mode)
   :config
   ;; use yasnippet as a global mode.
   ;;(yas-global-mode 1)
   ;; load yasnippet by buffer to increse performance.
   (yas-reload-all)
-  :hook
-  (prog-mode . yas-minor-mode)
+  ;; user snippets directory
+  (setq-default yas-snippet-dirs '("~/.emacs.d/snippets"))
   )
 
 ;; some useful packages that provide extra functionalty.
