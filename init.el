@@ -65,6 +65,7 @@
 ;; (load-library "dap")
 
 ;; lsp-lang elisp
+(load-library "sh")
 (load-library "rust")
 (load-library "golang")
 (load-library "python3")

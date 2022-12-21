@@ -1,4 +1,4 @@
-;;; eglot.el -*- lexical-binding: t; -*-
+;;; sh.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,17 +17,13 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; Enable eglot.el
-(use-package eglot
-  ;; ignore eglot from pull using package.el
-  :ensure nil
-  ;; ignore eglot from pull using straight.el
+;; Enable sh-script.el
+(use-package sh-script
   :straight (:type built-in)
+  :mode
+  ;; enable zsh script to use 'sh-mode'. 
+  ("\\.zsh\\'" . sh-mode)
   :hook
-  ;; set c language hook
-  (c-mode . eglot-ensure)
-  ;; set c++ language hook
-  (c++-mode . eglot-ensure)
-  :config
-  (add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
+  ;; uncommented if youre using eglot
+  (sh-mode . eglot-ensure)
   )
