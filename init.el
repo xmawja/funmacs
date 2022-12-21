@@ -26,6 +26,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/")
 (add-to-list 'load-path "~/.emacs.d/modules/completion/")
 (add-to-list 'load-path "~/.emacs.d/modules/completion/corfu/")
+(add-to-list 'load-path "~/.emacs.d/modules/completion/vertico")
 (add-to-list 'load-path "~/.emacs.d/modules/completion/company/")
 
 ;; core elisp 
@@ -35,7 +36,6 @@
 
 ;; modules elisp
 (load-library "org-mode")
-(load-library "vertico")
 (load-library "magit")
 (load-library "treemacs")
 (load-library "vterm")
@@ -52,9 +52,11 @@
 (load-library "modeline")
 
 ;; modules-completion elisp
-;; complation-corfu
+;; completion-corfu
 (load-library "corfu")
-;; ;; complation-company
+;; completion-vertigo
+(load-library "vertico")
+;; ;; completion-company
 ;; (load-library "company")
 
 ;; modules-lsp elisp
