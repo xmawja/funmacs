@@ -65,7 +65,7 @@
 ;; lsp-lang elisp
 (load-library "rust")
 (load-library "golang")
+(load-library "python3")
 (load-library "markdown")
 (load-library "web")
 (load-library "javascript")
-
