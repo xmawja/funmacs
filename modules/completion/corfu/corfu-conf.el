@@ -18,6 +18,7 @@
 ;; see <https://www.gnu.org/licenses/>.
 
 ;; load useful corfu extensions.
+(load-library "corfu")
 (load-library "cape")
 (load-library "dabbrev-mode")
 (load-library "kind-icon")
