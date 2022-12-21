@@ -18,7 +18,6 @@
 ;; see <https://www.gnu.org/licenses/.>
 
 ;; load modules config.
-(load-library "org-mode")
 (load-library "magit")
 (load-library "treemacs")
 (load-library "vterm")
