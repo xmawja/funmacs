@@ -19,7 +19,20 @@
 
 ;; Enable vertico
 (use-package vertico
-  :straight t
+  :straight (vertico :files (:defaults "extensions/*")
+                     :includes
+                     (vertico-buffer         ;; vertico-buffer-mode to display Vertico in a separate buffer.
+                      vertico-directory      ;; Commands for Ido-like directory navigation.
+                      vertico-flat           ;; vertico-flat-mode to enable a flat, horizontal display.
+                      vertico-grid           ;; vertico-grid-mode to enable a grid display.
+                      vertico-indexed        ;; vertico-indexed-mode to select indexed candidates with prefix arguments.
+                      vertico-mouse          ;; vertico-mouse-mode to support for scrolling and candidate selection.
+                      vertico-multiform      ;; Configure Vertico modes per command or completion category.
+                      vertico-quick          ;; Commands to select using Avy-style quick keys.
+                      vertico-repeat         ;; The command vertico-repeat repeats the last completion session.
+                      vertico-reverse        ;; vertico-reverse-mode to reverse the display.
+                      vertico-unobtrusive    ;; vertico-unobtrusive-mode displays only the topmost candidate.
+                      ))
   :init
   (vertico-mode)
 
@@ -41,33 +54,3 @@
   :straight t
   :init
   (savehist-mode))
-
-;; A few more useful configurations...
-(use-package emacs
-  :straight t
-  :init
-  ;; Add prompt indicator to `completing-read-multiple'.
-  ;; We display [CRM<separator>], e.g., [CRM,] if the separator is a comma.
-  (defun crm-indicator (args)
-    (cons (format "[CRM%s] %s"
-                  (replace-regexp-in-string
-                   "\\`\\[.*?]\\*\\|\\[.*?]\\*\\'" ""
-                   crm-separator)
-                  (car args))
-          (cdr args)))
-  (advice-add #'completing-read-multiple :filter-args #'crm-indicator)
-
-  ;; Do not allow the cursor in the minibuffer prompt
-  (setq minibuffer-prompt-properties
-        '(read-only t cursor-intangible t face minibuffer-prompt))
-  (add-hook 'minibuffer-setup-hook #'cursor-intangible-mode)
-
-  ;; Emacs 28: Hide commands in M-x which do not work in the current mode.
-  ;; Vertico commands are hidden in normal buffers.
-  ;; (setq read-extended-command-predicate
-  ;;       #'command-completion-default-include-p)
-
-  ;; Enable recursive minibuffers
-  (setq enable-recursive-minibuffers t))
-
-
