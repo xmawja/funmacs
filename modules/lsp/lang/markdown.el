@@ -40,6 +40,8 @@
   ;; uncomment if you are using lsp-mode.
   ;;(require 'lsp-marksman)
   ;; configuration for eglot using marksman
-  (add-to-list 'eglot-server-programs '(markdown-mode . ("marksman")))
+  (with-eval-after-load 'eglot
+    (add-to-list 'eglot-server-programs
+                 '(markdown-mode . ("marksman" "--stdio"))))
   )
 
