@@ -42,7 +42,7 @@
 (load-library "ui-conf")
 
 ;; modules-lsp-eglot elisp
-(load-library "eglot")
+(load-library "eglot-conf")
 ;; modules-lsp-lsp-mode elisp
 ;; (load-library "lsp")
 ;; (load-library "dap")
