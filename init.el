@@ -22,54 +22,37 @@
 (add-to-list 'load-path "~/.emacs.d/modules/")
 (add-to-list 'load-path "~/.emacs.d/modules/org/")
 (add-to-list 'load-path "~/.emacs.d/modules/ui/")
-(add-to-list 'load-path "~/.emacs.d/modules/lsp/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/eglot/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lsp-mode/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/")
-(add-to-list 'load-path "~/.emacs.d/modules/completion/")
 (add-to-list 'load-path "~/.emacs.d/modules/completion/corfu/")
 (add-to-list 'load-path "~/.emacs.d/modules/completion/vertico")
 (add-to-list 'load-path "~/.emacs.d/modules/completion/company/")
 
 ;; core elisp 
-(load-library "settings")
-(load-library "straight")
-(load-library "keymaps")
+(load-library "core-conf")
 
 ;; modules elisp
-(load-library "org-mode")
-(load-library "magit")
-(load-library "treemacs")
-(load-library "vterm")
-;; (load-library "projectile")
-(load-library "undo-tree")
-(load-library "yasnippet")
-;; (load-library "flycheck")
-(load-library "benchmark-init")
+(load-library "modules-conf")
+
+;; modules-org elisp
+(load-library "org-conf")
 
 ;;modules-ui elisp
-(load-library "themes")
-(load-library "all-the-icons")
-(load-library "dashboard")
-(load-library "modeline")
+(load-library "ui-conf")
 
-;; modules-completion elisp
-;; completion-corfu
-(load-library "corfu")
-;; completion-vertigo
-(load-library "vertico")
-;; ;; completion-company
-;; (load-library "company")
-
-;; modules-lsp elisp
+;; modules-lsp-eglot elisp
 (load-library "eglot")
+;; modules-lsp-lsp-mode elisp
 ;; (load-library "lsp")
 ;; (load-library "dap")
+;; modules-lsp-lang elisp
+(load-library "lang-conf")
 
-;; lsp-lang elisp
-(load-library "sh")
-(load-library "rust")
-(load-library "golang")
-(load-library "python3")
-(load-library "markdown")
-(load-library "web")
-(load-library "javascript")
-(load-library "yaml")
+;; modules-completion-corfu elisp
+(load-library "corfu-conf")
+;; modules-completion-vertigo elisp
+(load-library "vertico-conf")
+;; ;; modules-completion-company elisp
+;; (load-library "company")
+

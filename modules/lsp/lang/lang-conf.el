@@ -1,5 +1,5 @@
-;;; keymaps.el -*- lexical-binding: t; -*-
-;; This file has been generated from funmacs.org file. DO NOT EDIT.
+;;; lang-config.el -*- lexical-binding: t; -*-
+;; This file has been generated from init.el file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
 ;; Copyright (C) 2022 Muja Siyam
@@ -17,14 +17,12 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; Enable which-key.el
-(use-package which-key
-  :straight t
-  :init
-   (which-key-mode)
-   (setq which-key-idle-delay 0.3)
-   (which-key-setup-minibuffer))
-
-;; global keybinding
-;; recompile
-(global-set-key (kbd "<f12>") #'recompile) 
+;; load programming languages.
+(load-library "sh")
+(load-library "rust")
+(load-library "golang")
+(load-library "python3")
+(load-library "markdown")
+(load-library "web")
+(load-library "javascript")
+(load-library "yaml")

@@ -20,7 +20,7 @@
 ;; Enable emacs.el
 ;; A few more useful configurations...
 (use-package emacs
-  :straight (:type built-in)
+  ;; :straight (:type built-in)
   :init
   ;; modus-themes config
   ;; Add all your customizations prior to loading the themes
