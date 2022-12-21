@@ -18,7 +18,7 @@
 ;; see <https://www.gnu.org/licenses/>.
 
 ;; load core config.
-;; (load-library "emacs")
+(load-library "emacs")
 (load-library "settings")
 (load-library "straight")
 (load-library "which-key")

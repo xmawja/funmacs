@@ -22,11 +22,11 @@
 (use-package emacs
   ;; :straight (:type built-in)
   :init
-  ;; modus-themes config
-  ;; Add all your customizations prior to loading the themes
-  (setq modus-themes-italic-constructs t
-        modus-themes-bold-constructs nil
-        modus-themes-region '(bg-only no-extend))
+  ;; ;; modus-themes config
+  ;; ;; Add all your customizations prior to loading the themes
+  ;; (setq modus-themes-italic-constructs t
+  ;;       modus-themes-bold-constructs nil
+  ;;       modus-themes-region '(bg-only no-extend))
 
   ;; vertico config
   ;; Add prompt indicator to `completing-read-multiple'.
@@ -49,9 +49,10 @@
   ;;       #'command-completion-default-include-p)
   ;; Enable recursive minibuffers
   (setq enable-recursive-minibuffers t)
-  :config
-  ;; modus-themes configure.
-  ;; Load the theme of your choice:
-  (load-theme 'modus-operandi) ;; OR (load-theme 'modus-vivendi)
-  :bind ("<f5>" . modus-themes-toggle)
+
+  ;; :config
+  ;; ;; modus-themes configure.
+  ;; ;; Load the theme of your choice:
+  ;; (load-theme 'modus-operandi) ;; OR (load-theme 'modus-vivendi)
+  ;; :bind ("<f5>" . modus-themes-toggle)
   )
