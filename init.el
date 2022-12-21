@@ -72,3 +72,4 @@
 (load-library "markdown")
 (load-library "web")
 (load-library "javascript")
+(load-library "yaml")
