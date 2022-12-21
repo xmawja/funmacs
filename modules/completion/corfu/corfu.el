@@ -82,6 +82,7 @@
   (load-library "dabbrev-mode")
   (load-library "kind-icon")
   (load-library "tempel")
+  (load-library "consult")
   ;; ;; add suggestion for yasnippets when using eglot
   ;; (defun ms/eglot-capf ()
   ;;   (setq-local completion-at-point-functions
