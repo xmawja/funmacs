@@ -1,5 +1,5 @@
-;;; lang-config.el -*- lexical-binding: t; -*-
-;; This file has been generated from init.el file. DO NOT EDIT.
+;;; toml.el -*- lexical-binding: t; -*-
+;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
 ;; Copyright (C) 2022 Muja Siyam
@@ -17,13 +17,18 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load programming languages.
-(load-library "sh")
-(load-library "rust")
-(load-library "golang")
-(load-library "python3")
-(load-library "markdown")
-(load-library "web")
-(load-library "javascript")
-(load-library "yaml")
-(load-library "toml")
+(use-package toml-mode
+  :straight t
+  :hook
+  ;; uncommented if youre using eglot.
+  (toml-mode . eglot-ensure)
+  :config
+  ;; load rust cargo PATH because the lsp backend live there
+  (add-to-list 'exec-path "~/.cargo/bin")
+  ;; load taplo the lsp backend
+  ;; (add-to-list 'eglot-server-programs '(toml-mode . ("taplo")))
+  (with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+               '(toml-mode . ("taplo"  "--stdio"))))
+  )
+
