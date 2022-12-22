@@ -1,5 +1,5 @@
-;;; lang-config.el -*- lexical-binding: t; -*-
-;; This file has been generated from init.el file. DO NOT EDIT.
+;;; zig-mode.el -*- lexical-binding: t; -*-
+;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
 ;; Copyright (C) 2022 Muja Siyam
@@ -17,14 +17,19 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load programming languages.
-(load-library "sh")
-(load-library "rust")
-(load-library "golang")
-(load-library "python3")
-(load-library "markdown")
-(load-library "web")
-(load-library "javascript")
-(load-library "yaml")
-(load-library "toml")
-(load-library "zig")
+;; Enable zig-mode.el
+(use-package zig-mode
+  :hook
+  ;; uncommented if youre using eglot.el
+  (zig-mode . eglot-ensure)
+  :config
+  ;; set where zig zls PATH
+  (add-to-list 'exec-path "~/.zig/zls/zig-out/bin")
+  ;; ;; load zls path from zig-mode function
+  ;; (setq lsp-zig-zls-executable "~/.zig/zls/zig-out/bin")
+  ;; ;; setup zls manualy
+  ;; (unless (version< emacs-version "24")
+  ;; (add-to-list 'load-path "~/.zig/zls/zig-out/bin")
+  ;; (autoload 'zig-mode "zig-mode" nil t)
+  ;; (add-to-list 'auto-mode-alist '("\\.zig\\'" . zig-mode)))
+  )
