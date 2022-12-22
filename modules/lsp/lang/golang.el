@@ -20,6 +20,7 @@
 ;; Enable golang
 (use-package go-mode
   :straight t
+  ;; :requires project
   :hook
   ;; uncomment and choose your prefared lsp packend server.
   ;; lsp-mode.
@@ -29,6 +30,8 @@
   ;; company-mode work best with lsp-mode if use eglot consider corfo.el.
   ;; company code compilaton
   ;;(go-mode . company-mode)
+  ;; ;; find project hook root 'go.mod'
+  ;; (project-find-functions . project-find-go-module)
   :config
   ;; GOPATH to gopls
   (add-to-list 'exec-path "~/go/bin")
@@ -38,4 +41,27 @@
   ;; 	(add-hook 'before-save-hook #'lsp-format-buffer t t)
   ;; 	(add-hook 'before-save-hook #'lsp-organize-imports t t))
   ;; (add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
+
+  ;; install gopls lsp backend server
+  ;; 'go' install golang.org/x/tools/gopls@latest
+  ;; (with-eval-after-load 'eglot
+  ;;   (add-to-list 'eglot-server-programs
+  ;;                '(go-mode . ("gopls" "--stdio"))))
+
+  ;; Configuring project for Go modules in .emacs
+  ;; Eglot uses the built-in project package to identify the LSP workspace,
+  ;; for a newly-opened buffer.
+  ;; The project package does not natively know about GOPATH or Go modules.
+  ;; Fortunately, you can give it a custom hook
+  ;; to tell it to look for the nearest parent go.mod file
+  ;; (that is, the root of the Go module 'go.mod') as the project root.
+  (require 'project)
+  (defun project-find-go-module (dir)
+    (when-let ((root (locate-dominating-file dir "go.mod")))
+      (cons 'go-module root)))
+  ;; define new methode for project root.
+  (cl-defmethod project-root ((project (head go-module)))
+    (cdr project))
+  ;; find project function hook 'go.mod'
+  (add-hook 'project-find-functions #'project-find-go-module)
   )
