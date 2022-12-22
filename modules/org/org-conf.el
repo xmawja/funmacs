@@ -18,4 +18,4 @@
 ;; see <https://www.gnu.org/licenses/>.
 
 ;; load org-mode.el config.
-(load-library "org")
+(load-library "org-mode")
