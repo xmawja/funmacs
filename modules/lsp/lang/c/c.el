@@ -1,4 +1,4 @@
-;;; lang-config.el -*- lexical-binding: t; -*-
+;;; c.el -*- lexical-binding: t; -*-
 ;; This file has been generated from init.el file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,19 +17,15 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load parent directorys PATH.
-(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/c")
-
-;; load programming languages.
-(load-library "sh")
-(load-library "rust")
-(load-library "golang")
-(load-library "python3")
-(load-library "markdown")
-(load-library "web")
-(load-library "javascript")
-(load-library "yaml")
-(load-library "toml")
-(load-library "zig")
-(load-library "ocaml")
-(load-library "c")
+;; Enable c-mode.el
+(use-package c-mode
+  :ensure nil                   ;; don't pull anything its builtin
+  :straight (:type built-in)    ;; don't pull anything its builtin
+  :hook
+  ;; set to use eglot.el
+  ;; uncommented if you're using eglot.el
+  (c-mode . eglot-ensure)
+  :config
+  ;; define the c lsp backend server.
+  (add-to-list 'eglot-server-programs '(c-mode "clangd"))
+  )
