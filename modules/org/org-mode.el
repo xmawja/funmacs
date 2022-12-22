@@ -26,8 +26,10 @@
   :after org
   :bind
   (:map global-map
-		("C-c a" . org-agenda) ;; open agenda
-		("C-c l" . org-store-link)) ;; stored agenda
+		("C-c a" . org-agenda)         ;; open agenda
+                ("C-c c" . org-capture)        ;; capture notes
+                ("C-c l" . org-store-link)     ;; stored agenda
+                )
   :init
   ;;(setq-default major-mode 'org-mode) if nesesery
   ;; set the deafault org directory
