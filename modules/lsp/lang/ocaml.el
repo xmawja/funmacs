@@ -1,5 +1,5 @@
-;;; lang-config.el -*- lexical-binding: t; -*-
-;; This file has been generated from init.el file. DO NOT EDIT.
+;;; ocaml-mode.el -*- lexical-binding: t; -*-
+;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
 ;; Copyright (C) 2022 Muja Siyam
@@ -17,15 +17,15 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load programming languages.
-(load-library "sh")
-(load-library "rust")
-(load-library "golang")
-(load-library "python3")
-(load-library "markdown")
-(load-library "web")
-(load-library "javascript")
-(load-library "yaml")
-(load-library "toml")
-(load-library "zig")
-(load-library "ocaml")
+;; Enable tuareg.el
+(use-package tuareg
+  :hook
+  ;; automatically trigger eglot mode
+  ;; uncomented if you're using eglot.el
+  (tuareg-mode . eglot-ensure)
+  :config
+  ;; install ocaml server protocol using 'opam' or 'esy' package manager.
+  ;; opam install ocaml-lsp-server
+  ;; define ocamllsp 'PATH'.
+  (add-to-list 'exec-path "~/.opam/default/bin")
+  )
