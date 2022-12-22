@@ -18,9 +18,12 @@
 ;; see <https://www.gnu.org/licenses/>.
 
 ;; load parent directorys PATH.
-(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/c")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/c/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/cpp/")
 
 ;; load programming languages.
+(load-library "c")
+(load-library "cpp")
 (load-library "sh")
 (load-library "rust")
 (load-library "golang")
@@ -32,4 +35,3 @@
 (load-library "toml")
 (load-library "zig")
 (load-library "ocaml")
-(load-library "c")

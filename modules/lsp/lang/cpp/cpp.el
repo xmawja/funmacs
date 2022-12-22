@@ -1,5 +1,5 @@
-;;; eglot.el -*- lexical-binding: t; -*-
-;; This file has been generated from funmacs.org file. DO NOT EDIT.
+;;; cpp.el -*- lexical-binding: t; -*-
+;; This file has been generated from init.el file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
 ;; Copyright (C) 2022 Muja Siyam
@@ -17,10 +17,15 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; Enable eglot.el
-(use-package eglot
-  ;; ignore eglot from pull using package.el
-  :ensure nil
-  ;; ignore eglot from pull using straight.el
-  :straight (:type built-in)
+;; Enable c-mode.el
+(use-package c++-mode
+  :ensure nil                   ;; don't pull anything its builtin
+  :straight (:type built-in)    ;; don't pull anything its builtin
+  :hook
+  ;; set to use eglot.el
+  ;; uncommented if you're using eglot.el
+  (c++-mode . eglot-ensure)
+  :config
+  ;; define the 'c++' lsp backend server.
+  (add-to-list 'eglot-server-programs '(c++-mode "clangd"))
   )
