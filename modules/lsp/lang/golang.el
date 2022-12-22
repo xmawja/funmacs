@@ -64,4 +64,11 @@
     (cdr project))
   ;; find project function hook 'go.mod'
   (add-hook 'project-find-functions #'project-find-go-module)
+  ;; Configuring gopls via Eglot
+  ;; LSP server settings are controlled by the eglot-workspace-configuration variable,
+  ;; which can be set either globally in .emacs or in a .dir-locals.el file in the project root.
+  (setq-default eglot-workspace-configuration
+    '((:gopls .
+        ((staticcheck . t)
+         (matcher . "CaseSensitive")))))
   )
