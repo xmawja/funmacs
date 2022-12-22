@@ -38,7 +38,15 @@
 ;; INITIALIZED USE-PACKAGES
 (straight-use-package 'use-package)
 (setq use-package-always-ensure t)
+
 ;; CONFIGURE use-package TO USE straight.el BY DEFAULT
 (use-package straight
   :custom (straight-use-package-by-default t))
 
+;; use-package.el is no longer needed at runtime
+;; This means you should put the following at
+;; the top of your Emacs, to further reduce load time:
+(eval-when-compile
+  (require 'use-package))
+;; (require 'diminish)                ;; if you use :diminish
+(require 'bind-key)                ;; if you use any :bind variant
