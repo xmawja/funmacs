@@ -19,3 +19,4 @@
 
 ;; load org-mode.el config.
 (load-library "org-mode")
+(load-library "org-roam")
