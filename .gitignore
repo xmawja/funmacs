@@ -18,6 +18,7 @@
 .extension/
 *.cache*
 *.log
+*.db
 /modules/private
 test/.local*/
 test/result
