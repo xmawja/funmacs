@@ -25,6 +25,25 @@
   ;; set to use eglot.el
   ;; uncommented if you're using eglot.el
   (c-mode . eglot-ensure)
+  ;; Using 'Makefile' from parent directory
+  ;; This will run Make if there is a 'Makefile'
+  ;; in the same directory as the source-file,
+  ;; or it will create a command for compiling a single file
+  ;; and name the executable the same name as the file with the extension stripped.
+  (c-mode . (lambda ()
+              (unless (file-exists-p "Makefile")
+                (set (make-local-variable 'compile-command)
+                     ;; emulate make's .c.o implicit pattern rule, but with
+                     ;; different defaults for the CC, CPPFLAGS, and CFLAGS
+                     ;; variables:
+                     ;; $(CC) -c -o $@ $(CPPFLAGS) $(CFLAGS) $<
+        	     (let ((file (file-name-nondirectory buffer-file-name)))
+                       (format "%s -c -o %s.o %s %s %s"
+                               (or (getenv "CC") "clang")
+                               (file-name-sans-extension file)
+                               (or (getenv "CPPFLAGS") "-DDEBUG=9")
+                               (or (getenv "CFLAGS") "-ansi -pedantic -Wall -Wextra -Werror -g")
+        		       file))))))
   :config
   ;; define the c lsp backend server.
   (add-to-list 'eglot-server-programs '(c-mode "clangd"))
