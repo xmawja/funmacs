@@ -1,4 +1,4 @@
-;;; org-mode.el -*- lexical-binding: t; -*-
+;;; org-agenda.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -18,27 +18,18 @@
 ;; see <https://www.gnu.org/licenses/>.
 
 ;; Enable org-mode.el
-(use-package org
+(use-package org-agenda
   ;; ignore org.el from pull using package.el
   :ensure nil
   ;; ignore org.el from pull using straight.el.
   :straight (:type built-in)
-  :after org
-  :init
-  ;;(setq-default major-mode 'org-mode) if nesesery
-  ;; set the default notes file places
-  ;; (setq org-default-notes-file (concat org-directory "/notes.org"))
-  (setq org-default-notes-file (concat org-directory "/notes.org"))
-  ;; set the deafault org directory
-  (setq org-directory (expand-file-name "~/Documents/org"))
-  ;; activaae loge done
-  (setq org-log-done t)
-  ;; closing timestamp or next line
-  (setq org-log-done 'time)
-  ;; take a note before closing the task.
- (setq org-log-done 'note)
- ;; Pamodoro timer tone
- (setq org-clock-sound "~/.emacs.d/assets/sound/ding.wav")
- :config
- (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+  ;; :after org
+  :bind
+  (:map global-map
+		("C-c a" . org-agenda)         ;; open agenda
+                ("C-c l" . org-store-link)     ;; stored agenda
+                )
+  :config
+  ;; set the default agenda files directory
+  (setq org-agenda-files '("~/Documents/org/agenda.org" ))
  )
