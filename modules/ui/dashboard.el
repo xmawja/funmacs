@@ -29,7 +29,13 @@
   (setq dashboard-set-heading-icons t)
   (setq dashboard-set-file-icons t)
   ;; Set the title
-  (setq dashboard-banner-logo-title "Welcome to Funmacs")
+  ;; (setq dashboard-banner-logo-title "Welcome to Funmacs")
+  (setq dashboard-banner-logo-title (message "Funmacs ready in %s with %d garbage collections."
+                                       (format "%.2f seconds"
+                                               (float-time
+                                                (time-subtract after-init-time before-init-time)))
+                                       gcs-done))
+
   ;; Set the banner
   (setq dashboard-startup-banner "~/.emacs.d/assets/txt/logo.txt")
   ;; Value can be
@@ -50,5 +56,3 @@
                         (agenda . 5)
                         (registers . 5)))
   )
-
-
