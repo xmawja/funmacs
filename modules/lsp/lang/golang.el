@@ -23,11 +23,11 @@
   ;; :requires project
   :hook
   ;; uncomment and choose your prefared lsp packend server.
-  ;; lsp-mode.
+  ;; 'lsp-mode'.
   ;;(go-mode . lsp-deferred)
-  ;; eglot mode.
+  ;; 'eglot' mode.
   (go-mode . eglot-ensure)
-  ;; company-mode work best with lsp-mode if use eglot consider corfo.el.
+  ;; company-mode work best with 'lsp-mode' if use 'eglot' consider corfo.el.
   ;; company code compilaton
   ;;(go-mode . company-mode)
   ;; ;; find project hook root 'go.mod'
@@ -64,7 +64,7 @@
     (cdr project))
   ;; find project function hook 'go.mod'
   (add-hook 'project-find-functions #'project-find-go-module)
-  ;; Configuring gopls via Eglot
+  ;; Configuring gopls via 'eglot'
   ;; LSP server settings are controlled by the eglot-workspace-configuration variable,
   ;; which can be set either globally in .emacs or in a .dir-locals.el file in the project root.
   (setq-default eglot-workspace-configuration

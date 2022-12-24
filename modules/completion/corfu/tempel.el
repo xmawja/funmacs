@@ -17,7 +17,7 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; Enable Tempel
+;; Enable Tempel.el
 (use-package tempel
   ;; Require trigger prefix before template name when completing.
   ;; :custom
@@ -25,7 +25,6 @@
 
   :bind (("M-+" . tempel-complete) ;; Alternative tempel-expand
          ("M-*" . tempel-insert))
-
   :init
 
   ;; Setup completion at point
@@ -41,11 +40,13 @@
                 (cons #'tempel-expand
                       completion-at-point-functions)))
 
-  (add-hook 'prog-mode-hook 'tempel-setup-capf)
-  (add-hook 'text-mode-hook 'tempel-setup-capf)
-
   ;; Optionally make the Tempel templates available to Abbrev,
   ;; either locally or globally. `expand-abbrev' is bound to C-x '.
   ;; (add-hook 'prog-mode-hook #'tempel-abbrev-mode)
   ;; (global-tempel-abbrev-mode)
-)
+  :hook
+  ;; tempel in prog-mode
+  (prog-mode . tempel-setup-capf)
+  ;; tempel in text mode
+  (text-mode . tempel-setup-capf)
+  )

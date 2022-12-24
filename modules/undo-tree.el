@@ -20,7 +20,8 @@
 ;; Enable undo-tree.el
 (use-package undo-tree
   :straight t
+  :hook
+  (after-init . undo-tree-mode)
   :config
   (global-undo-tree-mode 1)
   )
-

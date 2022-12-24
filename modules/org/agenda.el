@@ -23,7 +23,7 @@
   :ensure nil
   ;; ignore org.el from pull using straight.el.
   :straight (:type built-in)
-  ;; :after org
+  ;; :require org
   :bind
   (:map global-map
 		("C-c a" . org-agenda)         ;; open agenda

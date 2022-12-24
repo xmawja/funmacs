@@ -21,7 +21,7 @@
 ;; comment if you set it in early-init.el
 ;;(setq package-enable-at-startup nil)
 
-;; BOOTSTRAPING straight.el 
+;; BOOTSTRAPING straight.el
 (defvar bootstrap-version)
 (let ((bootstrap-file
        (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))

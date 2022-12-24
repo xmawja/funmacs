@@ -42,4 +42,3 @@
 ;;  :config
 ;;  (load-theme 'monokai-pro t)
 ;;  )
-

@@ -24,6 +24,8 @@
   ;; ignore org.el from pull using straight.el.
   :straight (:type built-in)
   :after org
+  :hook
+  (after-init . org-mode)
   :init
   ;;(setq-default major-mode 'org-mode) if nesesery
   ;; set the default notes file places

@@ -31,9 +31,9 @@
   (setq-default indent-tabs-mode nil)
   :hook
   ;; set lsp backend server
-  ;; uncomment if using eglot
+  ;; uncomment if using 'eglot'
   (python-mode . eglot-ensure)
-  ;; ;; uncomment if using lsp-mode
+  ;; ;; uncomment if using 'lsp-mode'
   ;; (python-mode . lsp-mode)
   :config
   ;; because the lsp backend can't guess the indent
@@ -47,7 +47,7 @@
   )
 
 ;; lsp serve backend clients.
-;; ;; uncommnted if youre using lsp-mode.
+;; ;; uncommnted if youre using 'lsp-mode'.
 ;; (use-package lsp-pyright
 ;;   :ensure t
 ;;   :hook
@@ -55,9 +55,9 @@
 ;;                    (require 'lsp-pyright)
 ;;                    (lsp)))  ; or lsp-deferred
 ;;   )
-;; good and lightweght eglot python lsp to integrate with.
+;; good and lightweght 'eglot' python lsp to integrate with.
 ;; at this moment there is no better than pyright.
-;; uncomment if your using eglot.
+;; uncomment if your using 'eglot'.
 (use-package lsp-pyright
   :straight t
   )

@@ -27,7 +27,7 @@
   ;; the default lsp is lsp-mode but we can changet to eglot by.
   ;; uncoment if you are using eglot mode.
   (setq rustic-lsp-client 'eglot)
-  
+
   :bind (:map rustic-mode-map
               ("M-j" . lsp-ui-imenu)
               ("M-?" . lsp-find-references)
@@ -58,5 +58,6 @@
   )
 ;; Enable cargo.el
 (use-package cargo
+  :after (rust-mode)
   :hook
   (rust-mode . cargo-minor-mode))

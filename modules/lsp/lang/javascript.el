@@ -28,7 +28,7 @@
 ;; Enable js2-mode.el
 ;; Bind js2-mode to any file with the *.js extension by default:
 (use-package js2-mode
-  ;; ;; uncomment if youre unig lsp-mode.el
+  ;; ;; uncomment if youre unig 'lsp-mode'.
   ;; :after (lsp-mode dap-mode)
   :mode "\\.js\\'"
   :hook
@@ -39,19 +39,19 @@
   ;; (add-hook 'js-mode-hook 'js2-minor-mode)
   ;; uncomment if you are using ls-mode.el
   ;;((js2-mode . my/setup-js-mode))
-  ;; uncomment if your are using eglot.el.
+  ;; uncomment if your are using 'eglot'.
   (js2-mode . eglot-ensure))
 
 ;; Enable typescript-mode.el
 ;; Bind typescript-mode to any file with the *.ts extension by default:
 (use-package typescript-mode
-  ;; ;; uncomment if youre using lsp-mode.el
+  ;; ;; uncomment if youre using 'lsp-mode'
   ;; :after (lsp-mode dap-mode)
   :mode ("\\.ts\\'" "\\.tsx\\'")
   :hook
-  ;; uncomment if you are using lsp-mode.el
+  ;; uncomment if you are using 'lsp-mode'.
   ;; ((typescript-mode . my/setup-js-mode))
-  ;; uncomment if you are using eglot.el
+  ;; uncomment if you are using 'eglot'.
   (typescript-mode . eglot-ensure))
 
 ;; Enable risx-mode.el
@@ -60,7 +60,7 @@
   :mode "\\.jsx\\'"
   :mode "components\\/.*\\.js\\'"
   :hook
-  ;; uncomment if youre using lsp-mode.el
+  ;; uncomment if youre using 'lsp-mode'.
   ;; ((rjsx-mode . lsp-deferred))
-  ;; uncomment if youre using eglot.el.
+  ;; uncomment if youre using 'eglot'.
   (rjsx-mode . eglot-ensure))

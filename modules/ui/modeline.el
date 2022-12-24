@@ -19,5 +19,8 @@
 
 ;; Enable modeline.el
 (use-package doom-modeline
-  :ensure t
+  :straight t
+  :hook
+  ;; after init
+  (after-init . doom-modeline-mode)
   :init (doom-modeline-mode 1))
