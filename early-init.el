@@ -30,9 +30,16 @@
 (setq gc-cons-threshold most-positive-fixnum
       gc-cons-percentage 0.6)
 
+;; fully redraw the display before it processes queued input events.
+;; This may have slight performance implications;
+;; if you’re aggressively mouse scrolling a document or rely on your keyboard’s;
+;; auto repeat feature. For most of us, myself included,
+;; it’s probably a no-brainer to switch it on.
+(setq redisplay-dont-pause t)
+
 ;; In Emacs 27+, package initialization occurs before `user-init-file' is
 ;; loaded, but after `early-init-file'. We want to keep from loading at startup.
-;; disable package.el load at startup if you use somthing like straight.el. 
+;; disable package.el load at startup if you use somthing like straight.el.
 (setq package-enable-at-startup nil)
 
 ;; Set fonts to be used as default to speed init.

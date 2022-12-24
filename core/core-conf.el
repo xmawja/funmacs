@@ -23,3 +23,4 @@
 (load-library "straight")
 (load-library "which-key")
 (load-library "backup")
+(load-library "recentfile")

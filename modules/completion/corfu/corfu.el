@@ -73,7 +73,9 @@
               ("M-d" . corfu-show-documentation)
               ("M-l" . corfu-show-location)
 	      )
-  ;; :hook
+  :hook
+  ;; after init
+  (after-init . corfu-mode)
   ;; ;; yasnippet suggestion for lsp-mode
   ;; (eglot-managed-mode . ms/eglot-capf)
   ;; :config

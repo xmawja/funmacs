@@ -29,7 +29,13 @@
   (setq dashboard-set-heading-icons t)
   (setq dashboard-set-file-icons t)
   ;; Set the title
-  (setq dashboard-banner-logo-title "Welcome to Funmacs")
+  ;; (setq dashboard-banner-logo-title "Welcome to Funmacs")
+  (setq dashboard-banner-logo-title
+        (message "Funmacs ready in %s with %d garbage collections."
+                 (format "%.2f seconds"
+                         (float-time
+                          (time-subtract after-init-time before-init-time)))
+                 gcs-done))
   ;; Set the banner
   (setq dashboard-startup-banner "~/.emacs.d/assets/txt/logo.txt")
   ;; Value can be
@@ -45,10 +51,33 @@
   (setq dashboard-projects-backend 'project-el)
   ;; To customize which widgets are displayed
   (setq dashboard-items '((recents  . 5)
-                        (bookmarks . 5)
-                        (projects . 5)
-                        (agenda . 5)
-                        (registers . 5)))
+                          (bookmarks . 5)
+                          (projects . 5)
+                          (agenda . 5)
+                          (registers . 5)))
+  ;; set naviagtion banner.
+  (setq dashboard-set-navigator t)
+  ;; navigation buttons.
+  (setq dashboard-navigator-buttons
+        `(( ;; homepage navigation tag.
+           (,(all-the-icons-faicon "cloud" :height 1.1 :v-adjust 0.0)
+            "Homepage"
+            "Browse Homepage"
+            (lambda (&rest _) (browse-url "https://funamcs.muja.dev")))
+           ;; github navigation tag.
+           (,(all-the-icons-octicon "mark-github" :height 1.1 :v-adjust 0.0)
+            "GitHub"
+            "Browse GitHub"
+            (lambda (&rest _) (browse-url "https://github.com/xmawja/funmacs")))
+           ;; twitter navigation tag.
+           (,(all-the-icons-faicon "twitter" :height 1.1 :v-adjust 0.0)
+            "Twitter"
+            "Browse Twitter"
+            (lambda (&rest _) (browse-url "https://www.twitter.com/xmawja")))
+           ;; linkedin navigation tag.
+           (,(all-the-icons-faicon "linkedin" :height 1.1 :v-adjust 0.0)
+            "LinkedIn"
+            "Browse LinkedIn"
+            (lambda (&rest _) (browse-url "https://www.linkedin.com/in/xmawja")))))
+        )
   )
-
-

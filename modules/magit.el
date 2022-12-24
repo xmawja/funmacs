@@ -22,10 +22,15 @@
   :straight t
   :bind
   (:map global-map
-		("C-x g" . magit-status))
-)
+	("C-x g" . magit-status))
+  :hook
+  ;; after init
+  (after-init . magit-mode)
+  )
 
 ;; Options
 ;; magit todos
 (use-package magit-todos
-  :defer t)
+  :defer t
+  :after (magit-mode)
+  )

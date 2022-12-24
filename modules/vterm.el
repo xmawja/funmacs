@@ -20,6 +20,10 @@
 ;; Enable vterm.el
 (use-package vterm
   :straight t
+  :after (vterm-toggle)
+  :hook
+  ;; after init
+  (after-init . vterm-mode)
   :init
   (setq vterm-toggle-fullscreen-p nil)
   )

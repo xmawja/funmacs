@@ -33,6 +33,8 @@
                       vertico-reverse        ;; vertico-reverse-mode to reverse the display.
                       vertico-unobtrusive    ;; vertico-unobtrusive-mode displays only the topmost candidate.
                       ))
+  :hook
+  (after-init . vertico-mode)
   :init
   (vertico-mode)
 
@@ -52,5 +54,8 @@
 ;; Persist history over Emacs restarts. Vertico sorts by history position.
 (use-package savehist
   :straight t
+  :hook
+  ;; after init
+  (after-init . savehist-mode)
   :init
   (savehist-mode))

@@ -20,8 +20,10 @@
 ;; Enable lsp.el
 (use-package lsp-mode
   :straight t
-  :commands (lsp lsp-deferred) 
+  :commands (lsp lsp-deferred)
   :init
+  ;; after init
+  (after-init . lsp-mode)
   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
   (setq lsp-keymap-prefix "C-c l")
   ;; set c/c++ compilation and snippetg

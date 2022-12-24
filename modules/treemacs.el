@@ -25,6 +25,8 @@
   (with-eval-after-load 'winum
     (define-key winum-keymap (kbd "M-0") #'treemacs-select-window))
   :hook
+  ;; after init
+  (after-init . treemacs-mode)
   ;; disable global numbers on treemacs.el
   (treemacs-mode . (lambda() (display-line-numbers-mode -1)))
   :config
@@ -136,7 +138,7 @@
   :ensure t
   :config (treemacs-set-scope-type 'Perspectives))
 
-;; Enable tabs using buitin tab-bar-mode. 
+;; Enable tabs using buitin tab-bar-mode.
 (use-package treemacs-tab-bar        ; treemacs-tab-bar if you use tab-bar-mode
   :after (treemacs)
   :ensure t

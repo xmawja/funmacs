@@ -1,5 +1,5 @@
-;;; org-agenda.el -*- lexical-binding: t; -*-
-;; This file has been generated from funmacs.org file. DO NOT EDIT.
+;;; recentf-mode.el -*- lexical-binding: t; -*-
+;; This file has been generated from init.el file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
 ;; Copyright (C) 2022 Muja Siyam
@@ -17,19 +17,19 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; Enable org-mode.el
-(use-package org-agenda
-  ;; ignore org.el from pull using package.el
+;; Enable recentf.el
+(use-package recentf
   :ensure nil
-  ;; ignore org.el from pull using straight.el.
   :straight (:type built-in)
-  ;; :require org
-  :bind
-  (:map global-map
-		("C-c a" . org-agenda)         ;; open agenda
-                ("C-c l" . org-store-link)     ;; stored agenda
-                )
   :config
-  ;; set the default agenda files directory
-  (setq org-agenda-files '("~/Documents/org/agenda.org" ))
- )
+  (setq recentf-max-saved-items 40
+        recentf-max-menu-items 15
+        recentf-menu-open-all-flag t
+        ;; disable recentf-cleanup on Emacs start, because it can cause
+        ;; problems with remote files
+        recentf-cleanup-auto 'never)
+  (add-to-list 'recentf-exclude  (expand-file-name package-user-dir))
+  ;; (add-to-list 'recentf-exclude no-littering-var-directory)
+  ;; (add-to-list 'recentf-exclude no-littering-etc-directory)
+  :hook (after-init . recentf-mode)
+  )
