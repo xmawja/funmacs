@@ -19,4 +19,5 @@
 
 ;; load org-mode.el config.
 (load-library "org-mode")
+(load-library "capture")
 (load-library "org-roam")
