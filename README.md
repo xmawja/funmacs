@@ -38,9 +38,11 @@
 ## Quick Start
 
 1. Clone the repository into your [`emacs.d`](docs/install.md) directory,
-`git clone https://github.com/xmawja/funmacs.git ~/.emacs.d`
+```shell
+git clone https://github.com/xmawja/funmacs.git ~/.emacs.d
+```
 2. Open emacs and it would be autoConfigure and pull related packages.
-3. Enjoy and have Fun Emacs.
+3. Enjoy and have Funmacs.
 
 ## Documentation
 
