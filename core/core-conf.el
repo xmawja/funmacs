@@ -22,3 +22,4 @@
 (load-library "settings")
 (load-library "straight")
 (load-library "which-key")
+(load-library "backup")
