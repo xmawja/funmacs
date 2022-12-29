@@ -43,6 +43,13 @@
 ;;  (load-theme 'monokai-pro t)
 ;;  )
 
+;; ;; Enable atom-one-dark-theme.el
+;; (use-package atom-one-dark-theme
+;;   :straight t
+;;   :config
+;;   (load-theme 'atom-one-dark t)
+;;   )
+
 ;; ;; Enable dracula-theme.el
 ;; (use-package dracula-theme
 ;;   :straight t
