@@ -20,6 +20,7 @@
 ;; load parent directorys PATH.
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/c/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/cpp/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/web/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/lua/")
 
 ;; load programming languages.
@@ -27,11 +28,11 @@
 (load-library "cpp")
 (load-library "sh")
 (load-library "rust")
+;; (load-library "web")  ;; uncommenced if your using 'lsp-mode'
+(load-library "javascript")
 (load-library "golang")
 (load-library "python3")
 (load-library "markdown")
-(load-library "web")
-(load-library "javascript")
 (load-library "yaml")
 (load-library "toml")
 (load-library "zig")
