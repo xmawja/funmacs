@@ -30,6 +30,7 @@
 (load-library "rust")
 ;; (load-library "web")  ;; uncommenced if your using 'lsp-mode'
 (load-library "html")
+(load-library "css")
 (load-library "javascript")
 (load-library "golang")
 (load-library "python3")
