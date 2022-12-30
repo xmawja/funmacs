@@ -28,7 +28,7 @@
 (prefer-coding-system 'utf-8)
 (set-language-environment "UTF-8")
 ;; ;; set default UTF-8 multiline and leve it for redability
-;; (set-default-coding-systems 'utf-8)     ; Default to utf-8 encoding
+;; (set-default-coding-systems 'utf-8)     ; Default to utf-encoding
 ;; (prefer-coding-system       'utf-8)     ; Add utf-8 at the front for automatic detection.
 ;; (set-default-coding-systems 'utf-8)     ; Set default value of various coding systems
 ;; (set-terminal-coding-system 'utf-8)     ; Set coding system of terminal output
@@ -49,9 +49,9 @@
 ;;(tool-bar-mode -1)                      ; diasble tool bar
 ;;(set-fringe-mode 10)                    ; give some breathing room
 
-;; CHANGE TAB SIZE
-;;(setq-default tab-width 4)		        ; enable indent global
-;;(setq-default c-basic-offset 4)         ; enable indent for C/C++
+;; CHANGE TAB SIZE 2 SPACES
+(setq-default tab-width 2)	       ; enable indent global
+(setq-default c-basic-offset 2)        ; enable indent for C/C++
 
 ;; ENABLE BULT-IN COMPLATION
 (setq tab-always-indent 'complete)
