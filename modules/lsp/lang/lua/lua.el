@@ -1,5 +1,5 @@
-;;; lang-config.el -*- lexical-binding: t; -*-
-;; This file has been generated from init.el file. DO NOT EDIT.
+;;; lua.el -*- lexical-binding: t; -*-
+;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
 ;; Copyright (C) 2022 Muja Siyam
@@ -17,23 +17,20 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load parent directorys PATH.
-(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/c/")
-(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/cpp/")
-(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/lua/")
-
-;; load programming languages.
-(load-library "c")
-(load-library "cpp")
-(load-library "sh")
-(load-library "rust")
-(load-library "golang")
-(load-library "python3")
-(load-library "markdown")
-(load-library "web")
-(load-library "javascript")
-(load-library "yaml")
-(load-library "toml")
-(load-library "zig")
-(load-library "ocaml")
-(load-library "lua")
+;; Enable golang
+(use-package lua-mode
+  :straight t
+  ;; :requires project
+  :hook
+  ;; lua eglot
+  (lua-mode . eglot-ensure)
+  :config
+  ;; install 'lua-lsp'
+  ;; luarocks install --server=https://luarocks.org/dev lua-lsp --local
+  ;; PATH to local lua-lsp
+  (add-to-list 'exec-path "~/.luarocks/bin")
+  ;; load 'lua-lsp' backend
+  (with-eval-after-load 'eglot
+    (add-to-list 'eglot-server-programs
+                 '(lua-mode . ("lua-lsp" "--stdio"))))
+  )
