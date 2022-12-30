@@ -29,7 +29,8 @@
   :mode
   (("README\\.md\\'" . gfm-mode)
    ("\\.md\\'" . markdown-mode)
-   ("\\.markdown\\'" . markdown-mode))
+   ("\\.mdx\\'" . markdown-mode))       ;; Markdown for the component era.
+   ("\\.markdown\\'" . markdown-mode)
   ;;:commands (markdown-mode gfm-mode)
   :init
   ;; tools command to preview.
