@@ -53,9 +53,9 @@
 ;;(setq-default tab-width 4)		        ; enable indent global
 ;;(setq-default c-basic-offset 4)         ; enable indent for C/C++
 
-;; ENABLE BULTIN COPLATION
-;;(setq tab-always-indent 'complete)
-;;(add-to-list 'completion-styles 'initials t)
+;; ENABLE BULT-IN COMPLATION
+(setq tab-always-indent 'complete)
+(add-to-list 'completion-styles 'initials t)
 
 ;; Set up the visible bell
 (setq visible-bell t)
