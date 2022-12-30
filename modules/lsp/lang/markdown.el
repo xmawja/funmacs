@@ -39,9 +39,8 @@
   (add-to-list 'exec-path "~/.local/bin")
   ;; uncomment if you are using lsp-mode.
   ;;(require 'lsp-marksman)
-  ;; configuration for eglot using marksman
-  (with-eval-after-load 'eglot
-    (add-to-list 'eglot-server-programs
-                 '(markdown-mode . ("marksman" "--stdio"))))
+  ;; ;; configuration for eglot using marksman
+  ;; (with-eval-after-load 'eglot
+  ;;   (add-to-list 'eglot-server-programs
+  ;;                '(markdown-mode . ("marksman" "--stdio"))))
   )
-
