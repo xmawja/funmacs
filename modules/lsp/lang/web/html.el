@@ -22,6 +22,8 @@
   :ensure nil
   :straight (:type built-in)
   :hook
+  ;; install 'vscode-langservers-extracted' protocol
+  ;; npm i -g vscode-langservers-extracted
   ;; autoload 'eglot' server
   (html-mode . eglot-ensure)
   )
