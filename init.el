@@ -29,7 +29,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/completion/vertico")
 (add-to-list 'load-path "~/.emacs.d/modules/completion/company/")
 
-;; core elisp 
+;; core elisp
 (load-library "core-conf")
 
 ;; modules elisp
@@ -55,4 +55,3 @@
 (load-library "vertico-conf")
 ;; ;; modules-completion-company elisp
 ;; (load-library "company")
-

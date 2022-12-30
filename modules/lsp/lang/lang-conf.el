@@ -20,24 +20,50 @@
 ;; load parent directorys PATH.
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/c/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/cpp/")
-(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/web/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/go/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/lua/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/markdown/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/ocaml/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/python/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/rust/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/sh/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/toml/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/web/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/yaml/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/zig/")
 
-;; load programming languages.
+;; available programming languages.
+;; c programing
 (load-library "c")
+;; c++ language
 (load-library "cpp")
-(load-library "sh")
-(load-library "rust")
-;; (load-library "web")  ;; uncommenced if your using 'lsp-mode'
-(load-library "html")
-(load-library "css")
-(load-library "json")
-(load-library "javascript")
-(load-library "golang")
-(load-library "python3")
-(load-library "markdown")
-(load-library "yaml")
-(load-library "toml")
-(load-library "zig")
-(load-library "ocaml")
+;; golang programing
+(load-library "go")
+;; lua language
 (load-library "lua")
+;; markdown language
+(load-library "markdown")
+;; ocaml ml language
+(load-library "ocaml")
+;; python 3 language
+(load-library "python3")
+;; rust language
+(load-library "rust")
+;; shell script languages
+(load-library "sh")
+;; toml language
+(load-library "toml")
+;; web-mode
+;; (load-library "web")  ;; uncommenced if your using 'lsp-mode'
+;; css style language
+(load-library "css")
+;; html markup language
+(load-library "html")
+;; javascript/typescript language
+(load-library "javascript")
+;; json object notation
+(load-library "json")
+;; yaml language
+(load-library "yaml")
+;; zig language
+(load-library "zig")
