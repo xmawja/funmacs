@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -68,7 +68,9 @@
   ;; LSP server settings are controlled by the eglot-workspace-configuration variable,
   ;; which can be set either globally in .emacs or in a .dir-locals.el file in the project root.
   (setq-default eglot-workspace-configuration
-    '((:gopls .
-        ((staticcheck . t)
-         (matcher . "CaseSensitive")))))
-  )
+                '((:gopls .
+                          ((staticcheck . t)
+                           (matcher . "CaseSensitive")))))
+  ) ;; end go-mode.el
+
+;; end 'go-mode' file.

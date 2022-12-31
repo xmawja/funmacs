@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -38,9 +38,11 @@
   ;; closing timestamp or next line
   (setq org-log-done 'time)
   ;; take a note before closing the task.
- (setq org-log-done 'note)
- ;; Pamodoro timer tone
- (setq org-clock-sound "~/.emacs.d/assets/sound/ding.wav")
- :config
- (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
- )
+  (setq org-log-done 'note)
+  ;; Pamodoro timer tone
+  (setq org-clock-sound "~/.emacs.d/assets/sound/ding.wav")
+  :config
+  (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+  ) ;; end org-mode.el
+
+;; end 'org-mode' file.

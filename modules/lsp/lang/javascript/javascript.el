@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -41,7 +41,7 @@
   ;;((js2-mode . my/setup-js-mode))
   ;; uncomment if your are using 'eglot'.
   (js2-mode . eglot-ensure)
-  ) ;; end 'js2-mode'
+  ) ;; end js2-mode.el
 
 ;; Options
 ;; js2-refactor.el
@@ -51,7 +51,7 @@
   ;; js2-refactor.el is now a minor mode \
   ;; that has to be enabled, with something like the following:
   (js2-mode . js2-refactor-mode)
-  ) ;; end 'js2-refactor'
+  ) ;; end js2-refactor.el
 
 ;; Enable risx-mode.el
 ;; But if a *.js file  is inside a components directory, use rjsx-mode instead:
@@ -63,4 +63,6 @@
   ;; ((rjsx-mode . lsp-deferred))
   ;; uncomment if youre using 'eglot'.
   (rjsx-mode . eglot-ensure)
-  ) ;; end 'rjsx-mode'
+  ) ;; end rjsx-mode.el
+
+;; end 'javascript' file.

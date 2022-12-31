@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -44,7 +44,7 @@
   (setq python-indent-guess-indent-offset nil)
   ;; (add-hook 'python-mode-hook 'smartparens-mode)
   ;; (add-hook 'python-mode-hook 'color-identifiers-mode)
-  )
+  ) ;; end python-mode.el
 
 ;; lsp serve backend clients.
 ;; ;; uncommnted if youre using 'lsp-mode'.
@@ -60,7 +60,7 @@
 ;; uncomment if your using 'eglot'.
 (use-package lsp-pyright
   :straight t
-  )
+  ) ;; end lsp-pyright.el
 
 ;; Enable pyvenv.el
 ;; pyenv python envirnment variables.
@@ -71,4 +71,6 @@
   ;; set the working home directory.
   ;; create 'versions' directory manualy.
   (setenv "WORKON_HOME" "~/.pyenv/versions")
-  )
+  ) ;; end pyvenv.el
+
+;; end 'python-mode' file.

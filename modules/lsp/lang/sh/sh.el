@@ -1,8 +1,8 @@
-;;; sh.el -*- lexical-binding: t; -*-
+;;; sh-script.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -21,9 +21,11 @@
 (use-package sh-script
   :straight (:type built-in)
   :mode
-  ;; enable zsh script to use 'sh-mode'. 
+  ;; enable zsh script to use 'sh-mode'.
   ("\\.zsh\\'" . sh-mode)
   :hook
   ;; uncommented if youre using eglot
   (sh-mode . eglot-ensure)
-  )
+  ) ;; end sh-script.el
+
+;; end 'sh-script' file.

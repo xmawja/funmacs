@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -26,11 +26,13 @@
   :hook
   ((web-mode . (lambda ()
                  (when
-		     ;; auto emerge emmet-ls
-		     (require 'emmet-ls nil t)
-		   ;; auto emerge lsp-html
-		   (require 'lsp-html nil t)
-		   ;; auto emerge css-ls
-		   (require 'css-ls nil t)
+		                 ;; auto emerge emmet-ls
+		                 (require 'emmet-ls nil t)
+		               ;; auto emerge lsp-html
+		               (require 'lsp-html nil t)
+		               ;; auto emerge css-ls
+		               (require 'css-ls nil t)
                    (lsp-deferred)))))
-  )
+  ) ;; end web-mode.el
+
+;; end 'web-mode' file.

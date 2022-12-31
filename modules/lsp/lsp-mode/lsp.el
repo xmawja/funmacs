@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -28,11 +28,11 @@
   (setq lsp-keymap-prefix "C-c l")
   ;; set c/c++ compilation and snippetg
   (setq gc-cons-threshold (* 100 1024 1024)
-      read-process-output-max (* 1024 1024)
-      treemacs-space-between-root-nodes nil
-      company-idle-delay 0.0
-      company-minimum-prefix-length 1
-      lsp-idle-delay 0.1)  ;; clangd is fast
+        read-process-output-max (* 1024 1024)
+        treemacs-space-between-root-nodes nil
+        company-idle-delay 0.0
+        company-minimum-prefix-length 1
+        lsp-idle-delay 0.1)  ;; clangd is fast
   :hook
   (lsp-mode . ms/lsp-mode-setup)      ; Enable Header Breadcrumb
   ;; LSP LANGUAGES SUPPORT
@@ -49,6 +49,8 @@
   (add-to-list 'load-path (expand-file-name "lib/lsp-mode/clients" user-emacs-directory))
   ;; Header breadcumb Function
   (defun ms/lsp-mode-setup ()
-	(setq lsp-headerline-breadcrumb-segments '(path-up-to-project file symbols))
-	(lsp-headerline-breadcrumb-mode))
-  )
+	  (setq lsp-headerline-breadcrumb-segments '(path-up-to-project file symbols))
+	  (lsp-headerline-breadcrumb-mode))
+  ) ;; end lsp-mode.el
+
+;; end 'lsp-mode' file.

@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -17,6 +17,7 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
+;; Enable toml-mode.el
 (use-package toml-mode
   :straight t
   :hook
@@ -28,7 +29,8 @@
   ;; load taplo the lsp backend
   ;; (add-to-list 'eglot-server-programs '(toml-mode . ("taplo")))
   (with-eval-after-load 'eglot
-  (add-to-list 'eglot-server-programs
-               '(toml-mode . ("taplo"  "--stdio"))))
-  )
+    (add-to-list 'eglot-server-programs
+                 '(toml-mode . ("taplo"  "--stdio"))))
+  ) ;; end toml-mode.el
 
+;; end 'toml-mode' file.

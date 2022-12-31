@@ -2,7 +2,7 @@
 ;; This file has been generated from init.el file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@
   (version-control t "use versioned backups")
   :config
   (setq confirm-kill-processes nil)
-  )
+  ) ;; end backup.el
 
 ;; ;; backup-dir.el package.
 ;; (use-package backup-dir
@@ -59,4 +59,6 @@
 ;;           (make-directory dirname t))
 ;;       (concat dirname (file-name-nondirectory FILE))))
 ;;   (make-backup-file-name t)
-;;   )
+;;   ) ;; end backup-dir.el
+
+;; end 'backup' file.
