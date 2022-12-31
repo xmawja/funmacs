@@ -1,4 +1,4 @@
-;;; flycheck.el -*- lexical-binding: t; -*-
+;;; hydra-conf.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -15,10 +15,8 @@
 ;; GNU General Public License for more details.
 
 ;; For a full copy of the GNU General Public License
-;; see <https://www.gnu.org/licenses/>.
+;; see <https://www.gnu.org/licenses/.>
 
-;; ;; Enable flycheck.el
-;; uncomment if you want to use it in favor of builtin flymake.
-;; (use-package flycheck
-;;   :straight t
-;;   :init (global-flycheck-mode))
+
+;; load library 'PATH'
+(load-library "hydra")

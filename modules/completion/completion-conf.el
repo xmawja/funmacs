@@ -20,7 +20,8 @@
 ;; load packages complation PATH
 (add-to-list 'load-path "~/.emacs.d/modules/completion/company/")
 (add-to-list 'load-path "~/.emacs.d/modules/completion/corfu/")
-(add-to-list 'load-path "~/.emacs.d/modules/completion/vertico")
+(add-to-list 'load-path "~/.emacs.d/modules/completion/vertico/")
+(add-to-list 'load-path "~/.emacs.d/modules/completion/yasnippet/")
 
 ;; ;; modules-completion-company elisp
 ;; (load-library "company-conf")
@@ -30,3 +31,6 @@
 
 ;; modules-completion-vertigo elisp
 (load-library "vertico-conf")
+
+;; modules-completion-yasnippet elisp
+(load-library "yasnippet-conf")

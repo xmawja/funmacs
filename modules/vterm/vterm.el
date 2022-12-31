@@ -1,4 +1,4 @@
-;;; magit.el -*- lexical-binding: t; -*-
+;;; vterm.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,20 +17,13 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; Enable magit
-(use-package magit
+;; Enable vterm.el
+(use-package vterm
   :straight t
-  :bind
-  (:map global-map
-	("C-x g" . magit-status))
+  :after (vterm-toggle)
   :hook
   ;; after init
-  (after-init . magit-mode)
-  )
-
-;; Options
-;; magit todos
-(use-package magit-todos
-  :defer t
-  :after (magit-mode)
-  )
+  (after-init . vterm-mode)
+  :init
+  (setq vterm-toggle-fullscreen-p nil)
+  ) ;; end vterm.el

@@ -1,4 +1,4 @@
-;;; vertico-conf.el -*- lexical-binding: t; -*-
+;;; lsp-ui.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,7 +17,8 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load useful packages config.
-(load-library "consult")
-(load-library "savehist-mode")
-(load-library "vertico")
+;; Optionaly
+;; lsp-ui Enhance UI
+(use-package lsp-ui
+  :hook (lsp-mode . lsp-ui-mode)
+  )

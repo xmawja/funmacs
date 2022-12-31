@@ -1,4 +1,4 @@
-;;; vertico-conf.el -*- lexical-binding: t; -*-
+;;; company-box.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -15,9 +15,8 @@
 ;; GNU General Public License for more details.
 
 ;; For a full copy of the GNU General Public License
-;; see <https://www.gnu.org/licenses/>.
+;; see <https://www.gnu.org/licenses/.>
 
-;; load useful packages config.
-(load-library "consult")
-(load-library "savehist-mode")
-(load-library "vertico")
+;; Enable company-box.el
+(use-package company-box
+  :hook (company-mode . company-box-mode))

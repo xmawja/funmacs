@@ -1,4 +1,4 @@
-;;; vertico-conf.el -*- lexical-binding: t; -*-
+;;; savehist.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,7 +17,14 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load useful packages config.
-(load-library "consult")
-(load-library "savehist-mode")
-(load-library "vertico")
+
+;; Persist history over Emacs restarts.\
+;; Vertico sorts by history position.
+(use-package savehist
+  :ensure nil
+  :straight (:type built-in)
+  :hook
+  ;; after init
+  (after-init . savehist-mode)
+  :init
+  (savehist-mode))

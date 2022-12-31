@@ -17,45 +17,40 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/.>
 
-;; load packages PATH
-(add-to-list 'load-path "~/.emacs.d/modules/")
+;; load directory 'PATH'
+(add-to-list 'load-path "~/.emacs.d/modules/benchmark/")
 (add-to-list 'load-path "~/.emacs.d/modules/completion/")
 (add-to-list 'load-path "~/.emacs.d/modules/eww/")
+(add-to-list 'load-path "~/.emacs.d/modules/hydra/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/")
+(add-to-list 'load-path "~/.emacs.d/modules/magit/")
 (add-to-list 'load-path "~/.emacs.d/modules/org/")
 (add-to-list 'load-path "~/.emacs.d/modules/treemacs/")
 (add-to-list 'load-path "~/.emacs.d/modules/ui/")
+(add-to-list 'load-path "~/.emacs.d/modules/undo-tree/")
+(add-to-list 'load-path "~/.emacs.d/modules/vterm/")
 
-;; load modules config.
+
+;; load library 'PATH'
+;; modules-benchmark elisp
+(load-library "benchmark-conf")
 ;; modules-completion-conf elisp
 (load-library "completion-conf")
 ;; modules-eww-browser elisp
 (load-library "eww-conf")
+;; ;; modules-hydra elisp
+;; (load-library "hydra-conf")
 ;; modules-lsp elisp
 (load-library "lsp-conf")
+;; modules-magit elisp
+(load-library "magit-conf")
 ;; modules-org elisp
 (load-library "org-conf")
 ;; modules-treemacs elisp
 (load-library "treemacs-conf")
 ;;modules-ui elisp
 (load-library "ui-conf")
-
-;; load librarys 'PATH'
-;; modules-benchmark elisp
-(load-library "benchmark-init")
-;; ;; modules-flycheck elisp
-;; (load-library "flycheck")
-;; ;; modules-hydra elisp
-;; (load-library "hydra")
-;; modules-magit elisp
-(load-library "magit")
-;; ;; modules-projectile elisp
-;; (load-library "projectile")
-;; modules-treemacs elsip
-(load-library "treemacs")
 ;; modules-undo-tree elisp
-(load-library "undo-tree")
+(load-library "undo-tree-conf")
 ;; modules-vterm elisp
-(load-library "vterm")
-;; modules-yasnippet elisp
-(load-library "yasnippet")
+(load-library "vterm-conf")

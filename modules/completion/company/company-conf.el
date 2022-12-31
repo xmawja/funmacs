@@ -20,3 +20,4 @@
 
 ;; load library PATH
 (load-library "company")
+(load-library "company-box")

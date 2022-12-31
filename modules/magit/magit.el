@@ -1,4 +1,4 @@
-;;; vertico-conf.el -*- lexical-binding: t; -*-
+;;; magit.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,7 +17,13 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load useful packages config.
-(load-library "consult")
-(load-library "savehist-mode")
-(load-library "vertico")
+;; Enable magit.el
+(use-package magit
+  :straight t
+  :bind
+  (:map global-map
+	("C-x g" . magit-status))
+  :hook
+  ;; after init
+  (after-init . magit-mode)
+  )

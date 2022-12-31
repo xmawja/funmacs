@@ -52,11 +52,3 @@
 	(setq lsp-headerline-breadcrumb-segments '(path-up-to-project file symbols))
 	(lsp-headerline-breadcrumb-mode))
   )
-
-;; Optionaly
-;; lsp-ui Enhance UI
-(use-package lsp-ui
-  :hook (lsp-mode . lsp-ui-mode))
-;; lsp-treemacs integration
-(use-package lsp-treemacs
-  :after lsp)

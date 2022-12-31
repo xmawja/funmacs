@@ -1,4 +1,4 @@
-;;; vertico-conf.el -*- lexical-binding: t; -*-
+;;; yasnippet.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,7 +17,17 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load useful packages config.
-(load-library "consult")
-(load-library "savehist-mode")
-(load-library "vertico")
+;; Enable yasnippet.el
+(use-package yasnippet
+  :straight t
+  :hook
+  ;; set yasnippet for prog-mode as minor mode.
+  (prog-mode . yas-minor-mode)
+  :config
+  ;; use yasnippet as a global mode.
+  ;;(yas-global-mode 1)
+  ;; load yasnippet by buffer to increse performance.
+  (yas-reload-all)
+  ;; user snippets directory
+  (setq-default yas-snippet-dirs '("~/.emacs.d/snippets"))
+  )

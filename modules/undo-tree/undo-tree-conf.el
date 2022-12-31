@@ -1,4 +1,4 @@
-;;; vterm.el -*- lexical-binding: t; -*-
+;;; undo-tree-conf.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -15,31 +15,8 @@
 ;; GNU General Public License for more details.
 
 ;; For a full copy of the GNU General Public License
-;; see <https://www.gnu.org/licenses/>.
+;; see <https://www.gnu.org/licenses/.>
 
-;; Enable vterm.el
-(use-package vterm
-  :straight t
-  :after (vterm-toggle)
-  :hook
-  ;; after init
-  (after-init . vterm-mode)
-  :init
-  (setq vterm-toggle-fullscreen-p nil)
-  )
 
-;; Enable vterm-toggle.el
-(use-package vterm-toggle
-  :bind
-  (("C-c t"        . vterm-toggle)
-   :map vterm-mode-map
-   ("<C-return>" . vterm-toggle-insert-cd)
-   ("s-n" . vterm-toggle-forward)
-   ("s-p" . vterm-toggle-backward))
-  :config
-  (add-to-list 'display-buffer-alist
-     '("\*vterm\*"
-       (display-buffer-in-side-window)
-       (window-height . 0.3)
-       (side . bottom)
-       (slot . 0))))
+;; load library 'PATH'
+(load-library "undo-tree")

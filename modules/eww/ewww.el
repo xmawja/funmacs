@@ -83,7 +83,7 @@ buffer."
 ;; ;; eww hydra
 ;; (setq eww-title (with-faicon "globe" "Eww Browser Command"))
 
-;;                                         ;generate hydra
+;; ;;generate hydra
 ;; (pretty-hydra-define eww-browser (:title eww-title :quit-key "q" :color pink )
 ;;                      ("A"
 ;;                       (

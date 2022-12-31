@@ -20,10 +20,11 @@
 ;; Enable all-the-icons.el
 (use-package  all-the-icons
   :straight t
-  ;; :hook
+  :hook
   ;; after init
-  ;; (after-init . all-the-icons-mode)
+  (after-init . all-the-icons-mode)
   :init
   (require 'treemacs-all-the-icons)
   (treemacs-load-theme "all-the-icons")
-  :if (display-graphic-p))
+  :if (display-graphic-p)
+  )

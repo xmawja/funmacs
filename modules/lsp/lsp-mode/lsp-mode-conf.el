@@ -20,3 +20,5 @@
 ;; load library 'PATH'
 (load-library "dap")
 (load-library "lsp")
+(load-library "lsp-treemacs")
+(load-library "lsp-ui")
