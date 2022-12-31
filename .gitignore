@@ -42,6 +42,7 @@ bookmarks
 .org-id-locations
 .tern-port
 .yas-compiled-snippets.el
+*.html
 auto-save-list/
 cask/
 ede-projects.el
