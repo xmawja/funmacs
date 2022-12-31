@@ -32,6 +32,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/rust/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/sh/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/toml/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/typescript/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/web/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/yaml/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/zig/")
@@ -65,6 +66,8 @@
 (load-library "sh-conf")
 ;; toml language
 (load-library "toml-conf")
+;; typescript language
+(load-library "typescript-conf")
 ;; web-mode
 ;; (load-library "web-conf")  ;; uncommenced if your using 'lsp-mode'
 ;; yaml language
