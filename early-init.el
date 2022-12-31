@@ -68,8 +68,8 @@
 ;; cursor color is concerned).
 (advice-add #'x-apply-session-resources :override #'ignore)
 
-;; ;; Stop showing compilation warnings on startup
-;; (setq native-comp-async-report-warnings-errors nil)
+;; Stop showing compilation warnings on startup
+(setq native-comp-async-report-warnings-errors nil)
 
 ;; Make the initial buffer load faster by setting its mode to fundamental-mode
 (customize-set-variable 'initial-major-mode 'fundamental-mode)
