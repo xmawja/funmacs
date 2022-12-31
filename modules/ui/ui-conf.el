@@ -19,6 +19,6 @@
 
 ;; load UI config.
 (load-library "all-the-icons")
-(load-library "themes")
 (load-library "dashboard")
 (load-library "modeline")
+(load-library "themes")

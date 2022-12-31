@@ -1,5 +1,5 @@
-;;; init.el -*- lexical-binding: t; -*-
-;; This file has been generated from init.el file. DO NOT EDIT.
+;;; completion-conf.el -*- lexical-binding: t; -*-
+;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
 ;; Copyright (C) 2022 Muja Siyam
@@ -15,14 +15,18 @@
 ;; GNU General Public License for more details.
 
 ;; For a full copy of the GNU General Public License
-;; see <https://www.gnu.org/licenses/>.
+;; see <https://www.gnu.org/licenses/.>
 
-;; import directorys 'PATH'
-(add-to-list 'load-path "~/.emacs.d/core/")
-(add-to-list 'load-path "~/.emacs.d/modules/")
+;; load packages complation PATH
+(add-to-list 'load-path "~/.emacs.d/modules/completion/company/")
+(add-to-list 'load-path "~/.emacs.d/modules/completion/corfu/")
+(add-to-list 'load-path "~/.emacs.d/modules/completion/vertico")
 
-;; import librarys 'PATH'
-;; core elisp
-(load-library "core-conf")
-;; modules elisp
-(load-library "modules-conf")
+;; ;; modules-completion-company elisp
+;; (load-library "company-conf")
+
+;; modules-completion-corfu elisp
+(load-library "corfu-conf")
+
+;; modules-completion-vertigo elisp
+(load-library "vertico-conf")

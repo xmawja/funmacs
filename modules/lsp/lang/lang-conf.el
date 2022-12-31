@@ -20,7 +20,11 @@
 ;; load parent directorys PATH.
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/c/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/cpp/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/css/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/go/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/html/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/javascript/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/json/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/lua/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/markdown/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/ocaml/")
@@ -34,36 +38,36 @@
 
 ;; available programming languages.
 ;; c programing
-(load-library "c")
+(load-library "c-conf")
 ;; c++ language
-(load-library "cpp")
-;; golang programing
-(load-library "go")
-;; lua language
-(load-library "lua")
-;; markdown language
-(load-library "markdown")
-;; ocaml ml language
-(load-library "ocaml")
-;; python 3 language
-(load-library "python3")
-;; rust language
-(load-library "rust")
-;; shell script languages
-(load-library "sh")
-;; toml language
-(load-library "toml")
-;; web-mode
-;; (load-library "web")  ;; uncommenced if your using 'lsp-mode'
+(load-library "cpp-conf")
 ;; css style language
-(load-library "css")
+(load-library "css-conf")
+;; golang programing
+(load-library "go-conf")
 ;; html markup language
-(load-library "html")
+(load-library "html-conf")
 ;; javascript/typescript language
-(load-library "javascript")
+(load-library "javascript-conf")
 ;; json object notation
-(load-library "json")
+(load-library "json-conf")
+;; lua language
+(load-library "lua-conf")
+;; markdown language
+(load-library "markdown-conf")
+;; ocaml ml language
+(load-library "ocaml-conf")
+;; python 3 language
+(load-library "python-conf")
+;; rust language
+(load-library "rust-conf")
+;; shell script languages
+(load-library "sh-conf")
+;; toml language
+(load-library "toml-conf")
+;; web-mode
+;; (load-library "web-conf")  ;; uncommenced if your using 'lsp-mode'
 ;; yaml language
-(load-library "yaml")
+(load-library "yaml-conf")
 ;; zig language
-(load-library "zig")
+(load-library "zig-conf")

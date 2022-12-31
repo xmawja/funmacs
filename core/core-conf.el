@@ -18,9 +18,9 @@
 ;; see <https://www.gnu.org/licenses/>.
 
 ;; load core config.
+(load-library "backup")
 (load-library "emacs")
+(load-library "recentfile")
 (load-library "settings")
 (load-library "straight")
 (load-library "which-key")
-(load-library "backup")
-(load-library "recentfile")

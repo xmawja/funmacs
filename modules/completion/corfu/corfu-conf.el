@@ -17,10 +17,10 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load useful corfu extensions.
-(load-library "corfu")
+;; load useful corfu extensions 'PATH'.
 (load-library "cape")
+(load-library "corfu")
 (load-library "dabbrev-mode")
 (load-library "kind-icon")
-(load-library "tempel")
 (load-library "orderless")
+(load-library "tempel")

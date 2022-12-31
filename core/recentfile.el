@@ -19,8 +19,8 @@
 
 ;; Enable recentf.el
 (use-package recentf
-  :ensure nil
-  :straight (:type built-in)
+  ;; :ensure nil
+  ;; :straight (:type built-in)
   :config
   (setq recentf-max-saved-items 40
         recentf-max-menu-items 15

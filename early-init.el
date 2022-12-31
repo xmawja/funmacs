@@ -74,5 +74,5 @@
 (customize-set-variable 'initial-major-mode 'fundamental-mode)
 
 ;; Reset garbage collector limit after init process has ended (8Mo)
-;;(add-hook 'after-init-hook
-;;          #'(lambda () (setq gc-cons-threshold (* 8 1024 1024))))
+(add-hook 'after-init-hook
+          #'(lambda () (setq gc-cons-threshold (* 8 1024 1024))))

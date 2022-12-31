@@ -19,8 +19,8 @@
 
 ;; Enable backup.el
 (use-package files
-  :ensure nil
-  :straight (:type built-in)
+  ;; :ensure nil
+  ;; :straight (:type built-in)
   :hook
   (before-save . delete-trailing-whitespace)
   :custom

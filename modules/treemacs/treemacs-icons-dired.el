@@ -1,5 +1,5 @@
-;;; init.el -*- lexical-binding: t; -*-
-;; This file has been generated from init.el file. DO NOT EDIT.
+;;; treemacs-icons-dired.el -*- lexical-binding: t; -*-
+;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
 ;; Copyright (C) 2022 Muja Siyam
@@ -15,14 +15,11 @@
 ;; GNU General Public License for more details.
 
 ;; For a full copy of the GNU General Public License
-;; see <https://www.gnu.org/licenses/>.
+;; see <https://www.gnu.org/licenses/.>
 
-;; import directorys 'PATH'
-(add-to-list 'load-path "~/.emacs.d/core/")
-(add-to-list 'load-path "~/.emacs.d/modules/")
 
-;; import librarys 'PATH'
-;; core elisp
-(load-library "core-conf")
-;; modules elisp
-(load-library "modules-conf")
+;; Enable treemacs icons when using dired buffer.
+(use-package treemacs-icons-dired
+  :ensure t
+  :hook (dired-mode . treemacs-icons-dired-enable-once)
+  )

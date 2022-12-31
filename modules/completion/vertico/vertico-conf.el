@@ -18,5 +18,5 @@
 ;; see <https://www.gnu.org/licenses/>.
 
 ;; load useful packages config.
-(load-library "vertico")
 (load-library "consult")
+(load-library "vertico")
