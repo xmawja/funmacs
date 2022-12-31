@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -55,4 +55,7 @@
   (setq org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
   (org-roam-db-autosync-mode)
   ;; If using org-roam-protocol
-  (require 'org-roam-protocol))
+  (require 'org-roam-protocol)
+  );; end org-roam.el
+
+;; end 'org-roam' file.

@@ -2,7 +2,7 @@
 ;; This file has been generated from init.el file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -32,6 +32,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/rust/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/sh/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/toml/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/typescript/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/web/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/yaml/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/zig/")
@@ -65,9 +66,14 @@
 (load-library "sh-conf")
 ;; toml language
 (load-library "toml-conf")
+;; typescript language
+(load-library "typescript-conf")
 ;; web-mode
 ;; (load-library "web-conf")  ;; uncommenced if your using 'lsp-mode'
 ;; yaml language
 (load-library "yaml-conf")
 ;; zig language
 (load-library "zig-conf")
+
+
+;; end 'lang-conf' file.

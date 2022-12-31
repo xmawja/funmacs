@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -43,10 +43,12 @@
   ;; Optionally make the Tempel templates available to Abbrev,
   ;; either locally or globally. `expand-abbrev' is bound to C-x '.
   ;; (add-hook 'prog-mode-hook #'tempel-abbrev-mode)
-  ;; (global-tempel-abbrev-mode)
+  (global-tempel-abbrev-mode)
   :hook
   ;; tempel in prog-mode
   (prog-mode . tempel-setup-capf)
   ;; tempel in text mode
   (text-mode . tempel-setup-capf)
-  )
+  ) ;; end temlpe.el
+
+;; end 'temple' file.

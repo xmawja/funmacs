@@ -2,7 +2,7 @@
 ;; This file has been generated from init.el file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -68,8 +68,8 @@
 ;; cursor color is concerned).
 (advice-add #'x-apply-session-resources :override #'ignore)
 
-;; ;; Stop showing compilation warnings on startup
-;; (setq native-comp-async-report-warnings-errors nil)
+;; Stop showing compilation warnings on startup
+(setq native-comp-async-report-warnings-errors nil)
 
 ;; Make the initial buffer load faster by setting its mode to fundamental-mode
 (customize-set-variable 'initial-major-mode 'fundamental-mode)
@@ -77,3 +77,5 @@
 ;; Reset garbage collector limit after init process has ended (8Mo)
 (add-hook 'after-init-hook
           #'(lambda () (setq gc-cons-threshold (* 8 1024 1024))))
+
+;; end 'early-init' file.

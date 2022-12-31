@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -55,9 +55,13 @@
     "Enable auto-saving in rustic-mode buffers."
     (when buffer-file-name
       (setq-local compilation-ask-about-save nil)))
-  )
+  ) ;; end rustic-mode.el
+
 ;; Enable cargo.el
 (use-package cargo
   :after (rust-mode)
   :hook
-  (rust-mode . cargo-minor-mode))
+  (rust-mode . cargo-minor-mode)
+  ) ;; end cargo.el
+
+;; end 'rustic-mode' file.

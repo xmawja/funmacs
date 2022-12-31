@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -22,4 +22,7 @@
   :straight t
   :config
   ;; To disable collection of benchmark data after init is done.
-  (add-hook 'after-init-hook 'benchmark-init/deactivate))
+  (add-hook 'after-init-hook 'benchmark-init/deactivate)
+  ) ;; end benchmark-init.el
+
+;; end 'bacnchmark-conf' file.

@@ -1,8 +1,8 @@
-;;; config.el -*- lexical-binding: t; -*-
+;;; ui-conf.el -*- lexical-binding: t; -*-
 ;; This file has been generated from init.el file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -22,3 +22,5 @@
 (load-library "dashboard")
 (load-library "modeline")
 (load-library "themes")
+
+;; end 'ui-conf' file.

@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -26,10 +26,12 @@
   ;; :require org
   :bind
   (:map global-map
-		("C-c a" . org-agenda)         ;; open agenda
-                ("C-c l" . org-store-link)     ;; stored agenda
-                )
+		    ("C-c a" . org-agenda)         ;; open agenda
+        ("C-c l" . org-store-link)     ;; stored agenda
+        )
   :config
   ;; set the default agenda files directory
   (setq org-agenda-files '("~/Documents/org/agenda.org" ))
- )
+  ) ;; end org-agenda.el
+
+;; end 'org-agenda' file.

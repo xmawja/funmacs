@@ -2,7 +2,7 @@
 ;; This file has been generated from init.el file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -55,4 +55,6 @@
   ;; ;; Load the theme of your choice:
   ;; (load-theme 'modus-operandi) ;; OR (load-theme 'modus-vivendi)
   ;; :bind ("<f5>" . modus-themes-toggle)
-  )
+  ) ;; end emacs.el
+
+;; end 'emacs' file.
