@@ -17,13 +17,14 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/.>
 
+;; load directory 'PATH'
+(add-to-list 'load-path "~/.emacs.d/modules/treemacs/")
 
 ;; load librarys 'PATH'
+(load-library "treemacs")
 (load-library "treemacs-all-the-icons")
 (load-library "treemacs-evil")
 (load-library "treemacs-icons-dired")
 (load-library "treemacs-magit")
 (load-library "treemacs-persp")
-(load-library "treemacs-projectile")
 (load-library "treemacs-tab-bar")
-(load-library "treemacs")

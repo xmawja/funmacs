@@ -18,4 +18,4 @@
 ;; see <https://www.gnu.org/licenses/>.
 
 ;; load library 'PATH'
-(load-library "json")
+(load-library "json-mode")

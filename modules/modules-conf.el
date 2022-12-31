@@ -21,7 +21,6 @@
 (add-to-list 'load-path "~/.emacs.d/modules/benchmark/")
 (add-to-list 'load-path "~/.emacs.d/modules/completion/")
 (add-to-list 'load-path "~/.emacs.d/modules/eww/")
-(add-to-list 'load-path "~/.emacs.d/modules/hydra/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/")
 (add-to-list 'load-path "~/.emacs.d/modules/magit/")
 (add-to-list 'load-path "~/.emacs.d/modules/org/")
@@ -38,8 +37,6 @@
 (load-library "completion-conf")
 ;; modules-eww-browser elisp
 (load-library "eww-conf")
-;; ;; modules-hydra elisp
-;; (load-library "hydra-conf")
 ;; modules-lsp elisp
 (load-library "lsp-conf")
 ;; modules-magit elisp

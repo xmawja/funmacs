@@ -28,5 +28,5 @@
 (load-library "eglot-conf")
 ;; modules-lsp-lang elisp
 (load-library "lang-conf")
-;; modules-lsp-mode elisp
-(load-library "lsp-mode-conf")
+;; ;; modules-lsp-mode elisp
+;; (load-library "lsp-mode-conf")
