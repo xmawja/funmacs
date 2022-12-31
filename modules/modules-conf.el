@@ -21,6 +21,8 @@
 ;; load modules config.
 ;; modules-eww-browser elisp
 (load-library "eww-conf")
+;; ;; modules-hydra elisp
+;; (load-library "hydra")
 (load-library "magit")
 (load-library "treemacs")
 (load-library "vterm")
