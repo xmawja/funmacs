@@ -1,4 +1,4 @@
-;;; modules-conf.el -*- lexical-binding: t; -*-
+;;; eww-conf.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,15 +17,5 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/.>
 
-(add-to-list 'load-path "~/.emacs.d/modules/eww/")
-;; load modules config.
-;; modules-eww-browser elisp
-(load-library "eww-conf")
-(load-library "magit")
-(load-library "treemacs")
-(load-library "vterm")
-;; (load-library "projectile")
-(load-library "undo-tree")
-(load-library "yasnippet")
-;; (load-library "flycheck")
-(load-library "benchmark-init")
+;; laod library 'PATH'
+(load-library "ewww")
