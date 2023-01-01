@@ -41,7 +41,8 @@
 
 ;; CONFIGURE use-package TO USE straight.el BY DEFAULT
 (use-package straight
-  :custom (straight-use-package-by-default t)
+  :custom
+  (straight-use-package-by-default t)
   ) ;; end straight.el
 
 ;; use-package.el is no longer needed at runtime

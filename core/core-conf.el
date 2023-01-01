@@ -17,13 +17,15 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load core config.
-(load-library "straight")
-(load-library "backup")
-(load-library "emacs")
-(load-library "recentfile")
-(load-library "settings")
+;; load package 'PATH'
+(add-to-list 'load-path "~/.emacs.d/core/")
 
+;; load library 'PATH'.
+(load-library "straight")
+(load-library "settings")
+(load-library "emacs")
 (load-library "which-key")
+;; (load-library "backup")
+(load-library "recentfile")
 
 ;; end 'core-config' file.
