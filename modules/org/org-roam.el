@@ -19,7 +19,12 @@
 
 ;; Enable org-roam.el
 (use-package org-roam
-  :straight t
+  ;; pull org-roam form source repository
+  :straight (:host github :repo "org-roam/org-roam"
+                   :files (:defaults "extensions/*"))
+  :init
+  ;; acknowledge upgrade and remove warning at startup
+  (setq org-roam-v2-ack t)
   :custom
   (org-roam-directory (file-truename "~/Documents/org/roam"))
   ;; set 'complation-at-point'
