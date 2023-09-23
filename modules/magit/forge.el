@@ -1,4 +1,4 @@
-;;; magit-conf.el -*- lexical-binding: t; -*-
+;;; magit.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,9 +17,9 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load library 'PATH'
-(load-library "forge")
-(load-library "magit")
-(load-library "magit-todos")
+;; Enable forge.el
+(use-package forge
+  
+  ) ;; end forge.el
 
-;; end 'magit-conf' file.
+;; end 'forge' file.
