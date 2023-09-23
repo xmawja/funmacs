@@ -66,5 +66,10 @@
 ;; autocomplete paired brackets
 (electric-pair-mode 1)
 
+;; 'alpha' transpairency
+;; For current frame
+(set-frame-parameter nil 'alpha-background 90)
+;; For all new frames henceforth
+(add-to-list 'default-frame-alist '(alpha-background . 90))
 
 ;; end 'settings' file.
