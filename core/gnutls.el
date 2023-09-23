@@ -1,4 +1,4 @@
-;;; core-config.el -*- lexical-binding: t; -*-
+;;; recentf-mode.el -*- lexical-binding: t; -*-
 ;; This file has been generated from init.el file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,16 +17,11 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load package 'PATH'
-(add-to-list 'load-path "~/.emacs.d/core/")
+;; Enable gnutls.el
+(use-package gnutls
+  :defer t
+  :custom
+  (gnutls-verify-error t)
+  ) ;; end
 
-;; load library 'PATH'.
-(load-library "straight")
-(load-library "settings")
-(load-library "emacs")
-(load-library "gnutls")
-(load-library "which-key")
-;; (load-library "backup")
-(load-library "recentfile")
-
-;; end 'core-config' file.
+;; end 'gnutls' file.
