@@ -1,4 +1,4 @@
-;;; core-config.el -*- lexical-binding: t; -*-
+;;; recentf-mode.el -*- lexical-binding: t; -*-
 ;; This file has been generated from init.el file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,17 +17,17 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load package 'PATH'
-(add-to-list 'load-path "~/.emacs.d/core/")
+;; Enable no-littering.el
+(use-package no-littering
+  :ensure t
+  :init
+  (setq no-littering-etc-directory "~/.cache/emacs/etc/"
+        no-littering-var-directory "~/.cache/emacs/var/")
+  (when (fboundp 'startup-redirect-eln-cache)
+    (startup-redirect-eln-cache
+     (convert-standard-filename
+      (expand-file-name  "eln-cache/" no-littering-var-directory))))
+  ) ;; end 
 
-;; load library 'PATH'.
-(load-library "straight")
-(load-library "settings")
-(load-library "emacs")
-(load-library "gnutls")
-(load-library "no-littering")
-(load-library "which-key")
-;; (load-library "backup")
-(load-library "recentfile")
 
-;; end 'core-config' file.
+;; end 'no-littering' file.
