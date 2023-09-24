@@ -72,4 +72,7 @@
 ;; For all new frames henceforth
 (add-to-list 'default-frame-alist '(alpha-background . 90))
 
+;; highlight line
+(global-hl-line-mode 1)
+
 ;; end 'settings' file.
