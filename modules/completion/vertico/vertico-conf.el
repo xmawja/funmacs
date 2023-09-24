@@ -19,6 +19,8 @@
 
 ;; load useful packages config.
 (load-library "consult")
+(load-library "consult-eglot")
+(load-library "marginalia")
 (load-library "savehist-mode")
 (load-library "vertico")
 
