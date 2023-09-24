@@ -18,7 +18,7 @@
 ;; see <https://www.gnu.org/licenses/>.
 
 ;; load library 'PATH'
-;;(load-library "forge")
+(load-library "forge")
 (load-library "git-modes")
 (load-library "magit-todos")
 (load-library "magit")

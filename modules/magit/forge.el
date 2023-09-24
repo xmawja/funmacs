@@ -19,7 +19,7 @@
 
 ;; Enable forge.el
 (use-package forge
-  
+  :straight t
   ) ;; end forge.el
 
 ;; end 'forge' file.
