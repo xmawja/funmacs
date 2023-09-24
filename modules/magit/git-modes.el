@@ -1,4 +1,4 @@
-;;; magit-conf.el -*- lexical-binding: t; -*-
+;;; magit.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,10 +17,12 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load library 'PATH'
-;;(load-library "forge")
-(load-library "git-modes")
-(load-library "magit-todos")
-(load-library "magit")
+;; Enable git-modes.el
+(use-package git-modes
+  :straight t
+  :config
+  (add-to-list 'auto-mode-alist
+             (cons "/.dockerignore\\'" 'gitignore-mode))
+  ) ;; end git-modes.el
 
-;; end 'magit-conf' file.
+;; end 'git-modes' file.
