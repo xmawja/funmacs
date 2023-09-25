@@ -26,6 +26,7 @@
   :hook
   ;; after init
   (after-init . magit-mode)
+  (after-save . magit-after-save-refresh-status)
   ) ;; end magit.el
 
 ;; end 'magit' file.
