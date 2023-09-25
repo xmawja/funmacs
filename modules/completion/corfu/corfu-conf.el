@@ -22,7 +22,6 @@
 (load-library "corfu")
 (load-library "dabbrev-mode")
 (load-library "kind-icon")
-(load-library "orderless")
 (load-library "tempel")
 
 

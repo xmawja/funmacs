@@ -23,6 +23,7 @@
 (load-library "embark")
 (load-library "consult-eglot")
 (load-library "marginalia")
+(load-library "orderless")
 (load-library "savehist-mode")
 (load-library "vertico")
 
