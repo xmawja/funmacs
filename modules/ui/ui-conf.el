@@ -20,6 +20,8 @@
 ;; load UI config.
 (load-library "all-the-icons")
 (load-library "dashboard")
+;; (load-library "highlight-indent-guides")
+(load-library "kind-icon")
 (load-library "modeline")
 (load-library "themes")
 
