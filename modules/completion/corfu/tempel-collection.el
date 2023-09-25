@@ -1,4 +1,4 @@
-;;; corfu-conf.el -*- lexical-binding: t; -*-
+;;; tempel.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,12 +17,12 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load useful corfu extensions 'PATH'.
-(load-library "cape")
-(load-library "corfu")
-(load-library "dabbrev-mode")
-(load-library "kind-icon")
-(load-library "tempel")
-(load-library "tempel-collection")
+;; Enable 'Tempel-collection.el'
+;; Collection tempel templates
+;; files are placed in the directory 'templates' as lisp data <mode>.eld files.
+(use-package tempel-collection
+  :ensure t
+  :after tempel
+  ) ;; End
 
-;; end 'corfu-conf' file.
+;; End 'tempel-collection.el' file.
