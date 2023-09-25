@@ -1,4 +1,4 @@
-;;; yasnippet-conf.el -*- lexical-binding: t; -*-
+;;; vertico.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,9 +17,12 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load librarys 'PATH'
-(load-library "yasnippet-capf")
-(load-library "yasnippet")
-(load-library "yasnippet-snippets")
+;; Enable 'yasnippet-capf.el'
+;; A simple capf (Completion-At-Point Function) for completing yasnippet snippets.
+(use-package yasnippet-capf
+  :after cape
+  :config
+  (add-to-list 'completion-at-point-functions #'yasnippet-capf)
+  ) ;; End
 
-;; end 'yasnippet-snippets' file.
+;; End 'yasnippet-capf.el' file.
