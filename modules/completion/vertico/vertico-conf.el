@@ -20,6 +20,7 @@
 ;; load useful packages config.
 (load-library "all-the-icons-completion")
 (load-library "consult")
+(load-library "embark")
 (load-library "consult-eglot")
 (load-library "marginalia")
 (load-library "savehist-mode")
