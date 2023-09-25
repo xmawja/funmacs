@@ -105,7 +105,7 @@
   (treemacs-indent-guide-mode t)
   :bind
   (:map global-map
-        ("M-0"       . treemacs-select-window)
+        ("M-o"       . treemacs-select-window)
         ("C-x t 1"   . treemacs-delete-other-windows)
         ("C-x t t"   . treemacs)
         ("C-x t d"   . treemacs-select-directory)
