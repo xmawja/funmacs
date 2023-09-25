@@ -1,4 +1,4 @@
-;;; vertico-conf.el -*- lexical-binding: t; -*-
+;;; all-the-icons.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,12 +17,14 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load useful packages config.
-(load-library "all-the-icons-completion")
-(load-library "consult")
-(load-library "consult-eglot")
-(load-library "marginalia")
-(load-library "savehist-mode")
-(load-library "vertico")
+;; Enable all-the-icons.el
+;; Add icons to completion candidates using the built in completion metadata functions.
+(use-package all-the-icons-completion
+  :after (marginalia all-the-icons)
+  :hook (marginalia-mode . all-the-icons-completion-marginalia-setup)
+  :init
+  (all-the-icons-completion-mode)
 
-;; end 'vertico-conf' file.
+  ) ;; end all-the-icons-completion.el
+
+;; end 'all-the-icons' file.
