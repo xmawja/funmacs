@@ -18,9 +18,12 @@
 ;; see <https://www.gnu.org/licenses/.>
 
 ;; load directory 'PATH'
+(add-to-list 'load-path "~/.emacs.d/modules/ai/")
 (add-to-list 'load-path "~/.emacs.d/modules/benchmark/")
 (add-to-list 'load-path "~/.emacs.d/modules/completion/")
+(add-to-list 'load-path "~/.emacs.d/modules/copilot/")
 (add-to-list 'load-path "~/.emacs.d/modules/eww/")
+(add-to-list 'load-path "~/.emacs.d/modules/flyspell/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/")
 (add-to-list 'load-path "~/.emacs.d/modules/magit/")
 (add-to-list 'load-path "~/.emacs.d/modules/org/")
