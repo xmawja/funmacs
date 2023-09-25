@@ -1,5 +1,5 @@
-;;; ui-conf.el -*- lexical-binding: t; -*-
-;; This file has been generated from init.el file. DO NOT EDIT.
+;;; modeline.el -*- lexical-binding: t; -*-
+;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
 ;; Copyright (C) 2022 - 2023 Muja Siyam
@@ -17,12 +17,15 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load UI config.
-(load-library "all-the-icons")
-(load-library "dashboard")
-(load-library "highlight-indent-guides")
-(load-library "kind-icon")
-(load-library "modeline")
-(load-library "themes")
+;; Enable modeline.el
+(use-package highlight-indent-guides
+  :straight t
+  :hook
+  (prog-mode . highlight-indent-guides-mode)
+  :config
+  (set-face-background 'highlight-indent-guides-odd-face "darkgray")
+  (set-face-background 'highlight-indent-guides-even-face "dimgray")
+  (set-face-foreground 'highlight-indent-guides-character-face "dimgray")
+  ) ;; end doom-modeline.el
 
-;; end 'ui-conf' file.
+;; end 'modeline' file.
