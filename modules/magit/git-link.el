@@ -1,4 +1,4 @@
-;;; magit-conf.el -*- lexical-binding: t; -*-
+;;; editorconfig.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -18,10 +18,11 @@
 ;; see <https://www.gnu.org/licenses/>.
 
 ;; load library 'PATH'
-(load-library "forge")
-(load-library "git-link")
-(load-library "git-modes")
-(load-library "magit-todos")
-(load-library "magit")
+;; Interactive Emacs functions that create URLs for files
+;; and commits in GitHub/Bitbucket/GitLab/... repositories.
+(use-package git-link
+  :config
+  (setf git-link-use-commit t)
+  ) ;; End
 
-;; end 'magit-conf' file.
+;;  End 'git-link.el' file.
