@@ -29,9 +29,6 @@
   :bind
   ("M-`" . copilot-complete)
   :bind
-  (:map rab/toggles-map
-        ("`" . copilot-mode))
-  :bind
   (:map copilot-completion-map
         ("C-g" .  'copilot-clear-overlay)
         ("M-p" . 'copilot-previous-completion)
