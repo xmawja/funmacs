@@ -101,6 +101,8 @@
        (treemacs-git-mode 'simple)))
 
     (treemacs-hide-gitignored-files-mode nil))
+  ;; indent guide 
+  (treemacs-indent-guide-mode t)
   :bind
   (:map global-map
         ("M-0"       . treemacs-select-window)
