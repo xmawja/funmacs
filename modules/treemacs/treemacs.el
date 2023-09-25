@@ -111,7 +111,11 @@
         ("C-x t d"   . treemacs-select-directory)
         ("C-x t B"   . treemacs-bookmark)
         ("C-x t C-t" . treemacs-find-file)
-        ("C-x t M-t" . treemacs-find-tag))
+        ("C-x t M-t" . treemacs-find-tag)
+        ("C-x t C-o" . treemacs-add-project)
+        ("C-x t C-a" . treemacs-create-workspace)
+        ("C-x t C-s" . treemacs-switch-workspace)
+        )
   ) ;; end treemacs.el
 
 ;; end 'treemacs' file.
