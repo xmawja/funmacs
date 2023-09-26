@@ -19,6 +19,7 @@
 
 ;; load packages 'PATH'
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/eglot/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/treesitter/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lsp-mode/")
 
@@ -26,6 +27,8 @@
 ;; load library 'PATH'
 ;; modules-lsp-eglot elisp
 (load-library "eglot-conf")
+;; modules-treesitter elisp
+(load-library "treesitter-conf")
 ;; modules-lsp-lang elisp
 (load-library "lang-conf")
 ;; ;; modules-lsp-mode elisp
