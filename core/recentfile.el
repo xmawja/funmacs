@@ -21,6 +21,8 @@
 (use-package recentf
   ;; :ensure nil
   ;; :straight (:type built-in)
+  :hook
+  (after-init . recentf-mode)  
   :config
   (setq recentf-max-saved-items 40
         recentf-max-menu-items 15
@@ -31,7 +33,11 @@
   (add-to-list 'recentf-exclude  (expand-file-name package-user-dir))
   ;; (add-to-list 'recentf-exclude no-littering-var-directory)
   ;; (add-to-list 'recentf-exclude no-littering-etc-directory)
-  :hook (after-init . recentf-mode)
+  ;; no-littering for recentf
+  (add-to-list 'recentf-exclude
+             (recentf-expand-file-name no-littering-var-directory))
+(add-to-list 'recentf-exclude
+             (recentf-expand-file-name no-littering-etc-directory))
   ) ;; end recentf.el
 
 ;; end 'recentf' file.
