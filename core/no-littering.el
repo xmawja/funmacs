@@ -19,14 +19,20 @@
 
 ;; Enable no-littering.el
 (use-package no-littering
-  :ensure t
-  :init
+  ;; :straight t
+  :init 
+  ;; (require 'no-littering)
   (setq no-littering-etc-directory "~/.cache/emacs/etc/"
         no-littering-var-directory "~/.cache/emacs/var/")
   (when (fboundp 'startup-redirect-eln-cache)
     (startup-redirect-eln-cache
      (convert-standard-filename
-      (expand-file-name  "eln-cache/" no-littering-var-directory))))
+      (expand-file-name  "eln-cache/" no-littering-var-directory)))
+    
+  (setq auto-save-file-name-transforms
+        `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
+  (setq custom-file (no-littering-expand-etc-file-name "custom.el")))
+  
   ) ;; end 
 
 
