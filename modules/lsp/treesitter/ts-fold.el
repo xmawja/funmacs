@@ -19,9 +19,21 @@
 
 
 ;; load library 'PATH'
-(load-library "treesitter")
-(load-library "treesit-auto")
-(load-library "ts-fold")
+;; Code-folding using tree-sitter
+;; ts-fold builds on top of elisp-tree-sitter
+;; to provide code folding based on the tree-sitter syntax tree.
+(use-package ts-fold
+  :straight (ts-fold :type git :host github :repo "emacs-tree-sitter/ts-fold")
+  :config
+  (global-ts-fold-mode)
+  (global-ts-fold-indicators-mode)
+  :bind
+  (:map global-map
+        ("C-c f O" . ts-fold-open-all)
+        ("C-c f o" . ts-fold-open-recursively)
+        ("C-c f C" . ts-fold-close-all)
+        ("C-c f c" . ts-fold-close)
+        ("C-c f z" . ts-fold-toggle))
+  ) ;; End
 
-;; end 'typescript-conf' file.
- 
+;; End 'ts-fold.el' file.
