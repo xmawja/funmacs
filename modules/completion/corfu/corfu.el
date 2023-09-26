@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -19,15 +19,15 @@
 
 ;; Enable corfu.el
 (use-package corfu
-   :straight (corfu :files (:defaults "extensions/*")
-                    :includes
-		    (corfu-echo       ;; corfu-echo-mode displays a brief candidate documentation in the echo area.
-		     corfu-history    ;; corfu-history-mode remembers selected candidates and sorts the candidates by their history position.
-		     corfu-indexed    ;; corfu-indexed-mode allows you to select indexed candidates with prefix arguments.
-		     corfu-info       ;; Actions to access the candidate location and documentation.
-		     corfu-popupinfo  ;; Display candidate documentation or source in a popup next to the candidate menu.
-		     corfu-quick      ;; Commands to select using Avy-style quick keys.
-		     ))
+  :straight (corfu :files (:defaults "extensions/*")
+                   :includes
+		               (corfu-echo       ;; corfu-echo-mode displays a brief candidate documentation in the echo area.
+		                corfu-history    ;; corfu-history-mode remembers selected candidates and sorts the candidates by their history position.
+		                corfu-indexed    ;; corfu-indexed-mode allows you to select indexed candidates with prefix arguments.
+		                corfu-info       ;; Actions to access the candidate location and documentation.
+		                corfu-popupinfo  ;; Display candidate documentation or source in a popup next to the candidate menu.
+		                corfu-quick      ;; Commands to select using Avy-style quick keys.
+		                ))
   ;; Optional customizations
   :custom
   (corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
@@ -62,17 +62,18 @@
   ;; (corfu-quick-mode t)
   ;; Aggressive completion, cheap prefix filtering.
   (setq corfu-auto t
-              corfu-auto-delay 0
-              corfu-auto-prefix 0
-              completion-styles '(basic))
+        corfu-quit-no-match 'separator
+        corfu-auto-delay 0
+        corfu-auto-prefix 0
+        completion-styles '(basic))
   :bind (:map corfu-map
               ("C-n" . corfu-next)
               ("C-p" . corfu-previous)
-	      ("<escape>" . corfu-quit)
+	            ("<escape>" . corfu-quit)
               ("<return>" . corfu-insert)
               ("M-d" . corfu-show-documentation)
               ("M-l" . corfu-show-location)
-	      )
+	            )
   :hook
   ;; after init
   (after-init . corfu-mode)
@@ -85,4 +86,6 @@
   ;; 		(list (cape-super-capf
   ;; 		       #'eglot-completion-at-point
   ;;                      (cape-company-to-capf #'company-yasnippet)))))
-  )
+  ) ;; end corfu.el
+
+;; end 'corfu' file.

@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -41,7 +41,9 @@
 
 ;; CONFIGURE use-package TO USE straight.el BY DEFAULT
 (use-package straight
-  :custom (straight-use-package-by-default t))
+  :custom
+  (straight-use-package-by-default t)
+  ) ;; end straight.el
 
 ;; use-package.el is no longer needed at runtime
 ;; This means you should put the following at
@@ -50,3 +52,5 @@
   (require 'use-package))
 ;; (require 'diminish)                ;; if you use :diminish
 (require 'bind-key)                ;; if you use any :bind variant
+
+;; end 'straight' file.

@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -26,6 +26,10 @@
   :after org
   :hook
   (after-init . org-mode)
+  ;; ;; modern org-mode org-modern
+  ;; ;; Option 1: Per buffer
+  ;; (org-mode . org-modern-mode)
+  ;; (org-agenda-finalize . org-modern-agenda)
   :init
   ;;(setq-default major-mode 'org-mode) if nesesery
   ;; set the default notes file places
@@ -38,9 +42,11 @@
   ;; closing timestamp or next line
   (setq org-log-done 'time)
   ;; take a note before closing the task.
- (setq org-log-done 'note)
- ;; Pamodoro timer tone
- (setq org-clock-sound "~/.emacs.d/assets/sound/ding.wav")
- :config
- (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
- )
+  (setq org-log-done 'note)
+  ;; Pamodoro timer tone
+  (setq org-clock-sound "~/.emacs.d/assets/sound/ding.wav")
+  :config
+  (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+  ) ;; end org-mode.el
+
+;; end 'org-mode' file.

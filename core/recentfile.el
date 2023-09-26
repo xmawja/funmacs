@@ -2,7 +2,7 @@
 ;; This file has been generated from init.el file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -19,8 +19,10 @@
 
 ;; Enable recentf.el
 (use-package recentf
-  :ensure nil
-  :straight (:type built-in)
+  ;; :ensure nil
+  ;; :straight (:type built-in)
+  :hook
+  (after-init . recentf-mode)  
   :config
   (setq recentf-max-saved-items 40
         recentf-max-menu-items 15
@@ -31,5 +33,11 @@
   (add-to-list 'recentf-exclude  (expand-file-name package-user-dir))
   ;; (add-to-list 'recentf-exclude no-littering-var-directory)
   ;; (add-to-list 'recentf-exclude no-littering-etc-directory)
-  :hook (after-init . recentf-mode)
-  )
+  ;; no-littering for recentf
+  (add-to-list 'recentf-exclude
+             (recentf-expand-file-name no-littering-var-directory))
+(add-to-list 'recentf-exclude
+             (recentf-expand-file-name no-littering-etc-directory))
+  ) ;; end recentf.el
+
+;; end 'recentf' file.

@@ -2,7 +2,7 @@
 ;; This file has been generated from init.el file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -17,42 +17,26 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; import directorys
+;; import directory 'PATH'
 (add-to-list 'load-path "~/.emacs.d/core/")
 (add-to-list 'load-path "~/.emacs.d/modules/")
-(add-to-list 'load-path "~/.emacs.d/modules/org/")
-(add-to-list 'load-path "~/.emacs.d/modules/ui/")
-(add-to-list 'load-path "~/.emacs.d/modules/lsp/eglot/")
-(add-to-list 'load-path "~/.emacs.d/modules/lsp/lsp-mode/")
-(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/")
-(add-to-list 'load-path "~/.emacs.d/modules/completion/corfu/")
-(add-to-list 'load-path "~/.emacs.d/modules/completion/vertico")
-(add-to-list 'load-path "~/.emacs.d/modules/completion/company/")
 
-;; core elisp 
+;; import library 'PATH'
+;; core elisp
 (load-library "core-conf")
-
 ;; modules elisp
 (load-library "modules-conf")
 
-;; modules-org elisp
-(load-library "org-conf")
-
-;;modules-ui elisp
-(load-library "ui-conf")
-
-;; modules-lsp-eglot elisp
-(load-library "eglot-conf")
-;; modules-lsp-lsp-mode elisp
-;; (load-library "lsp")
-;; (load-library "dap")
-;; modules-lsp-lang elisp
-(load-library "lang-conf")
-
-;; modules-completion-corfu elisp
-(load-library "corfu-conf")
-;; modules-completion-vertigo elisp
-(load-library "vertico-conf")
-;; ;; modules-completion-company elisp
-;; (load-library "company")
-
+;; end 'init' file.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(highlight-indent-guides-method 'character))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

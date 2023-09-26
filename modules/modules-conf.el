@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -17,12 +17,48 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/.>
 
-;; load modules config.
-(load-library "magit")
-(load-library "treemacs")
-(load-library "vterm")
-;; (load-library "projectile")
-(load-library "undo-tree")
-(load-library "yasnippet")
-;; (load-library "flycheck")
-(load-library "benchmark-init")
+;; load directory 'PATH'
+(add-to-list 'load-path "~/.emacs.d/modules/ai/")
+(add-to-list 'load-path "~/.emacs.d/modules/benchmark/")
+(add-to-list 'load-path "~/.emacs.d/modules/completion/")
+(add-to-list 'load-path "~/.emacs.d/modules/copilot/")
+(add-to-list 'load-path "~/.emacs.d/modules/eww/")
+(add-to-list 'load-path "~/.emacs.d/modules/flyspell/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/")
+(add-to-list 'load-path "~/.emacs.d/modules/magit/")
+(add-to-list 'load-path "~/.emacs.d/modules/org/")
+(add-to-list 'load-path "~/.emacs.d/modules/treemacs/")
+(add-to-list 'load-path "~/.emacs.d/modules/ui/")
+(add-to-list 'load-path "~/.emacs.d/modules/undo-tree/")
+(add-to-list 'load-path "~/.emacs.d/modules/vterm/")
+
+
+;; load library 'PATH'
+;; modules-ai elisp
+(load-library "ai-conf")
+;; modules-benchmark elisp
+(load-library "benchmark-conf")
+;; modules-completion-conf elisp
+(load-library "completion-conf")
+;; modules-copilot elisp
+(load-library "copilot-conf")
+;; modules-eww-browser elisp
+(load-library "eww-conf")
+;; modules-flyspell elisp
+(load-library "flyspell-conf")
+;; modules-lsp elisp
+(load-library "lsp-conf")
+;; modules-magit elisp
+(load-library "magit-conf")
+;; modules-org elisp
+(load-library "org-conf")
+;; modules-treemacs elisp
+(load-library "treemacs-conf")
+;;modules-ui elisp
+(load-library "ui-conf")
+;; modules-undo-tree elisp
+(load-library "undo-tree-conf")
+;; modules-vterm elisp
+(load-library "vterm-conf")
+
+;; end 'modules-conf' file.

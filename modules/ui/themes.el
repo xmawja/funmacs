@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@
   ;; Global settings (defaults)
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
-  (load-theme 'doom-one t)
+ (load-theme 'doom-monokai-pro t)
 
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
@@ -34,11 +34,45 @@
   (setq doom-themes-treemacs-theme "doom-colors") ; use "doom-colors" for less minimal icon theme
   (doom-themes-treemacs-config)
   ;; Corrects (and improves) org-mode's native fontification.
-  (doom-themes-org-config))
+  (doom-themes-org-config)
+  ) ;; end doom-themes.el
 
-;; Enable monokai-pro-theme.el
+;; ;; Enable monokai-pro-theme.el
 ;;(use-package monokai-pro-theme
 ;;  :straight t
 ;;  :config
 ;;  (load-theme 'monokai-pro t)
-;;  )
+;;  ) ;; end monokai-pro.el
+
+;; ;; Enable atom-one-dark-theme.el
+;; (use-package atom-one-dark-theme
+;;   :straight t
+;;   :config
+;;   (load-theme 'atom-one-dark t)
+;;   ) ;; end atom-one-dark-theme.el
+
+;; ;; Enable dracula-theme.el
+;; (use-package dracula-theme
+;;   :straight t
+;;   :config
+;;   (load-theme 'dracula t)
+;;   ;; Don't change the font size for some headings and titles (default t)
+;;   (setq dracula-enlarge-headings nil)
+
+;;   ;; Adjust font size of titles level 1 (default 1.3)
+;;   (setq dracula-height-title-1 1.25)
+
+;;   ;; Adjust font size of titles level 2 (default 1.1)
+;;   (setq dracula-height-title-2 1.15)
+
+;;   ;; Adjust font size of titles level 3 (default 1.0)
+;;   (setq dracula-height-title-3 1.05)
+
+;;   ;; Adjust font size of document titles (default 1.44)
+;;   (setq dracula-height-doc-title 1.4)
+
+;;   ;; Use less pink and bold on the mode-line and minibuffer (default nil)
+;;   (setq dracula-alternate-mode-line-and-minibuffer t)
+;;   ) ;; end dracula-theme.el
+
+;; end 'themes' file.

@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -19,9 +19,18 @@
 
 ;; Enable kind-icon.el with corfu!.
 (use-package kind-icon
-  :ensure t
+  :straight t
   :after corfu
   :custom
   (kind-icon-default-face 'corfu-default) ; to compute blended backgrounds correctly
   :config
-  (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
+  (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter)
+  ;; Wrapping completion-in-region:
+  (add-hook 'my-completion-ui-mode-hook
+   	        (lambda ()
+   	          (setq completion-in-region-function
+   		              (kind-icon-enhance-completion
+   		               completion-in-region-function))))
+  ) ;; end kind-icon.el
+
+;; end 'kind-icon' file.

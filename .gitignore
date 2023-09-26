@@ -23,7 +23,7 @@
 test/.local*/
 test/result
 .lsp-session-v1
-
+package-quickstart.el
 ido.last
 
 straight
@@ -42,6 +42,7 @@ bookmarks
 .org-id-locations
 .tern-port
 .yas-compiled-snippets.el
+*.html
 auto-save-list/
 cask/
 ede-projects.el

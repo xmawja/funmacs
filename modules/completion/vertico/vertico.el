@@ -2,7 +2,7 @@
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
-;; Copyright (C) 2022 Muja Siyam
+;; Copyright (C) 2022 - 2023 Muja Siyam
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -17,7 +17,8 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; Enable vertico
+;; Enable 'vertico.el' 
+;; Vertico is a minibuffer interface, that is, it changes the minibuffer looks and how you interact with it.
 (use-package vertico
   :straight (vertico :files (:defaults "extensions/*")
                      :includes
@@ -49,13 +50,6 @@
 
   ;; Optionally enable cycling for `vertico-next' and `vertico-previous'.
   ;; (setq vertico-cycle t)
-  )
+  ) ;; end vertico.el
 
-;; Persist history over Emacs restarts. Vertico sorts by history position.
-(use-package savehist
-  :straight t
-  :hook
-  ;; after init
-  (after-init . savehist-mode)
-  :init
-  (savehist-mode))
+;; end 'vertico' file.
