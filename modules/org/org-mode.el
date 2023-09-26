@@ -26,6 +26,10 @@
   :after org
   :hook
   (after-init . org-mode)
+  ;; ;; modern org-mode org-modern
+  ;; ;; Option 1: Per buffer
+  ;; (org-mode . org-modern-mode)
+  ;; (org-agenda-finalize . org-modern-agenda)
   :init
   ;;(setq-default major-mode 'org-mode) if nesesery
   ;; set the default notes file places
