@@ -23,7 +23,7 @@
 test/.local*/
 test/result
 .lsp-session-v1
-
+package-quickstart.el
 ido.last
 
 straight
