@@ -34,19 +34,19 @@
   ;;:commands (markdown-mode gfm-mode)
   :init
   ;; tools command to preview.
-  ;; for simple things multimarkdown
-  (setq markdown-command "multimarkdown")
-  ;; pandoc 
+  ;; ;; for simple things multimarkdown
+  ;; (setq markdown-command "multimarkdown")
+  ;; ;; pandoc 
   ;; (setq markdown-command "pandoc -t html5")
   :config
   ;; ;; load marksman directory to be placed of.
   ;; (add-to-list 'exec-path "~/.local/bin")
   ;; uncomment if you are using lsp-mode.
   ;;(require 'lsp-marksman)
-  ;; ;; configuration for eglot using marksman
-  ;; (with-eval-after-load 'eglot
-  ;;   (add-to-list 'eglot-server-programs
-  ;;                '(markdown-mode . ("marksman" "--stdio"))))
+  ;; configuration for eglot using marksman
+  (with-eval-after-load 'eglot
+    (add-to-list 'eglot-server-programs
+                 '(markdown-mode . ("marksman" "--stdio"))))
   ) ;; end markdown-mode.el
 
 ;; end 'markdown-mode' file.
