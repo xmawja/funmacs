@@ -19,12 +19,18 @@
 
 ;; Enable kind-icon.el with corfu!.
 (use-package kind-icon
-  :ensure t
+  :straight t
   :after corfu
   :custom
   (kind-icon-default-face 'corfu-default) ; to compute blended backgrounds correctly
   :config
   (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter)
+  ;; Wrapping completion-in-region:
+  (add-hook 'my-completion-ui-mode-hook
+   	        (lambda ()
+   	          (setq completion-in-region-function
+   		              (kind-icon-enhance-completion
+   		               completion-in-region-function))))
   ) ;; end kind-icon.el
 
 ;; end 'kind-icon' file.
