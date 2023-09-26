@@ -1,5 +1,5 @@
-;;; rust-conf.el -*- lexical-binding: t; -*-
-;; This file has been generated from init.el file. DO NOT EDIT.
+;;; rust.el -*- lexical-binding: t; -*-
+;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
 ;; Copyright (C) 2022 - 2023 Muja Siyam
@@ -17,9 +17,11 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load library 'PATH'
-(load-library "rust")
-(load-library "cargo")
-(load-library "cargo-mode")
+;; Enable cargo.el
+(use-package cargo
+  :after (rustic-mode)
+  :hook
+  (rustic-mode . cargo-minor-mode)
+  ) ;; end cargo.el
 
-;; end 'rust-conf' file.
+;; end 'cargo' file.

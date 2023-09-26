@@ -57,11 +57,4 @@
       (setq-local compilation-ask-about-save nil)))
   ) ;; end rustic-mode.el
 
-;; Enable cargo.el
-(use-package cargo
-  :after (rust-mode)
-  :hook
-  (rust-mode . cargo-minor-mode)
-  ) ;; end cargo.el
-
 ;; end 'rustic-mode' file.
