@@ -62,6 +62,7 @@
   ;; (corfu-quick-mode t)
   ;; Aggressive completion, cheap prefix filtering.
   (setq corfu-auto t
+        corfu-quit-no-match 'separator
         corfu-auto-delay 0
         corfu-auto-prefix 0
         completion-styles '(basic))
