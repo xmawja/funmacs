@@ -22,13 +22,13 @@
 (use-package flyspell
   :ensure t
   :defer t
-  :hook
-  (text-mode . flyspell-mode)
-  ;; (prog-mode . flyspell-prog-mode)
   :config
   (define-key flyspell-mode-map (kbd "C-,") nil)
   (define-key flyspell-mode-map (kbd "C-.") nil)
   (define-key flyspell-mode-map (kbd "C-;") #'flyspell-correct-wrapper)
+  ;; use flyspell on all modes
+  (add-hook 'text-mode-hook 'flyspell-mode)
+  (add-hook 'prog-mode-hook 'flyspell-prog-mode)
   ) ;; End
 
 (use-package flyspell-correct
