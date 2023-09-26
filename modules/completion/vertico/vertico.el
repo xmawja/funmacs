@@ -17,7 +17,8 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; Enable vertico
+;; Enable 'vertico.el' 
+;; Vertico is a minibuffer interface, that is, it changes the minibuffer looks and how you interact with it.
 (use-package vertico
   :straight (vertico :files (:defaults "extensions/*")
                      :includes
