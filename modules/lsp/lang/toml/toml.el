@@ -19,7 +19,8 @@
 
 ;; Enable toml-mode.el
 (use-package toml-mode
-  :straight t
+  :ensure nil
+  :straight (:type built-in)
   :hook
   ;; uncommented if youre using eglot.
   (toml-mode . eglot-ensure)
