@@ -21,7 +21,7 @@
 ;; Or using hooks
 (use-package markdown-soma
   :straight t
-  :hook ((markdown-mode org-mode) . markdown-soma-mode)
+  ;;:hook ((markdown-mode org-mode) . markdown-soma-mode)
   :init
   ;; default render buffer hooks
   (setq markdown-soma--render-buffer-hooks
