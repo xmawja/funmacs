@@ -28,6 +28,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/lua/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/markdown/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/ocaml/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/php/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/python/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/rust/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/sh/")
@@ -58,6 +59,8 @@
 (load-library "markdown-conf")
 ;; ocaml ml language
 (load-library "ocaml-conf")
+;; php language
+(load-library "php-conf")
 ;; python 3 language
 (load-library "python-conf")
 ;; rust language
