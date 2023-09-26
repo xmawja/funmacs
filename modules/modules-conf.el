@@ -34,12 +34,18 @@
 
 
 ;; load library 'PATH'
+;; modules-ai elisp
+(load-library "ai-conf")
 ;; modules-benchmark elisp
 (load-library "benchmark-conf")
 ;; modules-completion-conf elisp
 (load-library "completion-conf")
+;; modules-copilot elisp
+(load-library "copilot-conf")
 ;; modules-eww-browser elisp
 (load-library "eww-conf")
+;; modules-flyspell elisp
+(load-library "flyspell-conf")
 ;; modules-lsp elisp
 (load-library "lsp-conf")
 ;; modules-magit elisp

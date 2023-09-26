@@ -1,4 +1,4 @@
-;;; core-config.el -*- lexical-binding: t; -*-
+;;; recentf-mode.el -*- lexical-binding: t; -*-
 ;; This file has been generated from init.el file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,18 +17,11 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load package 'PATH'
-;;(add-to-list 'load-path "~/.emacs.d/core/")
+;; Enable emacs-gitignore.el
+(use-package helm-gitignore
+  
+  ) ;; end
 
-;; load library 'PATH'.
-;;(load-library "backup")
-;;(load-library "dired")
-;;(load-library "helm-gitignore")
-(load-library "emacs")
-;;(load-library "no-littering")
-;; (load-library "recentfile")
-(load-library "settings")
-(load-library "straight")
-(load-library "which-key")
+;; Generate .gitignore file by using gitignore.io API.
 
-;; end 'core-config' file.
+;; end 'emacs-gitignore' file.
