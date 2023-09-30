@@ -22,6 +22,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/benchmark/")
 (add-to-list 'load-path "~/.emacs.d/modules/completion/")
 (add-to-list 'load-path "~/.emacs.d/modules/copilot/")
+(add-to-list 'load-path "~/.emacs.d/modules/editorconfig/")
 (add-to-list 'load-path "~/.emacs.d/modules/eww/")
 (add-to-list 'load-path "~/.emacs.d/modules/flyspell/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/")
@@ -42,6 +43,8 @@
 (load-library "completion-conf")
 ;; modules-copilot elisp
 (load-library "copilot-conf")
+;; editorconfig-conf elisp
+(load-library "editorconfig-conf")
 ;; modules-eww-browser elisp
 (load-library "eww-conf")
 ;; modules-flyspell elisp
