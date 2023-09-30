@@ -24,6 +24,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/copilot/")
 (add-to-list 'load-path "~/.emacs.d/modules/editorconfig/")
 (add-to-list 'load-path "~/.emacs.d/modules/eww/")
+(add-to-list 'load-path "~/.emacs.d/modules/flymake/")
 (add-to-list 'load-path "~/.emacs.d/modules/flyspell/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/")
 (add-to-list 'load-path "~/.emacs.d/modules/magit/")
@@ -47,6 +48,8 @@
 (load-library "editorconfig-conf")
 ;; modules-eww-browser elisp
 (load-library "eww-conf")
+;; flymake-conf elisp
+(load-library "flymake-conf")
 ;; modules-flyspell elisp
 (load-library "flyspell-conf")
 ;; modules-lsp elisp
