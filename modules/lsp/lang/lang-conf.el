@@ -22,6 +22,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/conf/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/cpp/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/css/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/dart/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/docker/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/elisp/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/go/")
@@ -51,6 +52,8 @@
 (load-library "cpp-conf")
 ;; css style language
 (load-library "css-conf")
+;; dart language
+(load-library "dart-conf")
 ;; docker style language
 (load-library "docker-conf")
 ;; emacs lisp language
