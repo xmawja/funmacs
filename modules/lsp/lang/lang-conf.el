@@ -28,6 +28,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/html/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/javascript/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/json/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/kotlin/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/lua/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/markdown/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/ocaml/")
@@ -62,6 +63,8 @@
 (load-library "javascript-conf")
 ;; json object notation
 (load-library "json-conf")
+;; kotlin language
+(load-library "kotlin-conf")
 ;; lua language
 (load-library "lua-conf")
 ;; markdown language
