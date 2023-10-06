@@ -1,5 +1,5 @@
-;;; html-conf.el -*- lexical-binding: t; -*-
-;; This file has been generated from init.el file. DO NOT EDIT.
+;;; modules-conf.el -*- lexical-binding: t; -*-
+;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
 ;; Copyright (C) 2022 - 2023 Muja Siyam
@@ -15,10 +15,22 @@
 ;; GNU General Public License for more details.
 
 ;; For a full copy of the GNU General Public License
-;; see <https://www.gnu.org/licenses/>.
+;; see <https://www.gnu.org/licenses/.>
 
-;; load library 'PATH'
-(load-library "emmet")
-(load-library "html")
+;; Enable 'emmet.el'
+;;; Code:
 
-;; end 'html-conf' file.
+(use-package emmet-mode
+  :straight t
+  :hook
+  (html-mode . emmet-mode)
+  (sgml-mode-hook . emmet-mode) ;; Auto-start on any markup modes
+  (css-mode-hook  . emmet-mode) ;; enable Emmet's css abbreviation.
+  (emmet-jsx-major-modes . js-mode)
+  (emmet-jsx-major-modes . jsx-mode)
+  (emmet-jsx-major-modes . rjsx-mode)
+  (emmet-jsx-major-modes . js-jsx-mode)
+  (emmet-jsx-major-modes . js2-jsx-mode)
+  ) ;; End
+
+;; End 'emmet-mode.el' file.
