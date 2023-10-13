@@ -25,9 +25,6 @@
   :init
   ;; show Dashboard in frames created with emacsclient -c
   (setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
-  ;; add icons to the widget headings and their items
-  (setq dashboard-set-heading-icons t)
-  (setq dashboard-set-file-icons t)
   ;; Set the title
   ;; (setq dashboard-banner-logo-title "Welcome to Funmacs")
   (setq dashboard-banner-logo-title
@@ -55,27 +52,33 @@
                           (projects . 5)
                           (agenda . 5)
                           (registers . 5)))
+  ;; add icons to the widget headings and their items
+  (setq dashboard-set-heading-icons t)
+  (setq dashboard-set-file-icons t)
+  ;; enable nerd-icons
+  (setq dashboard-display-icons-p t) ;; display icons on both GUI and terminal
+  (setq dashboard-icon-type 'nerd-icons) ;; use `nerd-icons' package
   ;; set naviagtion banner.
   (setq dashboard-set-navigator t)
   ;; navigation buttons.
   (setq dashboard-navigator-buttons
         `(( ;; homepage navigation tag.
-           (,(all-the-icons-faicon "cloud" :height 1.1 :v-adjust 0.0)
+           (,(nerd-icons-faicon "nf-fa-home" :height 1.1 :v-adjust 0.0)
             "Homepage"
             "Browse Homepage"
             (lambda (&rest _) (browse-url "https://funamcs.muja.dev")))
            ;; github navigation tag.
-           (,(all-the-icons-octicon "mark-github" :height 1.1 :v-adjust 0.0)
+           (,(nerd-icons-faicon "nf-fa-github" :height 1.1 :v-adjust 0.0)
             "GitHub"
             "Browse GitHub"
             (lambda (&rest _) (browse-url "https://github.com/xmawja/funmacs")))
            ;; twitter navigation tag.
-           (,(all-the-icons-faicon "twitter" :height 1.1 :v-adjust 0.0)
+           (,(nerd-icons-faicon "nf-fa-twitter" :height 1.1 :v-adjust 0.0)
             "Twitter"
             "Browse Twitter"
             (lambda (&rest _) (browse-url "https://www.twitter.com/xmawja")))
            ;; linkedin navigation tag.
-           (,(all-the-icons-faicon "linkedin" :height 1.1 :v-adjust 0.0)
+           (,(nerd-icons-faicon "nf-fa-linkedin" :height 1.1 :v-adjust 0.0)
             "LinkedIn"
             "Browse LinkedIn"
             (lambda (&rest _) (browse-url "https://www.linkedin.com/in/xmawja")))))
