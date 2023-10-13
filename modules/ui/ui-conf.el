@@ -19,11 +19,11 @@
 
 
 ;; load UI config.
-(load-library "all-the-icons")
 (load-library "dashboard")
 (load-library "emojify")
 (load-library "highlight-indent-guides")
 (load-library "kind-icon")
+(load-library "nerd-icons")
 (load-library "modeline")
 (load-library "themes")
 

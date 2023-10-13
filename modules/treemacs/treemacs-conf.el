@@ -22,7 +22,6 @@
 
 ;; load librarys 'PATH'
 (load-library "treemacs")
-(load-library "treemacs-all-the-icons")
 (load-library "treemacs-evil")
 (load-library "treemacs-icons-dired")
 (load-library "treemacs-magit")
