@@ -17,14 +17,16 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
+;;; code
 
-;; load UI config.
-(load-library "all-the-icons")
-(load-library "dashboard")
-(load-library "emojify")
-(load-library "highlight-indent-guides")
-(load-library "kind-icon")
-(load-library "modeline")
-(load-library "themes")
+;; Enable 'emojify.el'
+(use-package emojify
+  :config
+  (when (member "Segoe UI Emoji" (font-family-list))
+    (set-fontset-font
+     t 'symbol (font-spec :family "Segoe UI Emoji") nil 'prepend))
+  (setq emojify-display-style 'unicode)
+  (setq emojify-emoji-styles '(unicode))
+  (bind-key* (kbd "C-c .") #'emojify-insert-emoji)) ; override binding in any mode
 
-;; end 'ui-conf' file.
+;; End 'emojify.el' file.
