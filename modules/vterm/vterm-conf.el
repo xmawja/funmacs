@@ -19,7 +19,7 @@
 
 
 ;; load library 'PATH'
-(load-library "vterm-toggle")
 (load-library "vterm")
+(load-library "vterm-toggle")
 
 ;; end 'vterm-conf' file.
