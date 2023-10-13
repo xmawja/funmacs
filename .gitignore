@@ -25,6 +25,7 @@ test/result
 .lsp-session-v1
 package-quickstart.el
 ido.last
+forge-database.sqlite
 
 straight
 recentf
@@ -55,3 +56,4 @@ smex-items
 tramp
 var/
 url/
+multisession/
