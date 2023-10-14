@@ -87,4 +87,7 @@
 (setq scroll-step 1)
 ;; keyboard scroll one line at a time
 
+;; fonts
+(add-to-list 'default-frame-alist
+             '(font . "JetBrains Sans Mono-10"))
 ;; end 'settings' file.
