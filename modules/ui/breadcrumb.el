@@ -1,4 +1,4 @@
-;;; ui-conf.el -*- lexical-binding: t; -*-
+;;; breadcrumb.el -*- lexical-binding: t; -*-
 ;; This file has been generated from init.el file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,15 +17,13 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
+;;; code
 
-;; load UI config.
-(load-library "breadcrumb")
-(load-library "dashboard")
-(load-library "emojify")
-(load-library "highlight-indent-guides")
-(load-library "kind-icon")
-(load-library "nerd-icons")
-(load-library "modeline")
-(load-library "themes")
+;; Enable 'breadcrumb.el'
+(use-package breadcrumb
+  :straight t
+  :init
+  (breadcrumb-mode 1)
+  ) ;; End
 
-;; end 'ui-conf' file.
+;; End 'breadcrumb.el' file.
