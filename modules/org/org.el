@@ -38,7 +38,7 @@
   ;; (setq org-default-notes-file (concat org-directory "/notes.org"))
   (setq org-default-notes-file (concat org-directory "/notes.org"))
   ;; set the deafault org directory
-  (setq org-directory (expand-file-name "~/Documents/org"))
+  (setq org-directory (expand-file-name "~/org"))
   ;; activaae loge done
   (setq org-log-done t)
   ;; closing timestamp or next line

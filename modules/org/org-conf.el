@@ -27,6 +27,7 @@
 (load-library "modern")
 (load-library "org")
 (load-library "ox")
+(load-library "super-agenda")
 (load-library "svg-tag")
 
 ;; end 'org-conf' file.

@@ -19,6 +19,7 @@
 
 ;;; code
 
+;; Enable 'ox.el'
 (use-package ox
   :config
   (setq org-export-with-tags nil)

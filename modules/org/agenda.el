@@ -31,7 +31,7 @@
         )
   :config
   ;; set the default agenda files directory
-  (setq org-agenda-files '("~/Documents/org/agenda.org" ))
+  (setq org-agenda-files '("~/org/agenda.org" ))
   ;; Setting the TODO keywords
   (setq org-todo-keywords
         '((sequence
