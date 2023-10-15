@@ -17,7 +17,9 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; Enable org-mode.el
+;;; code
+
+;; Enable 'org-mode.el'
 (use-package org
   ;; ignore org.el from pull using package.el
   :ensure nil
@@ -47,6 +49,32 @@
   (setq org-clock-sound "~/.emacs.d/assets/sound/ding.wav")
   :config
   (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+  ;; Prettification should ignore preceding letters
+  (defun prettify-symbols-compose-in-text-mode-p (start end _match)
+    "Similar to `prettify-symbols-default-compose-p' but ignore letters or words."
+    ;; Check that the chars should really be composed into a symbol.
+    (let* ((syntaxes-beg (if (memq (char-syntax (char-after start)) '(?_))
+                             '(?_) '(?. ?\\)))
+           (syntaxes-end (if (memq (char-syntax (char-before end)) '(?_))
+                             '(?_) '(?. ?\\))))
+      (not (or (memq (char-syntax (or (char-before start) ?\s)) syntaxes-beg)
+               (memq (char-syntax (or (char-after end) ?\s)) syntaxes-end)
+               ;; (nth 8 (syntax-ppss))
+               (org-in-src-block-p)
+               ))))
+  ;; Replace two consecutive hyphens with the em-dash
+  (defun funmacs/org-mode-load-prettify-symbols ()
+    (interactive)
+    (pushnew! prettify-symbols-alist
+              '("--"  . "–") '("---" . "—")
+              '("(?)" . "") '("(?)." . "") '("(?)," . ""))
+    (modify-syntax-entry ? " ")
+    (prettify-symbols-mode 1)
+    ;; Now, set the value of this
+    (setq-local prettify-symbols-compose-predicate 'prettify-symbols-compose-in-text-mode-p)
+    )
+  (when (not IS-WINDOWS)
+    (add-hook 'org-mode-hook 'funmacs/org-mode-load-prettify-symbols))
   ) ;; end org-mode.el
 
 ;; end 'org-mode' file.
