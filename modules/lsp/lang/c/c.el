@@ -46,8 +46,10 @@
         		                   file))))))
   :config
   ;; define the c lsp backend server.
-  (add-to-list 'eglot-server-programs '(c-mode "clangd"))
+  (with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+               '(c-mode . ("clangd" "--stdio"))))
+  ;; (add-to-list 'eglot-server-programs '(c-mode "clangd"))
   ) ;; end c-mode.el
-
 
 ;; end 'c-mode' file.
