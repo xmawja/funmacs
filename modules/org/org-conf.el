@@ -22,5 +22,6 @@
 (load-library "capture")
 (load-library "org-mode")
 (load-library "org-roam")
+(load-library "svg-tag")
 
 ;; end 'org-conf' file.
