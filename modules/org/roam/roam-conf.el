@@ -17,15 +17,7 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;;; code
-
 ;; load 'org-mode.el' config.
-(add-to-list 'load-path "~/.emacs.d/modules/org/roam/")
-
-(load-library "agenda")
-(load-library "capture")
-(load-library "modern")
-(load-library "org")
-(load-library "svg-tag")
-
+(load-library "roam")
+;; (load-library "capture")
 ;; end 'org-conf' file.
