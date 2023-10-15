@@ -20,8 +20,8 @@
 ;; load org-mode.el config.
 (load-library "agenda")
 (load-library "capture")
-(load-library "org-mode")
-(load-library "org-roam")
+(load-library "roam")
+(load-library "org")
 (load-library "svg-tag")
 
 ;; end 'org-conf' file.
