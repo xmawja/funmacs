@@ -42,6 +42,13 @@
   ;; - 1, 2 or 3 which displays one of the text banners
   ;; - "path/to/your/image.gif", "path/to/your/image.png" or "path/to/your/text.txt" which displays whatever gif/image/text you would prefer
   ;; - a cons of '("path/to/your/image.png" . "path/to/your/text.txt")
+  
+  ;; add icons to the widget headings and their items
+  (setq dashboard-set-heading-icons t)
+  (setq dashboard-set-file-icons t)
+  ;; enable nerd-icons
+  (setq dashboard-display-icons-p t) ;; display icons on both GUI and terminal
+  (setq dashboard-icon-type 'nerd-icons) ;; use `nerd-icons' package
   ;; Content is not centered by default. To center, set
   (setq dashboard-center-content t)
   ;; choose the default project managment backend
@@ -52,12 +59,6 @@
                           (projects . 5)
                           (agenda . 5)
                           (registers . 5)))
-  ;; add icons to the widget headings and their items
-  (setq dashboard-set-heading-icons t)
-  (setq dashboard-set-file-icons t)
-  ;; enable nerd-icons
-  (setq dashboard-display-icons-p t) ;; display icons on both GUI and terminal
-  (setq dashboard-icon-type 'nerd-icons) ;; use `nerd-icons' package
   ;; set naviagtion banner.
   (setq dashboard-set-navigator t)
   ;; navigation buttons.
