@@ -1,4 +1,4 @@
-;;; ui-conf.el -*- lexical-binding: t; -*-
+;;; fonts.el -*- lexical-binding: t; -*-
 ;; This file has been generated from init.el file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,16 +17,15 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
+;;; code
 
-;; load UI config.
-(load-library "breadcrumb")
-(load-library "dashboard")
-(load-library "emojify")
-(load-library "fonts")
-(load-library "highlight-indent-guides")
-(load-library "kind-icon")
-(load-library "nerd-icons")
-(load-library "modeline")
-(load-library "themes")
+;; Enable 'fonts.el'
 
-;; end 'ui-conf' file.
+;; Fonts
+(add-to-list 'default-frame-alist
+             '(font . "JetBrains Sans Mono"))
+;;(set-face-attribute 'default nil :font "Fira Code Retina" :height 150)
+;; Set the fixed pitch face
+(set-face-attribute 'fixed-pitch nil :font "Fira Code Retina" :height 120)
+;; Set the variable pitch face
+;;(set-face-attribute 'variable-pitch nil :font "Cantarell" :height 140 :weight 'regular)
