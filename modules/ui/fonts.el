@@ -23,9 +23,9 @@
 
 ;; Fonts
 (add-to-list 'default-frame-alist
-             '(font . "JetBrains Sans Mono"))
-;;(set-face-attribute 'default nil :font "Fira Code Retina" :height 150)
+            '(font . "JetBrainsMono Nerd Font Mono"))
+(set-face-attribute 'default nil :font "JetBrainsMono Nerd Font Mono" :height 120)
 ;; Set the fixed pitch face
-(set-face-attribute 'fixed-pitch nil :font "Fira Code Retina" :height 120)
+(set-face-attribute 'fixed-pitch nil :font "JetBrainsMono Nerd Font Mono" :height 120)
 ;; Set the variable pitch face
-;;(set-face-attribute 'variable-pitch nil :font "Cantarell" :height 140 :weight 'regular)
+(set-face-attribute 'variable-pitch nil :font "JetBrainsMono Nerd Font Mono" :height 140 :weight 'regular)
