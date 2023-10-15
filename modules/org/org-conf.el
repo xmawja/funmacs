@@ -26,6 +26,7 @@
 (load-library "capture")
 (load-library "modern")
 (load-library "org")
+(load-library "ox")
 (load-library "svg-tag")
 
 ;; end 'org-conf' file.
