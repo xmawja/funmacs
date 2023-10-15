@@ -21,6 +21,7 @@
 (load-library "agenda")
 (load-library "capture")
 (load-library "roam")
+(load-library "modern")
 (load-library "org")
 (load-library "svg-tag")
 
