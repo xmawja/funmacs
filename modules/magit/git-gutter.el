@@ -1,4 +1,4 @@
-;;; magit-conf.el -*- lexical-binding: t; -*-
+;;; git-gutter.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -15,14 +15,22 @@
 ;; GNU General Public License for more details.
 
 ;; For a full copy of the GNU General Public License
-;; see <https://www.gnu.org/licenses/>.
+;; see <https://www.gnu.org/licenses/>.;;; magit.el -*- lexical-binding: t; -*-
 
-;; load library 'PATH'
-(load-library "forge")
-(load-library "git-gutter")
-(load-library "git-link")
-(load-library "git-modes")
-(load-library "magit-todos")
-(load-library "magit")
+;;; code
 
-;; end 'magit-conf' file.
+;; Enable 'git-gutter.el' 
+(use-package git-gutter
+  :ensure t
+  :hook ((prog-mode org-mode) . git-gutter-mode )
+  :config
+  (setq git-gutter:update-interval 2)
+  (setq git-gutter:modified-sign "†")
+  (setq git-gutter:added-sign "†")
+  (setq git-gutter:deleted-sign "†")
+  (set-face-foreground 'git-gutter:added "Green")
+  (set-face-foreground 'git-gutter:modified "Gold")
+  (set-face-foreground 'git-gutter:deleted "Red")
+  ) ;; End
+
+;; End 'git-gutter.el' file.
