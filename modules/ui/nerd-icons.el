@@ -20,54 +20,61 @@
 
 ;; ENABLE 'nerd-font.el'
 (use-package nerd-icons
-  ;; :custom
+  :straight (nerd-icons
+             :type git
+             :host github
+             :repo "rainstormstudio/nerd-icons.el"
+             :files (:defaults "data"))
+  :custom
   ;; The Nerd Font you want to use in GUI
   ;; "Symbols Nerd Font Mono" is the default and is recommended
   ;; but you can use any other Nerd Font if you want
-  ;; (nerd-icons-font-family "Symbols Nerd Font Mono")
-  ) ;; End 
-  
+  (nerd-icons-font-family "Symbols Nerd Font Mono")
+  )
+
 (use-package nerd-icons-dired
   :hook
   (dired-mode . nerd-icons-dired-mode)
   )
 
 (use-package treemacs-nerd-icons
+  :after treemacs
   :config
-  (treemacs-load-theme "nerd-icons"))
-
-(use-package nerd-icons-completion
-  :after marginalia
-  :config
-  (nerd-icons-completion-mode)
-  (add-hook 'marginalia-mode-hook #'nerd-icons-completion-marginalia-setup))
-
-(use-package nerd-icons-ibuffer
-  :ensure t
-  :hook (ibuffer-mode . nerd-icons-ibuffer-mode)
-  :config
-  ;; Whether display the icons.
-  (setq nerd-icons-ibuffer-icon t)
-
-  ;; Whether display the colorful icons.
-  ;; It respects `nerd-icons-color-icons'.
-  (setq nerd-icons-ibuffer-color-icon t)
-
-  ;; The default icon size in ibuffer.
-  (setq nerd-icons-ibuffer-icon-size 1.0)
-
-  ;; Use human readable file size in ibuffer.
-  (setq  nerd-icons-ibuffer-human-readable-size t)
-
-  ;; A list of ways to display buffer lines with `nerd-icons'.
-  ;; See `ibuffer-formats' for details.
-  nerd-icons-ibuffer-formats
-
-  ;; Slow Rendering
-  ;; If you experience a slow down in performance when rendering multiple icons simultaneously,
-  ;; you can try setting the following variable
-  (setq inhibit-compacting-font-caches t)
+  (treemacs-load-theme "nerd-icons")
   )
+
+;; (use-package nerd-icons-completion
+;;   :after marginalia
+;;   :config
+;;   (nerd-icons-completion-mode)
+;;   (add-hook 'marginalia-mode-hook #'nerd-icons-completion-marginalia-setup))
+
+;; (use-package nerd-icons-ibuffer
+;;   :ensure t
+;;   :hook (ibuffer-mode . nerd-icons-ibuffer-mode)
+;;   :config
+;;   ;; Whether display the icons.
+;;   (setq nerd-icons-ibuffer-icon t)
+
+;;   ;; Whether display the colorful icons.
+;;   ;; It respects `nerd-icons-color-icons'.
+;;   (setq nerd-icons-ibuffer-color-icon t)
+
+;;   ;; The default icon size in ibuffer.
+;;   (setq nerd-icons-ibuffer-icon-size 1.0)
+
+;;   ;; Use human readable file size in ibuffer.
+;;   (setq  nerd-icons-ibuffer-human-readable-size t)
+
+;;   ;; A list of ways to display buffer lines with `nerd-icons'.
+;;   ;; See `ibuffer-formats' for details.
+;;   nerd-icons-ibuffer-formats
+
+;;   ;; Slow Rendering
+;;   ;; If you experience a slow down in performance when rendering multiple icons simultaneously,
+;;   ;; you can try setting the following variable
+;;   (setq inhibit-compacting-font-caches t)
+;;   )
 
 
 
