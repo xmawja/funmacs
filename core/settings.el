@@ -87,7 +87,12 @@
 (setq scroll-step 1)
 ;; keyboard scroll one line at a time
 
-;; fonts
-(add-to-list 'default-frame-alist
-             '(font . "JetBrains Sans Mono-10"))
+;; disable swap files
+(setq make-backup-files nil)
+(setq auto-save-default nil)
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
 ;; end 'settings' file.
