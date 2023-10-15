@@ -58,3 +58,4 @@ var/
 url/
 multisession/
 tree-sitter/
+org-clock-save.el
