@@ -33,4 +33,9 @@
   (set-face-foreground 'git-gutter:deleted "Red")
   ) ;; End
 
+(use-package ox-hugo
+  :ensure t   ;Auto-install the package from Melpa
+  :pin melpa  ;`package-archives' should already have ("melpa" . "https://melpa.org/packages/")
+  :after ox)
+
 ;; End 'git-gutter.el' file.
