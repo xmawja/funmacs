@@ -77,4 +77,13 @@
     (add-hook 'org-mode-hook 'funmacs/org-mode-load-prettify-symbols))
   ) ;; end org-mode.el
 
+;; org-bullets replaces the heading stars in org-mode buffers with nicer looking characters that you can control. Another option for this is org-superstar-mode which we may cover in a later video.
+    (use-package org-bullets
+      :hook (org-mode . org-bullets-mode)
+      :custom
+      (org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●")))
+
+;; Automatically change bullet type when indenting
+(setq org-list-demote-modify-bullet
+          '(("+" . "*") ("*" . "-")("-" . "+")))
 ;; end 'org-mode' file.
