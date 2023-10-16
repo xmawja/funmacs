@@ -17,24 +17,24 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/.>
 
-;; load packages 'PATH'
-(add-to-list 'load-path "~/.emacs.d/modules/lsp/debug/")
-(add-to-list 'load-path "~/.emacs.d/modules/lsp/eglot/")
-(add-to-list 'load-path "~/.emacs.d/modules/lsp/treesitter/")
-(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/")
-(add-to-list 'load-path "~/.emacs.d/modules/lsp/lsp-mode/")
+;;; code
 
+;; Enable 'dap-mode.el'
+(use-package dap-mode
+  ;; Uncomment the config below if you want all UI panes to be hidden by default!
+  ;; :custom
+  ;; (lsp-enable-dap-auto-configure nil)
+  ;; :config
+  ;; (dap-ui-mode 1)
+  :commands dap-debug
+  :config
+  ;; Set up Node debugging
+  (require 'dap-node)
+  (dap-node-setup) ;; Automatically installs Node debug adapter if needed
 
-;; load library 'PATH'
-;; modules-lsp-dap
-(load-library "debug-conf")
-;; modules-lsp-eglot elisp
-(load-library "eglot-conf")
-;; modules-treesitter elisp
-(load-library "treesitter-conf")
-;; modules-lsp-lang elisp
-(load-library "lang-conf")
-;; ;; modules-lsp-mode elisp
-;; (load-library "lsp-mode-conf")
-
-;; end 'lsp-conf' file.
+  ;; Bind `C-c l d` to `dap-hydra` for easy access
+  (general-define-key
+    :keymaps 'lsp-mode-map
+    :prefix lsp-keymap-prefix
+    "d" '(dap-hydra t :wk "debugger"))
+  ) ;; End
