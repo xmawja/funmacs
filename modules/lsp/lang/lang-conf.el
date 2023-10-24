@@ -30,6 +30,7 @@
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/json/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/lua/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/markdown/")
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/nix/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/ocaml/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/php/")
 (add-to-list 'load-path "~/.emacs.d/modules/lsp/lang/python/")
@@ -66,6 +67,8 @@
 (load-library "lua-conf")
 ;; markdown language
 (load-library "markdown-conf")
+;; nix language
+(load-library "nix-conf")
 ;; ocaml ml language
 (load-library "ocaml-conf")
 ;; php language
@@ -87,5 +90,7 @@
 ;; zig language
 (load-library "zig-conf")
 
+;; format all language
+(load-library "format-all")
 
 ;; end 'lang-conf' file.
