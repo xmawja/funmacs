@@ -55,3 +55,5 @@ smex-items
 tramp
 var/
 url/
+
+forge-database.sqlite
