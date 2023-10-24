@@ -90,5 +90,7 @@
 ;; zig language
 (load-library "zig-conf")
 
+;; format all language
+(load-library "format-all")
 
 ;; end 'lang-conf' file.
