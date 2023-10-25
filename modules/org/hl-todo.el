@@ -1,4 +1,4 @@
-;;; org-agenda.el -*- lexical-binding: t; -*-
+;;; hl-todo.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,21 +17,18 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; Enable org-mode.el
-(use-package org-agenda
-  ;; ignore org.el from pull using package.el
-  :ensure nil
-  ;; ignore org.el from pull using straight.el.
-  :straight (:type built-in)
-  ;; :require org
-  :bind
-  (:map global-map
-		    ("C-c a" . org-agenda)         ;; open agenda
-        ("C-c l" . org-store-link)     ;; stored agenda
-        )
-  :config
-  ;; set the default agenda files directory
-  (setq org-agenda-files '("~/Dropbox/org/agenda.org" ))
-  ) ;; end org-agenda.el
+;;; code
 
-;; end 'org-agenda' file.
+;; Enable 'hl-todo.el'
+(use-package hl-todo
+  :straight t
+  :config
+  (setq hl-todo-keyword-faces
+        '(("TODO"   . "#FF0000")
+          ("FIXME"  . "#FF0000")
+          ("DEBUG"  . "#A020F0")
+          ("GOTCHA" . "#FF4500")
+          ("STUB"   . "#1E90FF")))
+  ) ;; End
+
+;; End 'hl-todo.el' file.

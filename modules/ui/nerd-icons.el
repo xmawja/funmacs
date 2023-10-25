@@ -1,4 +1,4 @@
-;;; all-the-icons.el -*- lexical-binding: t; -*-
+;;; nerd-icons.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,16 +17,34 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; Enable all-the-icons.el
-(use-package  all-the-icons
+;;; code
+
+;; Enable 'nerd-icons'
+(use-package nerd-icons
   :straight t
   :hook
   ;; after init
-  (after-init . all-the-icons-mode)
+  (after-init . nerd-icons-mode)
   :init
-  (require 'treemacs-all-the-icons)
-  (treemacs-load-theme "all-the-icons")
+  (require 'treemacs-nerd-icons)
+  (treemacs-load-theme "nerd-icons")
   :if (display-graphic-p)
-  ) ;; end all-the-icons.el
+  :bind
+  (:map global-map
+         ("M-i"       . nerd-icons-insert)
+        )
+  ;; :custom
+  ;; The Nerd Font you want to use in GUI
+  ;; "Symbols Nerd Font Mono" is the default and is recommended
+  ;; but you can use any other Nerd Font if you want
+  ;; (nerd-icons-font-family "Symbols Nerd Font Mono")
+  ) ;; end 'nerd-icons'
 
-;; end 'all-the-icons' file.
+
+;; ;; Shows icons
+;; (use-package nerd-icons-dired
+;;   :diminish
+;;   :when (icons-displayable-p)
+;;   :custom-face
+;;   (nerd-icons-dired-dir-face ((t (:inherit nerd-icons-dsilver :foreground unspecified))))
+;;   :hook (dired-mode . nerd-icons-dired-mode))

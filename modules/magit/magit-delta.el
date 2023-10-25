@@ -1,4 +1,4 @@
-;;; org-agenda.el -*- lexical-binding: t; -*-
+;;; magit-delta.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -15,23 +15,17 @@
 ;; GNU General Public License for more details.
 
 ;; For a full copy of the GNU General Public License
-;; see <https://www.gnu.org/licenses/>.
+;; see <https://www.gnu.org/licenses/.>
 
-;; Enable org-mode.el
-(use-package org-agenda
-  ;; ignore org.el from pull using package.el
-  :ensure nil
-  ;; ignore org.el from pull using straight.el.
-  :straight (:type built-in)
-  ;; :require org
-  :bind
-  (:map global-map
-		    ("C-c a" . org-agenda)         ;; open agenda
-        ("C-c l" . org-store-link)     ;; stored agenda
-        )
-  :config
-  ;; set the default agenda files directory
-  (setq org-agenda-files '("~/Dropbox/org/agenda.org" ))
-  ) ;; end org-agenda.el
 
-;; end 'org-agenda' file.
+;;; code
+
+;; Enabled 'magit-delta'
+(use-package magit-delta
+  ;; :if *is-unix*
+  :after magit
+  :commands magit-delta-mode
+  :hook (magit-mode . magit-delta-mode)
+  ) ;; End
+
+;; End 'magit-delta' file.

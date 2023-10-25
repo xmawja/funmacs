@@ -20,8 +20,14 @@
 ;; Options
 ;; magit todos
 (use-package magit-todos
-  :defer t
-  :after (magit-mode)
+  ;;:defer t
+  :after magit
+  :commands magit-todos-list magit-todos-mode
+  ;; :config
+  ;; (leader-def
+  ;;  "gt" 'magit-todos-list)
+  ;; :init
+  ;; (if *is-windows* (setq magit-todos-nice nil))
   ) ;; end magit-todos.el
 
 ;; end 'magit-todos' file.

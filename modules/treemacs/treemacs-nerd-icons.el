@@ -1,4 +1,4 @@
-;;; treemacs-all-the-icons.el -*- lexical-binding: t; -*-
+;;; treemacs.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -15,12 +15,15 @@
 ;; GNU General Public License for more details.
 
 ;; For a full copy of the GNU General Public License
-;; see <https://www.gnu.org/licenses/.>
+;; see <https://www.gnu.org/licenses/>.
 
-;; all the icons packages for treemacs.
-(use-package treemacs-all-the-icons  ; icons
-  :straight t
-  :after (treemacs)
-  ) ;; end  treemacs-all-the-icons.el
+;;; code
 
-;; end 'treemacs-all-the-icons' file.
+;; Enable 'treemacs-nerd-icons'
+(use-package treemacs-nerd-icons
+  :after treemacs
+  :config
+  (treemacs-load-theme "nerd-icons")
+  ) ;; End
+
+;; End 'treemacs-nerd-icons.el' file.

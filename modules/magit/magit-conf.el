@@ -22,6 +22,7 @@
 (load-library "git-link")
 (load-library "git-modes")
 (load-library "magit-todos")
+(load-library "magit-delta")
 (load-library "magit")
 
 ;; end 'magit-conf' file.

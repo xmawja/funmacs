@@ -55,5 +55,6 @@ smex-items
 tramp
 var/
 url/
+multisession/
 
 forge-database.sqlite

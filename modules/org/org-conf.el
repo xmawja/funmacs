@@ -20,6 +20,7 @@
 ;; load org-mode.el config.
 (load-library "agenda")
 (load-library "capture")
+(load-library "hl-todo")
 (load-library "org-mode")
 (load-library "org-roam")
 

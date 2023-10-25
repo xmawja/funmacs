@@ -17,29 +17,45 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; Enable treesitter.el
+;;; code
 
-(require 'treesit)
+;; Enable 'treesitter.el'
+(use-package tree-sitter
+  :config
+  (global-tree-sitter-mode)
+  (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
+  ) ;; end
 
-;; M-x treesit-install-language-grammar bash
-(add-to-list
- 'treesit-language-source-alist
- '(bash "https://github.com/tree-sitter/tree-sitter-bash.git"))
-
-;; sh-mode use bash-ts-mode
-(add-to-list 'major-mode-remap-alist
-             '(sh-mode . bash-ts-mode))
-
-;; sh-mode use bash-ts-mode
-(add-to-list 'major-mode-remap-alist
-             '(c-mode . c-ts-mode))
+;; treesit language
+(use-package tree-sitter-langs
+  :straight (tree-sitter-langs
+             :type git
+             :host github
+             :repo "emacs-tree-sitter/tree-sitter-langs")
+  ) ;; end
 
 
-;; treesitter explore open in side window
-(add-to-list 'display-buffer-alist
-   '("^*tree-sitter explorer *" display-buffer-in-side-window
-     (side . right)
-     (window-width . 0.40)))
+;; (require 'treesit)
+
+;; ;; M-x treesit-install-language-grammar bash
+;; (add-to-list
+;;  'treesit-language-source-alist
+;;  '(bash "https://github.com/tree-sitter/tree-sitter-bash.git"))
+
+;; ;; sh-mode use bash-ts-mode
+;; (add-to-list 'major-mode-remap-alist
+;;              '(sh-mode . bash-ts-mode))
+
+;; ;; sh-mode use bash-ts-mode
+;; (add-to-list 'major-mode-remap-alist
+;;              '(c-mode . c-ts-mode))
+
+
+;; ;; treesitter explore open in side window
+;; (add-to-list 'display-buffer-alist
+;;    '("^*tree-sitter explorer *" display-buffer-in-side-window
+;;      (side . right)
+;;      (window-width . 0.40)))
 
 
 ;; (use-package tree-sitter

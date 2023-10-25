@@ -34,7 +34,7 @@
            ;; headline type and title
            ;; set the default notes file places
            ;; (setq org-default-notes-file (concat org-directory "/notes.org"))
-           (file+headline "~/Documents/org/tasks.org" "Tasks")
+           (file+headline "~/Dropbox/org/tasks.org" "Tasks")
            "* TODO %?\n- Added: %U %i\n  %a")
           )
         )

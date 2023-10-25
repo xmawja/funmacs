@@ -26,7 +26,7 @@
   ;; acknowledge upgrade and remove warning at startup
   (setq org-roam-v2-ack t)
   :custom
-  (org-roam-directory (file-truename "~/Documents/org/roam"))
+  (org-roam-directory (file-truename "~/Dropbox/org/roam"))
   ;; set 'complation-at-point'
   (org-roam-completion-everywhere t)
   ;; set org-roam templates.
