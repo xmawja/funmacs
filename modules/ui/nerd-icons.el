@@ -21,6 +21,14 @@
 
 ;; Enable 'nerd-icons'
 (use-package nerd-icons
+  :straight t
+  :hook
+  ;; after init
+  (after-init . nerd-icons-mode)
+  :init
+  (require 'treemacs-nerd-icons)
+  (treemacs-load-theme "nerd-icons")
+  :if (display-graphic-p)
   ;; :custom
   ;; The Nerd Font you want to use in GUI
   ;; "Symbols Nerd Font Mono" is the default and is recommended
