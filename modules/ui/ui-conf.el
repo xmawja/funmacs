@@ -24,6 +24,7 @@
 (load-library "highlight-indent-guides")
 (load-library "kind-icon")
 (load-library "modeline")
+(load-library "nerd-icons")
 (load-library "themes")
 
 ;; end 'ui-conf' file.
