@@ -1,4 +1,4 @@
-;;; magit-conf.el -*- lexical-binding: t; -*-
+;;; magit-delta.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -15,14 +15,17 @@
 ;; GNU General Public License for more details.
 
 ;; For a full copy of the GNU General Public License
-;; see <https://www.gnu.org/licenses/>.
+;; see <https://www.gnu.org/licenses/.>
 
-;; load library 'PATH'
-(load-library "forge")
-(load-library "git-link")
-(load-library "git-modes")
-(load-library "magit-todos")
-(load-library "magit-delta")
-(load-library "magit")
 
-;; end 'magit-conf' file.
+;;; code
+
+;; Enabled 'magit-delta'
+(use-package magit-delta
+  ;; :if *is-unix*
+  :after magit
+  :commands magit-delta-mode
+  :hook (magit-mode . magit-delta-mode)
+  ) ;; End
+
+;; End 'magit-delta' file.
