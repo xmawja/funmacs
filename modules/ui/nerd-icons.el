@@ -31,7 +31,7 @@
   :if (display-graphic-p)
   :bind
   (:map global-map
-         ("M-c i"       . nerd-icons-insert)
+         ("M-i"       . nerd-icons-insert)
         )
   ;; :custom
   ;; The Nerd Font you want to use in GUI
