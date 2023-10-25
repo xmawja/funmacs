@@ -1,4 +1,4 @@
-;;; org-conf.el -*- lexical-binding: t; -*-
+;;; hl-todo.el -*- lexical-binding: t; -*-
 ;; This file has been generated from funmacs.org file. DO NOT EDIT.
 ;; Sources are available from https://github.com/xmawja/funmacs
 
@@ -17,11 +17,18 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
-;; load org-mode.el config.
-(load-library "agenda")
-(load-library "capture")
-(load-library "hl-todo")
-(load-library "org-mode")
-(load-library "org-roam")
+;;; code
 
-;; end 'org-conf' file.
+;; Enable 'hl-todo.el'
+(use-package hl-todo
+  :straight t
+  :config
+  (setq hl-todo-keyword-faces
+        '(("TODO"   . "#FF0000")
+          ("FIXME"  . "#FF0000")
+          ("DEBUG"  . "#A020F0")
+          ("GOTCHA" . "#FF4500")
+          ("STUB"   . "#1E90FF")))
+  ) ;; End
+
+;; End 'hl-todo.el' file.
