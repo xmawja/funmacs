@@ -17,6 +17,10 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
+;;; code
+(when (version< emacs-version "29.1")
+  (error "This requires Emacs 29.1 and above!"))
+
 ;; USER info
 (setq user-full-name "Muja Siyam"
       user-mail-address "contact@muja.dev")
