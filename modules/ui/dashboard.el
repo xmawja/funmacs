@@ -17,17 +17,22 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
+;;; code
+
+(require 'nerd-icons)
 ;; Enable dashboard.el
 (use-package dashboard
-  :straight t
+  :straight (dashboard
+             :host github
+             :repo "emacs-dashboard/emacs-dashboard"
+             :branch "master")
   :config
   (dashboard-setup-startup-hook)
   :init
+  ;; disable white spaces
+  (add-hook 'dashboard-mode-hook (lambda () (setq show-trailing-whitespace nil)))
   ;; show Dashboard in frames created with emacsclient -c
   (setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
-  ;; add icons to the widget headings and their items
-  (setq dashboard-set-heading-icons t)
-  (setq dashboard-set-file-icons t)
   ;; Set the title
   ;; (setq dashboard-banner-logo-title "Welcome to Funmacs")
   (setq dashboard-banner-logo-title
@@ -43,12 +48,20 @@
   ;; - 'official which displays the official emacs logo
   ;; - 'logo which displays an alternative emacs logo
   ;; - 1, 2 or 3 which displays one of the text banners
-  ;; - "path/to/your/image.gif", "path/to/your/image.png" or "path/to/your/text.txt" which displays whatever gif/image/text you would prefer
+  ;; - "path/to/your/image.gif", "path/to/your/image.png"
+  ;; or "path/to/your/text.txt" which displays whatever gif/image/text you would prefer
   ;; - a cons of '("path/to/your/image.png" . "path/to/your/text.txt")
   ;; Content is not centered by default. To center, set
   (setq dashboard-center-content t)
   ;; choose the default project managment backend
   (setq dashboard-projects-backend 'project-el)
+  ;; add icons to the widget headings and their items
+  (setq dashboard-set-heading-icons t)
+  (setq dashboard-set-file-icons t)
+  ;; display icons on both GUI and terminal
+  (setq dashboard-display-icons-p t)
+  ;; use `nerd-icons' package
+  (setq dashboard-icon-type 'nerd-icons)
   ;; To customize which widgets are displayed
   (setq dashboard-items '((recents  . 5)
                           (bookmarks . 5)
@@ -60,26 +73,28 @@
   ;; navigation buttons.
   (setq dashboard-navigator-buttons
         `(( ;; homepage navigation tag.
-           (,(all-the-icons-faicon "cloud" :height 1.1 :v-adjust 0.0)
+           (,(nerd-icons-faicon "nf-fa-home" :height 1.1 :v-adjust 0.0)
             "Homepage"
             "Browse Homepage"
             (lambda (&rest _) (browse-url "https://funamcs.muja.dev")))
            ;; github navigation tag.
-           (,(all-the-icons-octicon "mark-github" :height 1.1 :v-adjust 0.0)
+           (,(nerd-icons-faicon "nf-fa-github" :height 1.1 :v-adjust 0.0)
             "GitHub"
             "Browse GitHub"
             (lambda (&rest _) (browse-url "https://github.com/xmawja/funmacs")))
            ;; twitter navigation tag.
-           (,(all-the-icons-faicon "twitter" :height 1.1 :v-adjust 0.0)
+           (,(nerd-icons-faicon "nf-fa-twitter" :height 1.1 :v-adjust 0.0)
             "Twitter"
             "Browse Twitter"
             (lambda (&rest _) (browse-url "https://www.twitter.com/xmawja")))
            ;; linkedin navigation tag.
-           (,(all-the-icons-faicon "linkedin" :height 1.1 :v-adjust 0.0)
+           (,(nerd-icons-faicon "nf-fa-linkedin" :height 1.1 :v-adjust 0.0)
             "LinkedIn"
             "Browse LinkedIn"
-            (lambda (&rest _) (browse-url "https://www.linkedin.com/in/xmawja")))))
+            (lambda (&rest _) (browse-url "https://www.linkedin.com/in/xmawja")))
+           )
+          )
         )
-  ) ;; end dashboard.el
+  ) ;; end
 
 ;; end 'dashboard' file.
