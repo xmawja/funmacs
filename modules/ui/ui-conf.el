@@ -19,6 +19,7 @@
 
 ;; load UI config.
 (load-library "all-the-icons")
+(load-library "breadcrumb")
 (load-library "dashboard")
 (load-library "highlight-indent-guides")
 (load-library "kind-icon")

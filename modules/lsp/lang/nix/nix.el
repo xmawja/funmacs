@@ -17,15 +17,33 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
+;;; Code
+
 ;; Enable nix.el
 (use-package nix-mode
-  :straight t
+  :ensure t
   :mode
-  ;; enable nix to use 'nix-mode'.
-  ("\\.nix\\'")
+  ("\\.nix\\'" "\\.nix.in\\'")
   :hook
-  ;; uncommented if youre using eglot
   (nix-mode . eglot-ensure)
-  ) ;; end nix.el
+  :config
+  (add-to-list 'eglot-server-programs '(nix-mode . ("rnix-lsp")))
+  ) ;; End 
+
+;; (use-package nix-drv-mode
+;;   :ensure nix-mode
+;;   :mode "\\.drv\\'")
+
+;; (use-package nix-shell
+;;   :ensure nix-mode
+;;   :commands
+;;   (nix-shell-unpack nix-shell-configure nix-shell-build)
+;;   )
+
+;; (use-package nix-repl
+;;   :ensure nix-mode
+;;   :commands
+;;   (nix-repl)
+;;   )
 
 ;; end 'nix.el' file.
