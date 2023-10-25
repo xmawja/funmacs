@@ -17,6 +17,8 @@
 ;; For a full copy of the GNU General Public License
 ;; see <https://www.gnu.org/licenses/>.
 
+;;; code
+
 ;; Enable treemacs.el
 (use-package treemacs
   :straight t
@@ -101,7 +103,7 @@
        (treemacs-git-mode 'simple)))
 
     (treemacs-hide-gitignored-files-mode nil))
-  ;; indent guide 
+  ;; indent guide
   (treemacs-indent-guide-mode t)
   :bind
   (:map global-map
