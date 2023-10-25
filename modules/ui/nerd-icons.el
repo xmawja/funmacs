@@ -29,6 +29,10 @@
   (require 'treemacs-nerd-icons)
   (treemacs-load-theme "nerd-icons")
   :if (display-graphic-p)
+  :bind
+  (:map global-map
+         ("M-c i"       . nerd-icons-insert)
+        )
   ;; :custom
   ;; The Nerd Font you want to use in GUI
   ;; "Symbols Nerd Font Mono" is the default and is recommended
