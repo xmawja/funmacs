@@ -27,7 +27,7 @@
   :hook
   (nix-mode . eglot-ensure)
   :config
-  (add-to-list 'eglot-server-programs '(nix-mode . ("nil")))
+  (add-to-list 'eglot-server-programs '(nix-mode . ("rnix-lsp")))
   ) ;; End 
 
 ;; (use-package nix-drv-mode
